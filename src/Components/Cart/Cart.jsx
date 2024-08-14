@@ -1,11 +1,12 @@
-import React from 'react'
-import styles from './Cart.module.css'
-
+import React from "react";
+import styles from "./Cart.module.css";
 
 const Cart = () => {
-  return <>
-  <h1>Cart</h1>
-  </>
-}
+    return (
+        <>
+            <h1>Cart</h1>
+        </>
+    );
+};
 
-export default Cart
+export default Cart;
