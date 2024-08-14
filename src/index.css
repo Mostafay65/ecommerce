@@ -20,6 +20,9 @@
 .btn-main:hover {
   background-color: #046963 !important;
 }
+.text-xsm{
+  font-size: 12px;
+}
 
 /* reset form-control class */
 
@@ -31,7 +34,6 @@
 }
 .form-control {
   border: 1px solid transparent !important;
-  font-size: 13px !important ;
   padding: 10px !important;
 }
 input::placeholder {

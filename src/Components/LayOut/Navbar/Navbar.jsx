@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg py-2 navbar-dark bg-black fixed-top">
-        <div className="container ">
+        <div className="container px-2 ">
           <div className="logo me-3">
           <img src={logo} style={{width : "120px"}} alt="" />
           </div>
@@ -41,7 +41,7 @@ const Navbar = () => {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               {token ? (
                   <li className="nav-item">
-                  <Link to="/" className="nav-link text-white" aria-current="page" onClick={handleSignOut}>Logout</Link>
+                  <Link to="/" className="nav-link text-white " aria-current="page" onClick={handleSignOut}>Log Out<i class="fa-solid ms-2 fa-right-from-bracket fa-xl"></i></Link>
                   </li>
               ):<>
               <li className="nav-item">

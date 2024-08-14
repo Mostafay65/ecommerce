@@ -1,23 +1,12 @@
-.inputGroupWrapper {
-  width: 100%;
-  max-width: 100%; 
-}
-
-@media (min-width: 768px) {
-  .inputGroupWrapper {
-    max-width: 400px;
-  }
-}
 .textReset {
-  transition: color 0.3s ease, transform 0.3s ease, margin-left 0.3s ease;
   text-decoration: none;
   color: #000;
-
+  transition: 0.3s ;
 }
 .textReset:hover {
-  color: rgb(52, 175, 52);
+  color: #088178;
   transform: translateX(10px);
-  margin-left: 5px;
+  text-decoration: none;
 }
 .gap-2 {
   gap: 0.5rem; 
