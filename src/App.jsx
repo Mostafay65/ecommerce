@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Home/Home";
-import LayOut from "./Components/LayOut/LayOut";
+import Layout from "./Components/Layout/Layout";
 import Products from "./Components/Products/Products";
 import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
@@ -9,12 +9,11 @@ import Cart from "./Components/Cart/Cart";
 import NotFound from "./Components/NotFound/NotFound";
 import TokenContextProvider from "./Components/Context/Token";
 
-
 function App() {
     const routes = createBrowserRouter([
         {
             path: "",
-            element: <LayOut />,
+            element: <Layout />,
             children: [
                 { path: "", element: <Home /> },
                 { path: "home", element: <Home /> },
@@ -27,9 +26,11 @@ function App() {
         },
     ]);
 
-    return <TokenContextProvider>
+    return (
+        <TokenContextProvider>
             <RouterProvider router={routes}> </RouterProvider>
-         </TokenContextProvider>
+        </TokenContextProvider>
+    );
 }
 
 export default App;

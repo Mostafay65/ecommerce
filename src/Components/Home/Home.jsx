@@ -5,12 +5,13 @@ import Slider from "../Slider/Slider";
 import MainBodyOfHome from "../MainBodyOfHome/MainBodyOfHome";
 
 const Home = () => {
-  return (
-    <>
-      <Slider />
-      <MainBodyOfHome />
-    </>
-  );
+    return (
+        <>
+
+            <Slider />
+            <MainBodyOfHome />
+        </>
+    );
 };
 
 export default Home;
