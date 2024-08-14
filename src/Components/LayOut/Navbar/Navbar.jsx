@@ -5,7 +5,7 @@ import { TokenContext } from '../../Context/Token';
 
 const Navbar = () => {
   let {token,setToken} = useContext(TokenContext)
-  console.log(token);
+  // console.log(token);
   
   function handleSignOut(){
     localStorage.removeItem('userToken')
