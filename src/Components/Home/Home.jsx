@@ -1,11 +1,14 @@
-import React from 'react'
-import styles from './Home.module.css'
-
+import React from "react";
+import styles from "./Home.module.css";
+import ProductMainCard from "../Cards/ProductMainCard";
+import Products from "../Products/Products";
 
 const Home = () => {
-  return <>
-  <h1 className='min-vh-100'>Home</h1>
-  </>
-}
+    return (
+        <>
+            <Products></Products>
+        </>
+    );
+};
 
-export default Home
+export default Home;
