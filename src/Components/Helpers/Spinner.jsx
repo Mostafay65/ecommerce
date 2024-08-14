@@ -1,22 +1,14 @@
-import ClockLoader from "react-spinners/ClockLoader";
+import SyncLoader from "react-spinners/SyncLoader";
 
-const override = {
-    display: "block",
-    margin: "120px auto",
-    borderColor: "red",
-};
-
-const Spinner = (loading) => {
-    return (
-        <ClockLoader
-            color={"#6466F1"}
-            loading={loading}
-            cssOverride={override}
-            size={150}
-            aria-label="Loading Spinner"
-            data-testid="loader"
+const Spinner = () => {
+    return <>
+        <div className=" w-100 vh-100 d-flex justify-content-center align-items-center">
+        <SyncLoader
+            color={"#333"}
+            size={20}
         />
-    );
+        </div>
+   </>
 };
 
 export default Spinner;
