@@ -124,6 +124,7 @@ const Footer = () => {
               <p>
                 <a href="#!" className={styles.textReset}>
                   View Cart
+                  
                 </a>
               </p>
               <p>
