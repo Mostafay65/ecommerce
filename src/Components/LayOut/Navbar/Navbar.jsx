@@ -6,7 +6,7 @@ import logo from '../../../assets/ecocart-high-resolution-logo-transparent (1).p
 
 const Navbar = () => {
   let {token,setToken} = useContext(TokenContext)
-  console.log(token);
+  // console.log(token);
   
   function handleSignOut(){
     localStorage.removeItem('userToken')

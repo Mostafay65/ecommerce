@@ -1,38 +1,38 @@
 import React from "react";
 import styles from "./ProductMainCard.module.css";
-import proImage from '../../assets/product.jpg';
+import Rating from "../Helpers/Rating";
 
-const ProductMainCard = () => {
+const ProductMainCard = ({ Product }) => {
     return (
         <>
             <div className={`${styles.product_card}`}>
-                <div className={`${styles.badge}`}>Hot</div>
+                <div className={`${styles.badge}`}>{Product.brand.slug}</div>
                 <img
-                    src={proImage}
+                    src={Product.imageCover}
                     alt="Colorful Pattern Shirts"
                     className={`${styles.product_image}`}
                 />
                 <div className={`${styles.product_info}`}>
-                    <span className={`${styles.category}`}>Music</span>
+                    <span className={`${styles.category}`}>
+                        {Product.subcategory[0].name}
+                    </span>
                     <h2 className={`${styles.product_name}`}>
-                        Colorful Pattern Shirts
+                        {Product.title}
                     </h2>
                     <div className={`${styles.rating}`}>
                         <span className={`${styles.stars}`}>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star-half-stroke"></i>
-                            <i className="fa-regular fa-star"></i>
+                            {<Rating rating={Product.ratingsAverage}></Rating>}
                         </span>
-                        <span className={`${styles.percentage}`}>90%</span>
+                        <span className={`${styles.percentage}`}>
+                            {Math.floor((Product.ratingsAverage / 5) * 100)}%
+                        </span>
                     </div>
                     <div className={`${styles.price}`}>
                         <span className={`${styles.current_price}`}>
-                            $238.85
+                            ${Product.price}
                         </span>
                         <span className={`${styles.original_price}`}>
-                            $245.8
+                            ${Product.price + (Product.price * 20) / 100}
                         </span>
                     </div>
                 </div>
