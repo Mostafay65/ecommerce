@@ -7,6 +7,7 @@ import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
 import Cart from "./Components/Cart/Cart";
 import NotFound from "./Components/NotFound/NotFound";
+import TokenContextProvider from "./Components/Context/Token";
 function App() {
     const routes = createBrowserRouter([
         {
@@ -24,7 +25,9 @@ function App() {
         },
     ]);
 
-    return <RouterProvider router={routes}></RouterProvider>;
+    return <TokenContextProvider>
+            <RouterProvider router={routes}> </RouterProvider>
+         </TokenContextProvider>
 }
 
 export default App;
