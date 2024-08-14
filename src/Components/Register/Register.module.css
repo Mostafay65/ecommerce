@@ -1,0 +1,26 @@
+.textsm{
+    font-size: 13px;
+    color: #383e50da;
+}
+.registerP{
+    font-size: 11px;
+}
+.registerBtns{
+    font-size: 13px;
+    transition: 0.4s;
+}
+.registerBtns:hover{
+    color: white;
+    background-color: #088178;
+}
+
+.registerBtns i{
+    transition: 0.4s;
+}
+
+.registerBtns:hover i{
+    color: white !important;
+}
+.signInText{
+    font-size: 13px;
+}
