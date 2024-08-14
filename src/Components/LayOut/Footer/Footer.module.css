@@ -8,26 +8,17 @@
     max-width: 400px;
   }
 }
-
 .textReset {
   transition: color 0.3s ease, transform 0.3s ease, margin-left 0.3s ease;
   text-decoration: none;
   color: #000;
 
 }
-
 .textReset:hover {
   color: rgb(52, 175, 52);
   transform: translateX(10px);
   margin-left: 5px;
 }
-
-
-
-.d-flex {
-  display: flex;
-}
-
 .gap-2 {
   gap: 0.5rem; 
 }

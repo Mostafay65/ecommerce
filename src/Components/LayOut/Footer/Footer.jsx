@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Footer.module.css"; // Import CSS Module
-import logoMail from "../../../imgs/theme/icons/icon-email.svg";
 import AppStore from "../../../imgs/theme/app-store.jpg";
 import PlayStore from "../../../imgs/theme/google-play.jpg";
 import PaymentMethod from "../../../imgs/theme/payment-method.png";
@@ -75,7 +74,6 @@ const Footer = () => {
             </div>
 
             <div className="col-md-2 col-lg-2 col-xl-2 mb-4 trans">
-              
               <h6 className="text-uppercase fw-bold mb-4">About</h6>
               <p>
                 <a href="#!" className={styles.textReset}>
@@ -124,7 +122,6 @@ const Footer = () => {
               <p>
                 <a href="#!" className={styles.textReset}>
                   View Cart
-                  
                 </a>
               </p>
               <p>
@@ -162,7 +159,7 @@ const Footer = () => {
             </div>
             <hr></hr>
             <div className="d-flex justify-content-between pb-3  text-secondary">
-              <span>© 2024, GATES -  Ecommerce </span>
+              <span>© 2024, GATES - Ecommerce </span>
               <span>Designed by Abdelaziz. All rights reserved</span>
             </div>
           </div>
