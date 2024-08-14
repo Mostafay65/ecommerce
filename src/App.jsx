@@ -8,6 +8,8 @@ import Register from "./Components/Register/Register";
 import Cart from "./Components/Cart/Cart";
 import NotFound from "./Components/NotFound/NotFound";
 import TokenContextProvider from "./Components/Context/Token";
+
+
 function App() {
     const routes = createBrowserRouter([
         {
