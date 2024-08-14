@@ -38,3 +38,13 @@ input::placeholder {
   font-size: 12px;
   color: rgba(128, 128, 128, 0.604) !important;
 }
+
+/* NavBar  */
+
+.navbar-toggler:focus{
+  box-shadow: none !important;
+ 
+}
+.navbar-toggler{
+  border: none !important;
+}
