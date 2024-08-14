@@ -1,0 +1,41 @@
+.inputGroupWrapper {
+  width: 100%;
+  max-width: 100%; 
+}
+
+@media (min-width: 768px) {
+  .inputGroupWrapper {
+    max-width: 400px;
+  }
+}
+
+.textReset {
+  transition: color 0.3s ease, transform 0.3s ease; 
+  text-decoration: none;
+  color: #000;
+
+}
+
+.textReset:hover {
+  color: green;
+  transform: translateX(10px);
+}
+
+
+/* Add these styles to your CSS file or within a <style> tag */
+
+.d-flex {
+  display: flex;
+}
+
+.gap-2 {
+  gap: 0.5rem; /* Adjust the gap between images */
+}
+
+.hover-up img {
+  transition: transform 0.3s ease;
+}
+
+.hover-up:hover img {
+  transform: translateY(-5px); /* Optional: move image up slightly on hover */
+}
