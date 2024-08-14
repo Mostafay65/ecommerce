@@ -7,7 +7,7 @@ const Products = () => {
         <>
             <div class="container" style={{ padding: "100px 0" }}>
                 <div class="row">
-                    <ProductMainCard></ProductMainCard>
+                    <ProductMainCard ></ProductMainCard>
                 </div>
             </div>
         </>
