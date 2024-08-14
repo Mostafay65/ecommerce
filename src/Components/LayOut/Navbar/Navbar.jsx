@@ -35,7 +35,7 @@ const Navbar = () => {
                 <Link to="/register" className="nav-link text-white" aria-current="page">Register</Link>
               </li>
               <li className="nav-item">
-                <Link to="/logout" className="nav-link text-white" aria-current="page">Logout</Link>
+                <Link to="/" className="nav-link text-white" aria-current="page">Logout</Link>
               </li>
             </ul>
           </div>
