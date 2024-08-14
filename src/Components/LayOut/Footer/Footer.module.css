@@ -10,26 +10,26 @@
 }
 
 .textReset {
-  transition: color 0.3s ease, transform 0.3s ease; 
+  transition: color 0.3s ease, transform 0.3s ease, margin-left 0.3s ease;
   text-decoration: none;
   color: #000;
 
 }
 
 .textReset:hover {
-  color: green;
+  color: rgb(52, 175, 52);
   transform: translateX(10px);
+  margin-left: 5px;
 }
 
 
-/* Add these styles to your CSS file or within a <style> tag */
 
 .d-flex {
   display: flex;
 }
 
 .gap-2 {
-  gap: 0.5rem; /* Adjust the gap between images */
+  gap: 0.5rem; 
 }
 
 .hover-up img {
@@ -37,5 +37,5 @@
 }
 
 .hover-up:hover img {
-  transform: translateY(-5px); /* Optional: move image up slightly on hover */
+  transform: translateY(-5px); 
 }
