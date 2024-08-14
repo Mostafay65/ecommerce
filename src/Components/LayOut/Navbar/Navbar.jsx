@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import styles from './Navbar.module.css';
 import { Link } from 'react-router-dom';
 import { TokenContext } from '../../Context/Token';
+import logo from '../../../assets/ecocart-high-resolution-logo-transparent (1).png'
 
 const Navbar = () => {
   let {token,setToken} = useContext(TokenContext)
@@ -13,9 +14,11 @@ const Navbar = () => {
   }
   return (
     <>
-      <nav className="navbar navbar-expand-lg py-2 navbar-dark bg-dark fixed-top">
-        <div className="container d-flex justify-content-between">
-          <Link to="#" className="navbar-brand">Logo</Link>
+      <nav className="navbar navbar-expand-lg py-2 navbar-dark bg-black fixed-top">
+        <div className="container ">
+          <div className="logo me-3">
+          <img src={logo} style={{width : "120px"}} alt="" />
+          </div>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -48,7 +51,6 @@ const Navbar = () => {
                 <Link to="/register" className="nav-link text-white" aria-current="page">Register</Link>
               </li>
               </>}
-            
             </ul>
           </div>
         </div>
