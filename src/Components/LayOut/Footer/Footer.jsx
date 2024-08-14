@@ -74,7 +74,8 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="col-md-2 col-lg-2 col-xl-2 mb-4">
+            <div className="col-md-2 col-lg-2 col-xl-2 mb-4 trans">
+              
               <h6 className="text-uppercase fw-bold mb-4">About</h6>
               <p>
                 <a href="#!" className={styles.textReset}>
@@ -158,15 +159,12 @@ const Footer = () => {
                 <img src={PaymentMethod} alt="Payment Methods" />
               </a>
             </div>
+            <hr></hr>
+            <div className="d-flex justify-content-between pb-3  text-secondary">
+              <span>© 2024, GATES -  Ecommerce </span>
+              <span>Designed by Abdelaziz. All rights reserved</span>
+            </div>
           </div>
-        </div>
-
-        <div
-          className="text-center p-4"
-          style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}
-        >
-          © 2024 Copyright:
-          <a className={`text-reset fw-bold ${styles.textReset}`}>GATES</a>
         </div>
       </footer>
     </>

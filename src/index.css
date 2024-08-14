@@ -1,40 +1,40 @@
-
-.bg-lamon{
-    background-color: #AECCC5;
+.bg-lamon {
+  background-color: #aeccc5;
 }
-    background-color: #F8F9FA !important;
+.bg-gray {
+  background-color: #f8f9fa !important;
 }
-.bg-main{
-    background-color: #088178 !important;
+.bg-main {
+  background-color: #088178 !important;
 }
-.text-main{
-    color: #088178 !important;
+.text-main {
+  color: #088178 !important;
 }
-.text-sec{
-    color: #383E50 !important;
+.text-sec {
+  color: #383e50 !important;
 }
-.btn-main{
-    background-color: #088178 !important;
-    color: white !important;
+.btn-main {
+  background-color: #088178 !important;
+  color: white !important;
 }
-.btn-main:hover{
-    background-color: #046963 !important;
+.btn-main:hover {
+  background-color: #046963 !important;
 }
 
 /* reset form-control class */
 
 .form-control:focus {
-    border: 1px solid rgba(0, 0, 0, 0.149) !important;
-    outline: 0;
-    box-shadow: 0 0 0 0 rgba(3, 15, 33, 0.25) !important;
-    background-color: white !important;
+  border: 1px solid rgba(0, 0, 0, 0.149) !important;
+  outline: 0;
+  box-shadow: 0 0 0 0 rgba(3, 15, 33, 0.25) !important;
+  background-color: white !important;
 }
-.form-control{
-    border: 1px solid transparent !important;
-    font-size: 13px !important ;
-    padding: 10px !important;
+.form-control {
+  border: 1px solid transparent !important;
+  font-size: 13px !important ;
+  padding: 10px !important;
 }
-input::placeholder{
-    font-size: 12px ;
-    color: rgba(128, 128, 128, 0.604) !important;
+input::placeholder {
+  font-size: 12px;
+  color: rgba(128, 128, 128, 0.604) !important;
 }
