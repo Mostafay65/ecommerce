@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ProductMainCard from "../Cards/ProductMainCard";
+import ProductMainCard from "../../Cards/ProductMainCard";
 
 const MainBodyOfHome = () => {
   const [products, setProducts] = useState([]);
@@ -23,14 +23,12 @@ const MainBodyOfHome = () => {
 
     fetchProducts();
   }, []);
-  debugger;
   return (
     <div className="container py-5">
       <div className="row">
         {loading ? (
-          <div className="d-flex justify-content-center align-items-center w-100" >
-            <div className="spinner-border text-main" role="status">
-            </div>
+          <div className="d-flex justify-content-center align-items-center w-100">
+            <div className="spinner-border text-main" role="status"></div>
           </div>
         ) : (
           products.map((product) => (

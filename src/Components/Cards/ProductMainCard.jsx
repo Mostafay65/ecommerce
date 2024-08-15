@@ -5,7 +5,7 @@ import Rating from "../Helpers/Rating";
 const ProductMainCard = ({ Product }) => {
   return (
     <>
-      <div className="p-2 col-6 col-md-4 col-lg-3 col-xl-2 ">
+      <div className="p-2 col-6 col-md-4 col-lg-3 ">
         <div
           className={`${styles.product_card} p-3 d-flex flex-column justify-content-between`}
         >
