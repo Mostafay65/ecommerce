@@ -1,0 +1,75 @@
+.bannersContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.bannerImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.textOverlay {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: #333;
+  text-align: left;
+  max-width: 80%;
+}
+
+.textOverlay h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+.textOverlay h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.learnMoreButton {
+    background-color: transparent;
+    color: #006f46;
+    font-size: 14px;
+    text-decoration: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .learnMoreButton:hover {
+    color: #004c32;
+  }
+  
+  .learnMoreButton:hover .mrgnLeftOnHover {
+    margin-left: 3px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .mrgnLeftOnHover {
+    display: inline-block;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .textOverlay h3, .textOverlay h2 {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .textOverlay h3:hover, .textOverlay h2:hover {
+    transform: translateX(5px); /* Move text slightly to the right */
+    color: #004c32; /* Optional: Change color on hover */
+  }
+  
