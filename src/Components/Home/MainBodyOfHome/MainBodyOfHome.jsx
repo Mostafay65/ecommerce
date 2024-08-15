@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import ProductMainCard from "../../Cards/ProductMainCard";
+import ProductMainCard from "../../Cards/ProductMainCard/ProductMainCard";
 import bannar from "./../../../imgs/theme/Home/banner-4.png";
-
 
 const MainBodyOfHome = () => {
   const [products, setProducts] = useState([]);
@@ -38,9 +37,7 @@ const MainBodyOfHome = () => {
           ))
         )}
       </div>
-
     </div>
-    
   );
 };
 
