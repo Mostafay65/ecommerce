@@ -1,0 +1,67 @@
+.bannerContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px; /* Adjust the height as needed */
+    overflow: hidden;
+  }
+  
+  .bannerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .textOverlay {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    color: #000; /* Adjust the color as needed */
+    max-width: 500px; /* Adjust the width if needed */
+  }
+  
+  .textOverlay h3 {
+    font-size: 18px;
+    color: #65a15d; /* Match the original color */
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+  }
+  
+  .textOverlay h3:hover {
+    transform: translateX(10px); /* Move the h3 up by 10px on hover */
+    color: #099360;
+  }
+  
+  .textOverlay h2 {
+    font-size: 32px;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .learnMoreButton {
+    background-color: #006f46; /* Button color */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    position: relative; /* Ensure the span can be positioned absolutely */
+  }
+  
+  .learnMoreButton:hover {
+    background-color: #004c32; /* Darker green on hover */
+  }
+  
+  .mrgnLeftOnHover {
+    display: inline-block; /* Make the span behave as inline-block */
+    transition: transform 0.3s ease; /* Smooth transition for the arrow effect */
+  }
+  
+  .learnMoreButton:hover .mrgnLeftOnHover {
+    transform: translateX(5px); /* Move the arrow to the right by 5px on hover */
+  }
+  
