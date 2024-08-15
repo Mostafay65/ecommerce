@@ -1,16 +1,18 @@
 .nav{
     color: black !important;
-    background-color: white;
+    
 }
 .scrolled{
     padding: 10px;
     transition: 0.3s;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255) !important;
 }
 .notScrolled{
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
     padding: 15px;
     transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.124) !important;
 }
 .cart{
     position: relative;
