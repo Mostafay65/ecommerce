@@ -1,23 +1,39 @@
-import React, { useContext } from 'react';
-import styles from './Navbar.module.css';
-import { Link } from 'react-router-dom';
+import React, { useContext, useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import { TokenContext } from '../../Context/Token';
-import logo from '../../../assets/ecocart-high-resolution-logo-transparent (1).png'
+import logo from '../../../assets/ecocart-high-resolution-logo-transparent.png';
+import styles from './Navbar.module.css';
 
 const Navbar = () => {
-  let {token,setToken} = useContext(TokenContext)
-  // console.log(token);
-  
-  function handleSignOut(){
-    localStorage.removeItem('userToken')
-    setToken(null)
+  let { token, setToken } = useContext(TokenContext);
+  const [scrolledDown, setScrolledDown] = useState(false);
+
+  function handleSignOut() {
+    localStorage.removeItem('userToken');
+    setToken(null);
   }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolledDown(true);
+      } else {
+        setScrolledDown(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <nav className="navbar navbar-expand-lg py-2 navbar-dark bg-black fixed-top">
-        <div className="container px-2 ">
+      <nav className={`navbar navbar-expand-lg bg-white fixed-top ${styles.nav} ${scrolledDown ? styles.scrolled : styles.notScrolled}`}>
+        <div className="container px-2">
           <div className="logo me-3">
-          <img src={logo} style={{width : "120px"}} alt="" />
+            <img src={logo} style={{ width: '120px' }} alt="Logo" />
           </div>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -25,38 +41,61 @@ const Navbar = () => {
           <div className="collapse navbar-collapse text-center" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link to="/home" className="nav-link text-white" aria-current="page">Home</Link>
+                <NavLink to="/home" className={({ isActive }) => `${isActive ? 'text-main' : ''} nav-link`} aria-current="page">
+                  Home
+                </NavLink>
               </li>
               <li className="nav-item">
-                <Link to="/products" className="nav-link text-white" aria-current="page">Products</Link>
+                <NavLink to="/products" className={({ isActive }) => `${isActive ? 'text-main' : ''} nav-link`} aria-current="page">
+                  Products
+                </NavLink>
               </li>
+             {token ? (
+               <li className="nav-item">
+               <NavLink to="/cart" className={({ isActive }) => `${isActive ? 'text-main' : ''} nav-link `} aria-current="page">
+                 <p className={`p-0 m-0 ${styles.cart}`}>
+                  Cart
+                  <span className={`${styles.cartNum}`}>0</span>
+                  </p>
+                 
+               </NavLink>
+             </li>
+             ):""}
               <li className="nav-item">
-                <Link to="/cart" className="nav-link text-white" aria-current="page">Cart</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/about-us" className="nav-link text-white" aria-current="page">About Us</Link>
+                <NavLink to="/about-us" className={({ isActive }) => `${isActive ? 'text-main' : ''} nav-link`} aria-current="page">
+                  About Us
+                </NavLink>
               </li>
             </ul>
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               {token ? (
+                <li className="nav-item">
+                  <NavLink to="/" className={`nav-link text-main ${styles.logoutIcon} `} aria-current="page" onClick={handleSignOut}>
+                    Log Out
+                    <i className={`fa-solid ms-2 text-main fa-right-from-bracket fa-xl ${styles.logoutIcon}`}></i>
+                  </NavLink>
+                </li>
+              ) : (
+                <>
                   <li className="nav-item">
-                  <Link to="/" className="nav-link text-white " aria-current="page" onClick={handleSignOut}>Log Out<i class="fa-solid ms-2 fa-right-from-bracket fa-xl"></i></Link>
+                    <NavLink to="/login" className={({ isActive }) => `${isActive ? 'text-main' : ''} nav-link`} aria-current="page">
+                      Login
+                    </NavLink>
                   </li>
-              ):<>
-              <li className="nav-item">
-                <Link to="/login" className="nav-link text-white" aria-current="page">Login</Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/register" className="nav-link text-white" aria-current="page">Register</Link>
-              </li>
-              </>}
+                  <li className="nav-item">
+                    <NavLink to="/register" className={({ isActive }) => `${isActive ? 'text-main' : ''} nav-link`} aria-current="page">
+                      Register
+                    </NavLink>
+                  </li>
+                </>
+              )}
             </ul>
           </div>
         </div>
       </nav>
     </>
   );
-}
+};
 
 export default Navbar;

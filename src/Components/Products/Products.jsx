@@ -4,25 +4,29 @@ import ProductMainCard from "../Cards/ProductMainCard";
 import Spinner from "../Helpers/Spinner";
 const Products = () => {
     const [Products, SetProducts] = useState([]);
-    const [Loading, SetLoading] = useState(true);
-    useEffect(() => {
-        const fetchProducts = async () => {
-            const URL = "https://ecommerce.routemisr.com/api/v1/products";
-            const res = await fetch(URL);
-            const data = await res.json();
-            SetProducts(data["data"]);
-            // console.log(Products);
-        };
-        fetchProducts();
+    const [Loading, SetLoading] = useState(false);
+    
+    const fetchProducts = async () => {
+        SetLoading(true)
+        console.log(Loading); 
+        const URL = "https://ecommerce.routemisr.com/api/v1/products";
+        const res = await fetch(URL);
+        const data = await res.json();
+        SetProducts(data["data"]);
         SetLoading(false);
+        console.log(Loading);
+    };
+    useEffect(() => {   
+        fetchProducts();
     }, []);
     return (
         <>
-            {Loading ? (
+           <div id="products" className="products py-5">
+           {Loading ? (
                 <Spinner />
             ) : (
-                <div className="container" style={{ padding: "100px 0" }}>
-                    <div className="row">
+                <div className="container py-5  " >
+                    <div className="row ">
                         {console.log(Products[0])}
                         {Products.map((Product) => (
                             <ProductMainCard
@@ -33,6 +37,7 @@ const Products = () => {
                     </div>
                 </div>
             )}
+           </div>
         </>
     );
 };
