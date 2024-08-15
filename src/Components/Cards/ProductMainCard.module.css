@@ -6,10 +6,18 @@
     background-color: #fff;
     transition-duration: 0.3s;
     height: 100%;
+    overflow: hidden;
+
 }
 .product_card:hover {
     box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.1);
     transform: scale(1.02);
+}
+
+.product_card:hover .product_image {
+
+    transform: scale(1.1);
+
 }
 
 .badge {
@@ -21,12 +29,14 @@
     padding: 4px 8px;
     border-radius: 12px;
     font-size: 12px;
+    z-index:1;
 }
 
 .product_image {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 16px;
+    transition-duration: 0.4s;
 }
 
 
