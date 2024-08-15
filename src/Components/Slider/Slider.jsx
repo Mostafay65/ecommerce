@@ -1,7 +1,6 @@
 import React from "react";
 import SImg1 from "./../../imgs/theme/Slider/banner-3.png";
 import SImg2 from "./../../imgs/theme/Slider/hero4.png";
-import SImg3 from "./../../imgs/theme/Slider/img3.jpg";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';

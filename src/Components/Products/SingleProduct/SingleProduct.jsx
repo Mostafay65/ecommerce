@@ -224,7 +224,7 @@ const SingleProduct = () => {
                             className={`${Style.banner}`}
                             style={{ backgroundImage: `url(${bannerImage2})` }}
                         >
-                            <p>men's-clothing, men's-fashion</p>
+                            <p>men's-clothing, women's-fashion</p>
                             <h1>
                                 All clothing you need will found it here
                                 <br/>

@@ -11,6 +11,7 @@ import TokenContextProvider, { TokenContext } from "./Components/Context/Token";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useContext, useEffect } from "react";
+import CartProvider from "./Components/Context/CartContext";
 import SingleProduct from "./Components/Products/SingleProduct/SingleProduct";
 
 function App() {
@@ -39,9 +40,9 @@ function App() {
     ]);
 
     return (
-        <TokenContextProvider>
+        <CartProvider>
             <RouterProvider router={routes} />
-        </TokenContextProvider>
+        </CartProvider>
     );
 }
 

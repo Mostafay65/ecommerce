@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import ProductMainCard from "../Cards/ProductMainCard";
+import ProductMainCard from "../../Cards/ProductMainCard";
+import bannar from "./../../../imgs/theme/Home/banner-4.png";
+
 
 const MainBodyOfHome = () => {
   const [products, setProducts] = useState([]);
@@ -9,7 +11,7 @@ const MainBodyOfHome = () => {
     const fetchProducts = async () => {
       try {
         const response = await fetch(
-          "https://ecommerce.routemisr.com/api/v1/products?limit=12"
+          "https://ecommerce.routemisr.com/api/v1/products?limit=8"
         );
         const data = await response.json();
         console.log(data.data);
@@ -23,14 +25,12 @@ const MainBodyOfHome = () => {
 
     fetchProducts();
   }, []);
-  debugger;
   return (
     <div className="container py-5">
       <div className="row">
         {loading ? (
-          <div className="d-flex justify-content-center align-items-center w-100" >
-            <div className="spinner-border text-main" role="status">
-            </div>
+          <div className="d-flex justify-content-center align-items-center w-100">
+            <div className="spinner-border text-main" role="status"></div>
           </div>
         ) : (
           products.map((product) => (
@@ -38,7 +38,9 @@ const MainBodyOfHome = () => {
           ))
         )}
       </div>
+
     </div>
+    
   );
 };
 

@@ -1,0 +1,17 @@
+.SwiperSlide{
+    overflow:hidden ;
+}
+.SwiperSlide img{
+    transition: 0.3s;
+}
+
+.SwiperSlide:hover img{
+    transform: scale(1.05);
+}
+.SwiperSlide p{
+    transition: 0.3s;
+}
+
+.SwiperSlide:hover p{
+    color: #046963;
+}
