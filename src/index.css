@@ -20,6 +20,9 @@
 .btn-main:hover {
   background-color: #046963 !important;
 }
+.text-xsm{
+  font-size: 12px;
+}
 
 /* reset form-control class */
 
@@ -31,7 +34,6 @@
 }
 .form-control {
   border: 1px solid transparent !important;
-  font-size: 13px !important ;
   padding: 10px !important;
 }
 input::placeholder {
@@ -47,4 +49,42 @@ input::placeholder {
 }
 .navbar-toggler{
   border: none !important;
+}
+
+/* Swiper and its slides */
+
+.swiper-pagination-bullet {
+  padding: 6px;
+}
+.swiper-pagination-bullet-active {
+  background-color: #046963 !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #088178 !important;
+  transition: all;
+  transition-duration: 0.3s;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  color: #046963 !important;
+}
+.slide{
+  background-position: center;
+  background-size: cover;
+}
+.slide .container{
+  top: 50%;
+  transform: translateY(-50%);
+}
+.slide .container h2:nth-child(3){
+  color: #046963;
+}
+.slide .container button{
+  background-image: url(./imgs/theme/Slider/button.png);
+  padding: 14px 80px 14px 65px ;
+  color: #046963;
+}
+.slide .container p{
+color: rgba(0, 0, 0, 0.511);
+font-size: 18px;
 }
