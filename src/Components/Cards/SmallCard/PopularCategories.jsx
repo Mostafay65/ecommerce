@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SCard1 from "./../../../imgs/theme/SmallCard/feature-1.png";
-import style from './SmallCard.module.css'
+import style from './PopularCategories.module.css'
 import axios from "axios";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
