@@ -2,9 +2,11 @@ import React, { useContext } from "react";
 import styles from "./Home.module.css";
 import Slider from "../Slider/Slider";
 import MainBodyOfHome from "./MainBodyOfHome/MainBodyOfHome";
-import PopularCategories from "../Cards/SmallCard/PopularCategories";
+import PopularCategories from "../Cards/PopularCategorieCard/PopularCategories";
 import OneImgBaner from "./ImgBaners/oneImgBaner";
 import ImgBaner from "./ImgBaners/ImgBaner";
+import SellBanner from "./ImgBaners/SellBanner";
+import NewArrival from "../Cards/ProductSecondaryCard/ProductSecondaryCard";
 const Home = () => {
   return (
     <>
@@ -13,8 +15,8 @@ const Home = () => {
       <OneImgBaner/>
       <PopularCategories/>
       <ImgBaner/>  
-
-
+      <SellBanner/>
+      <NewArrival/>
     </>
   );
 };

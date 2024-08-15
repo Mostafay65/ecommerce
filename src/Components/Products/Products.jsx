@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Products.module.css";
-import ProductMainCard from "../Cards/ProductMainCard";
+import ProductMainCard from "../Cards/ProductMainCard/ProductMainCard";
 import Spinner from "../Helpers/Spinner";
 import { Link } from "react-router-dom";
 const Products = () => {
