@@ -1,0 +1,133 @@
+.mainimg {
+    height: 70%;
+    width: 100%;
+}
+
+.subimg {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 8px;
+    width: 20%;
+    height: 20%;
+}
+
+.subimg:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+.maincolor {
+    color: #088178;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+}
+
+.current_price {
+    font-weight: bold;
+    color: #088178;
+    margin-right: 20px;
+}
+
+.original_price {
+    font-size: 15px;
+    color: #999;
+    text-decoration: line-through;
+    margin-right: 20px;
+}
+
+.off {
+    font-size: 15px;
+    color: #4f5d77;
+}
+
+.details {
+    color: #4f5d77;
+}
+
+.add_to_cart_button {
+    background-color: #088178;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: 0.4s;
+}
+
+.add_to_cart_button:hover {
+    background-color: #056963;
+}
+
+.quantity {
+    width: 100px;
+    border: 1px solid #cce7d0;
+    border-radius: 5px;
+    padding: 3px 5px;
+    outline: none;
+    font-size: 16px;
+    color: #455a64;
+}
+
+.ItemsColor {
+    color: #3fd092;
+}
+
+.Category {
+    border: 1px solid #e8e8e8;
+    padding: 40px;
+}
+
+.Category h3 {
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #056963;
+    transition-duration: 0.5s;
+}
+
+.Category li {
+    text-decoration: none;
+    padding-bottom: 8px;
+    transition-duration: 0.5s;
+}
+
+.Category h3:hover,
+.Category li:hover {
+    border-bottom: 1px solid #056963;
+    color: #088178;
+    transform: translateX(5px);
+}
+
+.banner {
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.banner h3 {
+    max-width: 200px;
+    transition-duration: 0.5s;
+}
+.banner h3:hover {
+    transform: translateX(5px);
+}
+
+.banner a {
+    text-decoration: none;
+    color: #056963;
+}
+.banner i{
+    transition-duration: 0.5s;
+}
+
+.banner a:hover i {
+    transform: translateX(5px);
+}
