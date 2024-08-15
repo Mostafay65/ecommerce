@@ -7,23 +7,20 @@ import Login from "./Components/Login/Login";
 import Register from "./Components/Register/Register";
 import Cart from "./Components/Cart/Cart";
 import NotFound from "./Components/NotFound/NotFound";
-import TokenContextProvider, { TokenContext } from './Components/Context/Token';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import TokenContextProvider, { TokenContext } from "./Components/Context/Token";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useContext, useEffect } from "react";
 import CartProvider from "./Components/Context/CartContext";
+import SingleProduct from "./Components/Products/SingleProduct/SingleProduct";
 
 function App() {
-
-    
     useEffect(() => {
         AOS.init({
             duration: 1200, // Adjust animation duration if needed
-            once: false,   // Make sure `once` is set to false if you want animations to re-trigger
+            once: false, // Make sure `once` is set to false if you want animations to re-trigger
         });
     }, []);
-
-   
 
     const routes = createBrowserRouter([
         {
@@ -33,6 +30,7 @@ function App() {
                 { path: "", element: <Home /> },
                 { path: "home", element: <Home /> },
                 { path: "products", element: <Products /> },
+                { path: "products/:id", element: <SingleProduct /> },
                 { path: "login", element: <Login /> },
                 { path: "register", element: <Register /> },
                 { path: "cart", element: <Cart /> },
