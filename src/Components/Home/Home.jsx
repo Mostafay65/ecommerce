@@ -6,7 +6,7 @@ import PopularCategories from "../Cards/PopularCategorieCard/PopularCategories";
 import OneImgBaner from "./ImgBaners/oneImgBaner";
 import ImgBaner from "./ImgBaners/ImgBaner";
 import SellBanner from "./ImgBaners/SellBanner";
-import NewArrival from "../Cards/ProductSecondaryCard/ProductSecondaryCard";
+
 const Home = () => {
   return (
     <>
@@ -16,7 +16,7 @@ const Home = () => {
       <PopularCategories/>
       <ImgBaner/>  
       <SellBanner/>
-      <NewArrival/>
+      
     </>
   );
 };

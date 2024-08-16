@@ -1,31 +1,35 @@
-import React from 'react';
-import styles from './ProductSecondaryCard.module.css';
-import Rating from '../../Helpers/Rating';
-import img from "./../../../imgs/theme/Home/product-5-2.jpg";
+import React from "react";
+import styles from "./ProductSecondaryCard.module.css";
+import Rating from "../../Helpers/Rating";
+import { Link } from "react-router-dom";
 
-export default function NewArrival() {
-  const product = {
-    title: "Lorem ipsum dolor",
-    price: 238.85,
-    originalPrice: 245.8,
-    rating: 4.5,
-    isHot: true,
-  };
+const ProductSecondaryCard = ({ Product }) => {
+    // console.log(Product);
+    return (
+        <Link
+            to={`/products/${Product.id}`}
+            className={`${styles.card} my-2 text-decoration-none`}
+        >
+            <div className={styles.hotTag}>{Product.brand.name}</div>
+            <div className={styles.imageContainer}>
+                <img
+                    src={Product.imageCover}
+                    alt={Product.title}
+                    className={styles.image}
+                />
+            </div>
+            <h2 className={styles.title}>{Product.title}</h2>
+            <div className={styles.rating}>
+                <Rating rating={Product.ratingsAverage} />
+            </div>
+            <div className={styles.priceContainer}>
+                <span className={styles.price}>${Product.price}.00</span>
+                <span className={styles.originalPrice}>
+                    ${Product.price + (Product.price * 20) / 100}.00
+                </span>
+            </div>
+        </Link>
+    );
+};
 
-  return (
-    <div className={styles.card}>
-      {product.isHot && <div className={styles.hotTag}>Hot</div>}
-      <div className={styles.imageContainer}>
-        <img src={img} alt={product.title} className={styles.image} />
-      </div>
-      <h2 className={styles.title}>{product.title}</h2>
-      <div className={styles.rating}>
-        <Rating rating={product.rating} />
-      </div>
-      <div className={styles.priceContainer}>
-        <span className={styles.price}>${product.price.toFixed(2)}</span>
-        <span className={styles.originalPrice}>${product.originalPrice.toFixed(2)}</span>
-      </div>
-    </div>
-  );
-}
+export default ProductSecondaryCard;

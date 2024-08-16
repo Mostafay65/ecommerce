@@ -4,6 +4,7 @@ import { CartContext } from "../Context/CartContext";
 import Loader from "../Helpers/Loader";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
+import Spinner from "../Helpers/Spinner";
 
 export default function Cart() {
   const {
@@ -27,7 +28,7 @@ export default function Cart() {
 
   async function removeProductFromCart(id) {
     const data = await removeFromCart(id);
-    if (data.status == "success") {
+    if (data.status === "success") {
       toast.success("Product Removed From Cart Successfully", {
         theme: "dark",
       });
@@ -39,7 +40,7 @@ export default function Cart() {
 
   async function clearCarts() {
     const data = await clearCart();
-    if (data.message == "success") {
+    if (data.message === "success") {
       toast.success("Product Removed From Cart Successfully", {
         theme: "dark",
       });
@@ -54,9 +55,9 @@ export default function Cart() {
   async function updateProductQuantity(id, count) {
     const data = await updateProductQty(id, count);
     console.log(data);
-    if (data.status == "success") {
+    if (data.status === "success") {
       getCartDetails();
-      if (count == 0) {
+      if (count === 0) {
         removeProductFromCart(id);
       } else {
         toast.success("Product Quantity Updated Successfully", {
@@ -74,7 +75,7 @@ export default function Cart() {
   }, []);
   return (
     <section>
-      {isLoading && <Loader />}
+      {isLoading && <Spinner />}
       <div className="container py-5 h-100 ">
         {cartDetails ? (
           <section>
@@ -157,10 +158,10 @@ export default function Cart() {
 
                           <div className="pt-5">
                             <h6 className="mb-0">
-                              <a href="#!" className="text-body">
+                              <Link to={`/Products`} className="text-body">
                                 <i className="fas fa-long-arrow-alt-left me-2"></i>
                                 Back to shop
-                              </a>
+                              </Link>
                             </h6>
                           </div>
                         </div>
