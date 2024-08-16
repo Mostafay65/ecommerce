@@ -13,7 +13,6 @@ const MainBodyOfHome = () => {
           "https://ecommerce.routemisr.com/api/v1/products?limit=8"
         );
         const data = await response.json();
-        console.log(data.data);
         setProducts(data.data);
         setLoading(false);
       } catch (error) {

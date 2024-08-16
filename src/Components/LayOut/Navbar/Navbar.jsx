@@ -3,15 +3,20 @@ import { NavLink, useLocation } from "react-router-dom";
 import { TokenContext } from "../../Context/Token";
 import logo from "../../../assets/ecocart-high-resolution-logo-transparent.png";
 import styles from "./Navbar.module.css";
+import { CartContext } from "../../Context/CartContext";
 
 const Navbar = () => {
   let { token, setToken } = useContext(TokenContext);
   const [scrolledDown, setScrolledDown] = useState(false);
   const location = useLocation();
+  let {numOfItems,getCart} =useContext(CartContext)
 
   function handleSignOut() {
     localStorage.removeItem("userToken");
     setToken(null);
+  }
+  async function getUserCart() {
+    await getCart()
   }
 
   useEffect(() => {
@@ -27,7 +32,12 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
+    
   }, []);
+
+  useEffect(()=>{
+    getUserCart()
+  },[])
 
   return (
     <>
@@ -91,7 +101,7 @@ const Navbar = () => {
                   >
                     <p className={`p-0 m-0 ${styles.cart}`}>
                       Cart
-                      <span className={`${styles.cartNum}`}>0</span>
+                      <span className={`${styles.cartNum}`}>{numOfItems}</span>
                     </p>
                   </NavLink>
                 </li>
