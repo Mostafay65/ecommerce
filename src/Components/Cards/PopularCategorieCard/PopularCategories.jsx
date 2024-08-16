@@ -14,9 +14,7 @@ const SmallCard = () => {
   const [categories,setCategories] =useState([]) 
 
   async function getCategories(){
-   let {data} =await axios.get(`https://ecommerce.routemisr.com/api/v1/categories`);
-   console.log(data.data[0]);
-   
+   let {data} =await axios.get(`https://ecommerce.routemisr.com/api/v1/categories`);   
    setCategories(data.data)
   }
   useEffect(()=>{

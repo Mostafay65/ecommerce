@@ -34,7 +34,6 @@ export default function CartProvider({children}){
                 headers,
             });
             setNumOfItems(data.numOfCartItems);
-            console.log(numOfItems);
             return data; 
         }
         catch(error){
