@@ -1,8 +1,18 @@
 .mainimg {
-    height: 70%;
+    height: 100%;
     width: 100%;
+    transition-duration: .3s;
 }
 
+.mainimg:hover {
+    cursor: zoom-in;
+    transform: scale(1.5);
+}
+
+.ImagContainer {
+    height: 70%;
+    overflow: hidden;
+}
 .subimg {
     background-color: white;
     border-radius: 10px;
@@ -130,4 +140,11 @@
 
 .banner a:hover i {
     transform: translateX(5px);
+}
+
+.RelatedProducts h1 {
+    color: #222222;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #088178;
 }

@@ -54,6 +54,7 @@
   font-weight: bold;
   margin: 10px 0;
   transition: color 0.3s ease;
+  color: #1A1A1A;
 }
 
 .title:hover {
