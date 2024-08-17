@@ -16,6 +16,7 @@ import "aos/dist/aos.css";
 import { useContext, useEffect } from "react";
 import CartProvider from "./Components/Context/CartContext";
 import SingleProduct from "./Components/Products/SingleProduct/SingleProduct";
+import ChangePassword from "./Components/ChangePassword/ChangePassword";
 
 function App() {
     useEffect(() => {
@@ -38,6 +39,7 @@ function App() {
                 { path: "login", element: <Login /> },
                 { path: "register", element: <Register /> },
                 { path: "cart", element: <Cart /> },
+                { path: "changePassword", element: <ChangePassword /> },
                 { path: "*", element: <NotFound /> },
             ],
         },
