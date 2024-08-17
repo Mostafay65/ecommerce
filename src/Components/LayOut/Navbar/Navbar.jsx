@@ -16,7 +16,7 @@ const Navbar = () => {
     setToken(null);
   }
   async function getUserCart() {
-    await getCart()
+   if(token) await getCart()
   }
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Navbar = () => {
 
   useEffect(()=>{
     getUserCart()
-  },[])
+  },[token])
 
   return (
     <>
