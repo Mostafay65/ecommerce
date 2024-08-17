@@ -8,7 +8,7 @@ import logo from '../../../assets/ecocart-high-resolution-logo-transparent.png'
 const Footer = () => {
   return (
     <>
-      <footer className="pt-5">
+      <footer className="">
         {/* Newsletter Section */}
         <section className={`${styles.newsletterSection} bg-lamon py-5`}>
           <div className="container">
