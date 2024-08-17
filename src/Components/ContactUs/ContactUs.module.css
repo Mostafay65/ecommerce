@@ -1,0 +1,149 @@
+.contact_section {
+    background-color: #d8f1eb;
+    padding: 200px 20px;
+    text-align: center;
+}
+
+.contact_content {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.contact_subtitle {
+    font-size: 1.2rem;
+    color: #1b8663;
+    margin-bottom: 20px;
+}
+
+.contact_title {
+    font-size: 4rem;
+    max-width: 600px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.contact_description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.contact_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.contact_btn {
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 1rem;
+    border: 2px solid #1b8663;
+    border-radius: 5px;
+    background-color: #1b8663;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact_btn:hover {
+    text-decoration: none;
+    background-color: #fff;
+    color: #1b8663;
+}
+
+.contact_btn.about-us {
+    background-color: #1b8663;
+}
+
+.contact_btn.support-center {
+    background-color: transparent;
+    color: #1b8663;
+}
+
+.contact_btn.support-center:hover {
+    background-color: #1b8663;
+    color: #fff;
+}
+
+.formContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+.formTitle {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #333333;
+}
+
+.formSubtitle {
+    text-align: center;
+    font-size: 1rem;
+    color: #777777;
+    margin-bottom: 2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.formControl {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.formControl::placeholder {
+    color: #cccccc;
+}
+
+textarea.formControl {
+    width: 100%;
+}
+
+.error {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.submitButton {
+    display: block;
+    width: 200px;
+    margin: 2rem auto 0;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #0a8754;
+    color: #ffffff;
+    text-align: center;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: #086a3f;
+}

@@ -165,6 +165,7 @@ const SingleProduct = () => {
                                         type="number"
                                         placeholder="Quantity.."
                                         min={1}
+                                        value={1}
                                         max={Product.quantity}
                                     />
                                     <button
