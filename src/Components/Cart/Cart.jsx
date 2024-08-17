@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import styles from "./Cart.module.css";
 import { CartContext } from "../Context/CartContext";
-import Loader from "../Helpers/Loader";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import Spinner from "../Helpers/Spinner";
@@ -30,7 +29,8 @@ export default function Cart() {
     const data = await removeFromCart(id);
     if (data.status === "success") {
       toast.success("Product Removed From Cart Successfully", {
-        theme: "dark",
+        theme: "light",
+        autoClose: 2500,
       });
       getCartDetails();
     } else {
@@ -42,7 +42,8 @@ export default function Cart() {
     const data = await clearCart();
     if (data.message === "success") {
       toast.success("Product Removed From Cart Successfully", {
-        theme: "dark",
+        theme: "light",
+        autoClose: 2500,
       });
       setCartDetails(null);
       getCartDetails();
@@ -61,7 +62,8 @@ export default function Cart() {
         removeProductFromCart(id);
       } else {
         toast.success("Product Quantity Updated Successfully", {
-          theme: "dark",
+          theme: "light",
+          autoClose: 2500,
         });
       }
     } else {
@@ -95,7 +97,7 @@ export default function Cart() {
                           <hr className="my-4" />
 
                           {cartDetails.data.products.map((product) => (
-                            <div className="row mb-4 d-flex justify-content-between align-items-center">
+                            <div className="row mb-4 d-flex justify-content-between align-items-center container">
                               <div className="col-md-2 col-lg-2 col-xl-2">
                                 <img
                                   src={product.product.imageCover}
@@ -148,13 +150,15 @@ export default function Cart() {
                                   }
                                   className="text-muted"
                                 >
-                                  <i className="fas fa-times"></i>
+                                  <i
+                                    style={{ cursor: "pointer" }}
+                                    className="fas fa-times"
+                                  ></i>
                                 </a>
                               </div>
+                              <hr className="my-4" />
                             </div>
                           ))}
-
-                          <hr className="my-4" />
 
                           <div className="pt-5">
                             <h6 className="mb-0">
@@ -184,13 +188,11 @@ export default function Cart() {
 
                           <div className="mb-4 pb-2">
                             <select data-mdb-select-init>
-                              <option value="1">
-                                Standard-Delivery- €5.00
-                              </option>
+                              <option value="1">Free shipping</option>
                             </select>
                           </div>
 
-                          <h5 className="text-uppercase mb-3">Email</h5>
+                          <h5 className="text-uppercase mb-3">Give code</h5>
 
                           <div className="mb-5">
                             <div className="form-outline">
@@ -203,7 +205,7 @@ export default function Cart() {
                                 className="form-label"
                                 htmlFor="form3Examplea2"
                               >
-                                Enter your Email
+                                Enter your code
                               </label>
                             </div>
                           </div>
@@ -217,13 +219,13 @@ export default function Cart() {
                             </h5>
                           </div>
 
-                          <button
-                            type="button"
+                          <Link
+                            to={`/checkout`}
                             className="btn btn-main btn-block btn-lg mb-3"
                             data-mdb-ripple-color="dark"
                           >
                             Checkout
-                          </button>
+                          </Link>
                           <button
                             onClick={clearCarts}
                             type="button"
