@@ -1,0 +1,35 @@
+/* YourStyle.module.css */
+
+.sliderContainer {
+    display: flex;
+    align-items: center;
+    /* background-color: rgb(140, 183, 131); */
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    justify-content: space-around;
+}
+
+.subimg {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 5px;
+    width: 20%;
+    height: 20%;
+    cursor: pointer;
+}
+
+button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
