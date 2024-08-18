@@ -93,24 +93,6 @@ const Navbar = () => {
                   Products
                 </NavLink>
               </li>
-              {token ? (
-                <li className="nav-item">
-                  <NavLink
-                    to="/cart"
-                    className={({ isActive }) =>
-                      `${isActive ? "text-main" : ""} nav-link `
-                    }
-                    aria-current="page"
-                  >
-                    <p className={`p-0 m-0 ${styles.cart}`}>
-                      Cart
-                      <span className={`${styles.cartNum}`}>{numOfItems}</span>
-                    </p>
-                  </NavLink>
-                </li>
-              ) : (
-                ""
-              )}
               <li className="nav-item">
                 <NavLink
                   to="/about-us"
@@ -122,11 +104,29 @@ const Navbar = () => {
                   About Us
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink
+                  to="/contact-us"
+                  className={({ isActive }) =>
+                    `${isActive ? "text-main" : ""} nav-link`
+                  }
+                  aria-current="page"
+                >
+                  Contact 
+                </NavLink>
+              </li>
             </ul>
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               {token ? (
                 <>
+                 <div className=" d-flex me-0 me-lg-3 mt-2 mb-3 my-lg-0 justify-content-center align-items-center">
+                   <Link to={'/cart'}>
+                   <i className="fas fa-xl fa-cart-shopping text-sec position-relative">
+                      <div className="bg-main position-absolute bottom-100 start-100 translate-middle text-white text-xsm d-flex justify-content-center align-items-center rounded-3 " style={{width:'18px',height:'18px'}}>{numOfItems}</div>
+                    </i>
+                   </Link>
+                  </div>
                   <div className="user-info justify-content-center d-flex align-items-center">
                     <div
                       className="icon rounded-pill bg-main d-flex justify-content-center align-items-center"
@@ -141,10 +141,10 @@ const Navbar = () => {
                         onClick={() => setScroll(!scroll)}
                       ></div>
                       <div
-                        className={`conChild position-absolute bg-white rounded-3 top-100 end-0 px-2 mt-2 py-2 ${
+                        className={`${styles.conChild} position-absolute rounded-2 top-100 end-0 px-2 mt-2 py-2 ${
                           scroll ? "" : "d-none"
                         } `}
-                        style={{ width: "160px" }}
+                        style={{ width: "180px" }}
                       >
                         <NavLink
                           to="/changePassword"
@@ -165,6 +165,7 @@ const Navbar = () => {
                       </div>
                     </div>
                   </div>
+                 
                 </>
               ) : (
                 <>

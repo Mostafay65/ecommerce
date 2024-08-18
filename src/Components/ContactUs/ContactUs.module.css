@@ -113,6 +113,12 @@
     font-size: 1rem;
     border: 1px solid #cccccc;
     border-radius: 4px;
+    font-size: 14px;
+}
+.formControl:focus{
+    border: 1px solid #086a3f !important;
+    outline: none;
+
 }
 
 .formControl::placeholder {
