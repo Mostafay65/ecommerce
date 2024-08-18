@@ -14,7 +14,7 @@ const Messages = () => {
   async function getMessages() {
     setLoading(true);
     let { data } = await axios.get(`http://localhost:4000/Messages`);
-    setMessages(data);
+    setMessages(data.reverse());
     setFilteredMessages(data); 
     setLoading(false);
   }

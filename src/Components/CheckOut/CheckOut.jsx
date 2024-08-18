@@ -79,9 +79,9 @@ export default function CheckOut() {
   }
 
   return (
-    <section className="py-5">
+    <section className="py-5 bg-gray">
       <title>Check Out</title>
-      <div className={`container p-5 my-5 ${styles.formContainer}`}>
+      <div className={`container p-5 my-5 ${styles.formContainer} bg-white`}>
         <h2>Checkout</h2>
 
         <form onSubmit={formik.handleSubmit} className={styles.form}>
@@ -156,33 +156,13 @@ export default function CheckOut() {
             ) : null}
           </div>
 
-          <div
-            className={`d-flex align-items-center justify-content-center py-3`}
-          >
-            <div className="form-check d-flex align-items-center">
-              <input
-                type="checkbox"
-                onChange={() => setisOnlinePayment(!isOnlinePayment)}
-                className="form-check-input custom-checkbox"
-                id="payment"
-              />
-              <label
-                htmlFor="payment"
-                className="form-check-label ms-2 fw-bold text-muted"
-              >
-                Online Payment
-              </label>
-            </div>
 
             <button
-              className={`btn ${
-                isOnlinePayment ? "btn-primary" : "btn-secondary"
-              } bg-main w-100 ms-3 payment-btn`}
+              className={`btn bg-main w-100 text-white ms-auto d-block payment-btn ${styles.CashBtn}`}
               disabled={!(formik.isValid && formik.dirty)}
             >
-              {isOnlinePayment ? "Online Payment" : "Cash Payment"}
+              Cash Payment
             </button>
-          </div>
         </form>
       </div>
     </section>

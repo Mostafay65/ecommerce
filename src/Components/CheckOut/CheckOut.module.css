@@ -19,3 +19,6 @@
     margin: 0 auto;
   }
   
+  .CashBtn{
+    width: fit-content !important;
+  }
