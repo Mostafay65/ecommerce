@@ -34,7 +34,7 @@ export default function BrandSwiper() {
       <Swiper
         modules={[Navigation, Pagination, Autoplay]} // Ensure Autoplay is included here
         spaceBetween={20}
-        slidesPerView={6}
+        slidesPerView={7}
         autoplay={{
           delay: 2000, 
         }}
