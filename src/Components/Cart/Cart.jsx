@@ -105,7 +105,7 @@ export default function Cart() {
                                   className="img-fluid rounded-3"
                                 />
                               </div>
-                              <div className="col-md-3 col-lg-3 col-xl-3">
+                              <div className={`${styles["margin-top-sm"]} col-md-3 col-lg-3 col-xl-3`}>
                                 <h6 className="text-muted">
                                   {product.product.category.name}
                                 </h6>
@@ -125,7 +125,7 @@ export default function Cart() {
                                 >
                                   <i className="fas fa-minus"></i>
                                 </button>
-                                <span className="mx-lg-3 mx-md-0 mx-3">
+                                <span className="mx-lg-3 mx-md-0 mx-3 mt-1">
                                   {product.count}
                                 </span>
                                 <button

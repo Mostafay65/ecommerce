@@ -1,0 +1,41 @@
+.orderCard {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .orderCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .itemCard {
+    transition: transform 0.3s ease;
+  }
+  
+  .itemCard:hover {
+    transform: scale(1.05);
+  }
+  
+  .itemInner {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .itemInner:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .text-main {
+    color: #007bff;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+  

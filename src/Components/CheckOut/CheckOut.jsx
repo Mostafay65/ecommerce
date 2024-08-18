@@ -16,7 +16,6 @@ export default function CheckOut() {
   };
 
   const validationSchema = Yup.object({
-    //Validation schema for YUP
     details: Yup.string()
       .min(5, "Give us More Details")
       .required("Details is required"),
@@ -32,12 +31,14 @@ export default function CheckOut() {
       .required("Phone Number is required"),
     email: Yup.string().email("Email Not Valid").required("Email is Required"),
   });
+
   const initialValues = {
     details: "",
     phone: "",
     city: "",
     email: "",
   };
+
   const formik = useFormik({
     initialValues,
     validationSchema,
@@ -59,16 +60,16 @@ export default function CheckOut() {
       );
       console.log(data);
       if (data.status == "success") {
-        toast.success("Order Placed Successfully", { theme: "dark" });
+        toast.success("Order Placed Successfully", { theme: "light" });
         setNumOfItems(0);
         if (isOnlinePayment) {
           setTimeout(() => (window.location.href = data.session.url), 5000);
         } else {
-          setTimeout(() => navigate(""), 5000);
+          setTimeout(() => navigate("/AllOrders"), 5000);
         }
       } else {
         toast.error("Something Went Wrong", {
-          theme: "dark",
+          theme: "light",
           position: "bottom-right",
         });
       }
@@ -80,14 +81,14 @@ export default function CheckOut() {
   return (
     <section className="py-5">
       <title>Check Out</title>
-      <div className="container p-5 my-5">
+      <div className={`container p-5 my-5 ${styles.formContainer}`}>
         <h2>Checkout</h2>
 
-        <form onSubmit={formik.handleSubmit}>
-          <div className="form-group mb-3">
+        <form onSubmit={formik.handleSubmit} className={styles.form}>
+          <div className={`form-group mb-3 ${styles.formGroup}`}>
             <label htmlFor="phone">Phone</label>
             <input
-              className="form-control border-dark"
+              className={`form-control bg-gray ${styles.input}`}
               id="phone"
               value={formik.values.phone}
               onChange={formik.handleChange}
@@ -96,34 +97,32 @@ export default function CheckOut() {
             />
             {formik.errors.phone && formik.touched.phone ? (
               <div className="alert alert-danger my-2">
-                {" "}
-                {formik.errors.phone}{" "}
+                {formik.errors.phone}
               </div>
             ) : null}
           </div>
 
-          <div className="form-group mb-3">
-            <label htmlFor="phone">Email</label>
+          <div className={`form-group mb-3 ${styles.formGroup}`}>
+            <label htmlFor="email">Email</label>
             <input
-              className="form-control border-dark"
+              className={`form-control bg-gray ${styles.input}`}
               id="email"
               value={formik.values.email}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               name="email"
             />
-            {formik.errors.phone && formik.touched.email ? (
+            {formik.errors.email && formik.touched.email ? (
               <div className="alert alert-danger my-2">
-                {" "}
-                {formik.errors.email}{" "}
+                {formik.errors.email}
               </div>
             ) : null}
           </div>
 
-          <div className="form-group mb-3">
+          <div className={`form-group mb-3 ${styles.formGroup}`}>
             <label htmlFor="city">City</label>
             <input
-              className="form-control border-dark"
+              className={`form-control bg-gray ${styles.input}`}
               type="text"
               id="city"
               name="city"
@@ -133,17 +132,15 @@ export default function CheckOut() {
             />
             {formik.errors.city && formik.touched.city ? (
               <div className="alert alert-danger my-2">
-                {" "}
-                {formik.errors.city}{" "}
+                {formik.errors.city}
               </div>
             ) : null}
           </div>
 
-          <div className="form-group mb-3">
+          <div className={`form-group mb-3 ${styles.formGroup}`}>
             <label htmlFor="details">Details</label>
             <textarea
-              type="text"
-              className="form-control border-dark"
+              className={`form-control bg-gray ${styles.input}`}
               id="details"
               name="details"
               value={formik.values.details}
@@ -154,39 +151,37 @@ export default function CheckOut() {
             ></textarea>
             {formik.errors.details && formik.touched.details ? (
               <div className="alert alert-danger my-2">
-                {" "}
-                {formik.errors.details}{" "}
+                {formik.errors.details}
               </div>
             ) : null}
           </div>
 
-          <div className="d-flex align-items-center ">
-            <input
-              type="checkbox"
-              onChange={() => setisOnlinePayment(!isOnlinePayment)}
-              className="form-check-input"
-              name=""
-              id="payment"
-            />
-            <label for="payment" className="form-check-label px-1">
-              Online Payment?
-            </label>
-
-            {isOnlinePayment ? (
-              <button
-                className="btn btn-success bg-main w-50 ms-3"
-                disabled={!(formik.isValid && formik.dirty)}
+          <div
+            className={`d-flex align-items-center justify-content-center py-3`}
+          >
+            <div className="form-check d-flex align-items-center">
+              <input
+                type="checkbox"
+                onChange={() => setisOnlinePayment(!isOnlinePayment)}
+                className="form-check-input custom-checkbox"
+                id="payment"
+              />
+              <label
+                htmlFor="payment"
+                className="form-check-label ms-2 fw-bold text-muted"
               >
                 Online Payment
-              </button>
-            ) : (
-              <button
-                className="btn btn-success bg-main w-50 ms-3"
-                disabled={!(formik.isValid && formik.dirty)}
-              >
-                Cash Payment
-              </button>
-            )}
+              </label>
+            </div>
+
+            <button
+              className={`btn ${
+                isOnlinePayment ? "btn-primary" : "btn-secondary"
+              } bg-main w-100 ms-3 payment-btn`}
+              disabled={!(formik.isValid && formik.dirty)}
+            >
+              {isOnlinePayment ? "Online Payment" : "Cash Payment"}
+            </button>
           </div>
         </form>
       </div>
