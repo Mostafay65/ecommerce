@@ -32,7 +32,7 @@ export default function BrandSwiper() {
         Our <span className="text-main">Brands</span>
       </h4>
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
+        modules={[Navigation, Pagination, Autoplay]} // Ensure Autoplay is included here
         spaceBetween={20}
         slidesPerView={6}
         autoplay={{
