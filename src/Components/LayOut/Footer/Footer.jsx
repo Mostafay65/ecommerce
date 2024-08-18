@@ -145,12 +145,8 @@ const Footer = () => {
               <h6 className="text-uppercase fw-semibold text-main mb-4">Install App</h6>
               <p>From App Store or Google Play</p>
               <div className="d-flex gap-2 mb-sm-4 mb-lg-0">
-                <a href="#" className="hover-up">
-                  <img className="active" src={AppStore} alt="App Store" />
-                </a>
-                <a href="#" className="hover-up">
-                  <img src={PlayStore} alt="Google Play Store" />
-                </a>
+                  <img width={110} src={AppStore} alt="App Store" />
+                  <img width={110} src={PlayStore} alt="Google Play Store" />
               </div>
               <p>Secured Payment Gateways</p>
               <a href="#" className="hover-up">
