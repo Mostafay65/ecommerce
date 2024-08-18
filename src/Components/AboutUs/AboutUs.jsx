@@ -10,6 +10,7 @@ import comp1 from '../../assets/About/company-1.jpg'
 import comp2 from '../../assets/About/company-2.jpg'
 import comp3 from '../../assets/About/company-3.jpg'
 import BrandSwiper from '../Home/BrandsSwiper/BrandsSwiper'
+import OurTeam from '../OurTeam/OurTeam'
 
 
 
@@ -29,6 +30,11 @@ const AboutUs = () => {
       name:"Patric Adams",
       role:"CEO & Co-Founder",
       image: team3
+    },
+    {
+      name:"Patric Adams",
+      role:"CEO & Co-Founder",
+      image: team4
     },
     {
       name:"Patric Adams",
@@ -95,29 +101,33 @@ const AboutUs = () => {
           <img src={aboutImage} className='img-fluid' alt="" />
         </div>
       </div>
-      <div className="row">
-        <div className="col-md-6  mb-md-4">
+      <div className="row justify-content-center ">
+      <div className="col-md-6 mb-md-4">
         <h4 className='h5 text-main'>Our Team</h4>
         <h2>Top team of experts</h2>
         <p className='text-sec'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione optio perferendis sequi mollitia quis autem ea cupiditate possimus!</p>
-        </div>
-        <div className="col-md-6 mb-4 mb-md-0 d-flex justify-content-md-end align-items-md-center">
-          <button className={`${styles.btnMain} py-2 rounded-2 px-3 text-xsm fw-semibold text-main text-uppercase `}>All Members</button>
-        </div>
-        {ourTeam.map((member)=>(
-          <div className="col-md-3 col-6 mb-4 rounded-3 text-center ">
-          <img src={member.image} className={`${styles.teamImg} img-fluid rounded-3 mb-2`} alt="" />
-          <h5 className='text-sec'>{member.name}</h5>
-          <p className=' text-main'>{member.role}</p>
-          <div className="icons d-flex justify-content-center text-sm gap-3">
-            <i className='fab fa-facebook-f text-secondary'></i>
-            <i className='fab fa-twitter text-secondary'></i>
-            <i className='fab fa-instagram text-secondary'></i>
-            <i className='fab fa-pinterest-p text-secondary'></i>
-          </div>
-        </div>
-        ))}
       </div>
+      <div className="col-md-6 mb-4 mb-md-0 d-flex justify-content-md-end align-items-md-center">
+        <button className={`${styles.btnMain} py-2 rounded-2 px-3 text-xsm fw-semibold text-main text-uppercase`}>All Members</button>
+      </div>
+      <div className="col-12">
+        <div className="row justify-content-center">
+          {ourTeam.map((member, index) => (
+            <div key={index} className="col-lg-2 col-md-3 col-6 mb-4 rounded-3 text-center">
+              <img src={member.image} className={`${styles.teamImg} img-fluid rounded-3 mb-2`} alt={member.name} />
+              <h5 className='text-sec'>{member.name}</h5>
+              <p className='text-main'>{member.role}</p>
+              <div className="icons d-flex justify-content-center text-sm gap-3">
+                <i className='fab fa-facebook-f text-secondary'></i>
+                <i className='fab fa-twitter text-secondary'></i>
+                <i className='fab fa-instagram text-secondary'></i>
+                <i className='fab fa-pinterest-p text-secondary'></i>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
       <hr  />
       <div className="row brenches text-center">
        <div className="branches-title py-3">
@@ -162,8 +172,11 @@ const AboutUs = () => {
         </div>
      </div>
        ))}
-       <button className={` btn m-auto mt-5 text-uppercase btn-main px-3 ${styles.viewMoreBtn}`}>View More</button>
+       <button className={` btn m-auto mt-5 mb-5 text-uppercase btn-main px-3 ${styles.viewMoreBtn}`}>View More</button>
       </div>
+      <hr />
+      <OurTeam/>
+      <hr/>
       <BrandSwiper/>
     </div>
   </section>

@@ -130,3 +130,49 @@ font-size: 18px;
   outline: 0;
   border: 1px solid #046963;
 }
+
+/* Cursuole */
+
+.customers .customer-image img{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  transform: translateY(50%);
+}
+.customers .customer{
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+.carousel-indicators.customers-indicators [data-bs-target]{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color:#046963;
+  margin-top: 20px;
+}
+.customers .cur-control-prev{
+  left: -20%;
+} 
+.customers .cur-control-next{
+  right: -20%;
+} 
+.customers .cur-icon {
+  color: black;
+}
+.customers .cur-icon:hover {
+  color: #088178
+}
+.cur-control:hover .cur-icon{
+  color: #046963
+}
+.cur-icon-prev{
+  transition: transform 0.4s;
+}
+.cur-icon-prev:hover{
+  transform: translateX(-2px);
+}
+.cur-icon-next{
+  transition: transform 0.4s;
+}
+.cur-icon-next:hover{
+  transform: translateX(2px);
+}
