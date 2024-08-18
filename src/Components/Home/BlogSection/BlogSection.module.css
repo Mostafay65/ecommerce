@@ -1,0 +1,231 @@
+.section {
+    padding: 40px 0;
+  }
+  
+  .sectionTitle {
+    font-size: 24px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+  }
+  
+  .sectionTitle:hover {
+    transform: scale(1.05);
+  }
+  
+  .highlight {
+    color: #088178;
+  }
+  
+  .layout {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .blogPosts {
+    flex: 3;
+  }
+  
+  .blogPost {
+    display: flex;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .blogPost:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .blogImg {
+    width: 260px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .blogPost:hover .blogImg {
+    transform: scale(1.05);
+  }
+  
+  .postContent {
+    flex: 1;
+  }
+  
+  .category {
+    color: #2b614e;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .blogPost:hover .category {
+    color: #088178;
+  }
+  
+  .title {
+    font-size: 18px;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .blogPost:hover .title {
+    color: #088178;
+  }
+  
+  .meta {
+    font-size: 12px;
+    color: #6c757d;
+  }
+  
+  .dot {
+    margin: 0 5px;
+  }
+  
+  .readMore {
+    color: #2b614e;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+  }
+  
+  .readMore::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #088178;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .readMore:hover {
+    color: #088178;
+    transform: translateX(5px);
+  }
+  
+  .readMore:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .promos {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .promo {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .promo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .largePromo {
+    flex: 2;
+  }
+  
+  .smallPromos {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+  }
+  
+  .smallPromos .promo {
+    flex: 1;
+  }
+  
+  .promoImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .promo:hover .promoImg {
+    transform: scale(1.1);
+  }
+  
+  .promoContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    background: rgba(255,255,255,0.5);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: background 0.3s ease;
+  }
+  
+  .promo:hover .promoContent {
+    background: rgba(255,255,255,0.7);
+  }
+  
+  .promoContent span {
+    font-size: 14px;
+    color: #6c757d;
+    transition: color 0.3s ease;
+  }
+  
+  .promo:hover .promoContent span {
+    color: #088178;
+  }
+  
+  .promoContent h4 {
+    font-size: 18px;
+    margin: 5px 0 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .promo:hover .promoContent h4 {
+    color: #088178;
+  }
+  
+  .shopNow {
+    color: #2b614e;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+  }
+  
+  .shopNow:hover {
+    color: #088178;
+    transform: translateX(5px);
+  }
+  
+  @media (max-width: 768px) {
+    .layout {
+      flex-direction: column;
+    }
+    
+    .blogPost {
+      flex-direction: column;
+    }
+    
+    .blogImg {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+    
+    .smallPromos {
+      flex-direction: column;
+    }
+  }

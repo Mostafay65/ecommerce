@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules"; // Make sure to import Autoplay
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import "swiper/css/autoplay"; // Import the necessary CSS
 import styles from "./NewArrivalsProduct.module.css";
 import NewArrivalsCard from "../../Cards/NewArrivalsCard/NewArrivalsCard";  // Import the new card
@@ -38,7 +37,7 @@ export default function NewArrivalsProduct() {
         spaceBetween={20}
         slidesPerView={6}
         autoplay={{
-          delay: 1000, // Set the delay to 2000ms (2 seconds)
+          delay: 1000, // Set the delay to 1000ms (1 second)
         }}
         loop={true}
         breakpoints={{
