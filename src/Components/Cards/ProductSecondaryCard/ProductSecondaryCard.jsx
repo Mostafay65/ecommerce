@@ -4,7 +4,15 @@ import Rating from "../../Helpers/Rating";
 import { Link } from "react-router-dom";
 
 const ProductSecondaryCard = ({ Product }) => {
-    // console.log(Product);
+
+    // Function to truncate the product title if it exceeds 23 characters
+    const truncateTitle = (title, maxLength) => {
+        if (title.length > maxLength) {
+            return title.substring(0, maxLength) + "";
+        }
+        return title;
+    };
+
     return (
         <Link
             to={`/products/${Product.id}`}
@@ -18,7 +26,7 @@ const ProductSecondaryCard = ({ Product }) => {
                     className={styles.image}
                 />
             </div>
-            <h2 className={styles.title}>{Product.title}</h2>
+            <h2 className={styles.title}>{truncateTitle(Product.title, 15)}</h2> {/* Truncate title */}
             <div className={styles.rating}>
                 <Rating rating={Product.ratingsAverage} />
             </div>
