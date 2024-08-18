@@ -6,7 +6,8 @@
       "email": "mohamed.ali@gmail.com",
       "phone": "01234567890",
       "subject": "Product Inquiry",
-      "message": "I would like to know more about your latest products."
+      "message": "I would like to know more about your latest products.",
+      "viewed": true
     },
     {
       "id": "2b34",
@@ -14,7 +15,8 @@
       "email": "ahmed.hassan@gmail.com",
       "phone": "01123456789",
       "subject": "Order Issue",
-      "message": "I faced an issue while placing my order."
+      "message": "I faced an issue while placing my order.",
+      "viewed": false
     },
     {
       "id": "3c45",
@@ -22,7 +24,8 @@
       "email": "fatima.abdel@gmail.com",
       "phone": "01098765432",
       "subject": "Payment Problem",
-      "message": "My payment was declined, but funds were deducted."
+      "message": "My payment was declined, but funds were deducted.",
+      "viewed": true
     },
     {
       "id": "4d56",
@@ -30,7 +33,8 @@
       "email": "omar.salem@gmail.com",
       "phone": "01567894321",
       "subject": "Return Policy",
-      "message": "Can you explain your return policy?"
+      "message": "Can you explain your return policy?",
+      "viewed": false
     },
     {
       "id": "5e67",
@@ -38,7 +42,8 @@
       "email": "aisha.khalid@gmail.com",
       "phone": "01234567891",
       "subject": "Shipping Details",
-      "message": "How long does shipping take to my location?"
+      "message": "How long does shipping take to my location?",
+      "viewed": false
     },
     {
       "id": "6f78",
@@ -46,7 +51,8 @@
       "email": "hassan.mostafa@gmail.com",
       "phone": "01123456788",
       "subject": "Product Review",
-      "message": "I would like to leave a review for a product I bought."
+      "message": "I would like to leave a review for a product I bought.",
+      "viewed": false
     },
     {
       "id": "7g89",
@@ -54,7 +60,8 @@
       "email": "yasmin.saeed@gmail.com",
       "phone": "01087654321",
       "subject": "Account Issue",
-      "message": "I can't access my account. Please assist."
+      "message": "I can't access my account. Please assist.",
+      "viewed": true
     },
     {
       "id": "8h90",
@@ -62,7 +69,8 @@
       "email": "ali.ahmed@gmail.com",
       "phone": "01567894320",
       "subject": "Discount Inquiry",
-      "message": "Are there any discounts available for bulk purchases?"
+      "message": "Are there any discounts available for bulk purchases?",
+      "viewed": false
     },
     {
       "id": "9i01",
@@ -70,7 +78,8 @@
       "email": "khalid.ramzy@gmail.com",
       "phone": "01234567892",
       "subject": "Technical Support",
-      "message": "I need help with using your app."
+      "message": "I need help with using your app.",
+      "viewed": false
     },
     {
       "id": "1k23",
@@ -78,7 +87,8 @@
       "email": "hussein.abdel@gmail.com",
       "phone": "01098765433",
       "subject": "Complaint",
-      "message": "I received the wrong product in my order."
+      "message": "I received the wrong product in my order.",
+      "viewed": false
     },
     {
       "id": "2l34",
@@ -86,7 +96,8 @@
       "email": "laila.mohamed@gmail.com",
       "phone": "01567894322",
       "subject": "Delivery Time",
-      "message": "Can you expedite my delivery?"
+      "message": "Can you expedite my delivery?",
+      "viewed": false
     },
     {
       "id": "3m45",
@@ -94,7 +105,8 @@
       "email": "mustafa.hassan@gmail.com",
       "phone": "01234567893",
       "subject": "Refund Request",
-      "message": "I would like to request a refund for my order."
+      "message": "I would like to request a refund for my order.",
+      "viewed": false
     },
     {
       "id": "4n56",
@@ -102,7 +114,8 @@
       "email": "amira.fathi@gmail.com",
       "phone": "01123456786",
       "subject": "Price Match",
-      "message": "Do you offer price matching on your products?"
+      "message": "Do you offer price matching on your products?",
+      "viewed": false
     },
     {
       "id": "5o67",
@@ -110,7 +123,8 @@
       "email": "yousef.abdelkader@gmail.com",
       "phone": "01087654322",
       "subject": "Order Status",
-      "message": "Can you update me on the status of my order?"
+      "message": "Can you update me on the status of my order?",
+      "viewed": false
     },
     {
       "id": "6p78",
@@ -118,7 +132,8 @@
       "email": "nadia.salem@gmail.com",
       "phone": "01567894323",
       "subject": "Product Question",
-      "message": "What materials are used in product X?"
+      "message": "What materials are used in product X?",
+      "viewed": false
     },
     {
       "id": "7q89",
@@ -126,7 +141,8 @@
       "email": "tarek.hassan@gmail.com",
       "phone": "01234567894",
       "subject": "Account Deletion",
-      "message": "I want to delete my account permanently."
+      "message": "I want to delete my account permanently.",
+      "viewed": false
     },
     {
       "id": "8r90",
@@ -134,7 +150,8 @@
       "email": "noor.khalid@gmail.com",
       "phone": "01123456785",
       "subject": "Product Warranty",
-      "message": "Does product X come with a warranty?"
+      "message": "Does product X come with a warranty?",
+      "viewed": false
     },
     {
       "id": "9s01",
@@ -142,7 +159,8 @@
       "email": "ibrahim.ali@gmail.com",
       "phone": "01098765434",
       "subject": "Loyalty Program",
-      "message": "How can I join your loyalty program?"
+      "message": "How can I join your loyalty program?",
+      "viewed": false
     },
     {
       "id": "0t12",
@@ -150,7 +168,8 @@
       "email": "layla.mostafa@gmail.com",
       "phone": "01567894324",
       "subject": "Website Feedback",
-      "message": "Your website is great, but it could use more filters."
+      "message": "Your website is great, but it could use more filters.",
+      "viewed": false
     },
     {
       "id": "1u23",
@@ -158,7 +177,8 @@
       "email": "sami.nasser@gmail.com",
       "phone": "01234567895",
       "subject": "Order Cancellation",
-      "message": "I need to cancel my recent order."
+      "message": "I need to cancel my recent order.",
+      "viewed": false
     },
     {
       "id": "2v34",
@@ -166,7 +186,8 @@
       "email": "mona.elshazly@gmail.com",
       "phone": "01123456788",
       "subject": "Product Quality",
-      "message": "The quality of the product was not as expected."
+      "message": "The quality of the product was not as expected.",
+      "viewed": false
     },
     {
       "id": "3w45",
@@ -174,7 +195,8 @@
       "email": "rami.said@gmail.com",
       "phone": "01098765435",
       "subject": "Payment Issue",
-      "message": "I was charged twice for the same product."
+      "message": "I was charged twice for the same product.",
+      "viewed": false
     },
     {
       "id": "4x56",
@@ -182,7 +204,8 @@
       "email": "lina.mohsen@gmail.com",
       "phone": "01567894325",
       "subject": "Discount Code",
-      "message": "I have a discount code, but it's not working."
+      "message": "I have a discount code, but it's not working.",
+      "viewed": false
     },
     {
       "id": "5y67",
@@ -190,7 +213,8 @@
       "email": "jamal.ali@gmail.com",
       "phone": "01234567896",
       "subject": "Product Dimensions",
-      "message": "What are the dimensions of product Y?"
+      "message": "What are the dimensions of product Y?",
+      "viewed": false
     },
     {
       "id": "6z78",
@@ -198,7 +222,8 @@
       "email": "dalia.mourad@gmail.com",
       "phone": "01123456789",
       "subject": "Stock Availability",
-      "message": "When will product Z be back in stock?"
+      "message": "When will product Z be back in stock?",
+      "viewed": false
     },
     {
       "id": "7a89",
@@ -206,7 +231,8 @@
       "email": "fadi.mohammed@gmail.com",
       "phone": "01087654323",
       "subject": "Exchange Request",
-      "message": "I would like to exchange my recent purchase."
+      "message": "I would like to exchange my recent purchase.",
+      "viewed": false
     },
     {
       "id": "8b90",
@@ -214,7 +240,8 @@
       "email": "rania.hassan@gmail.com",
       "phone": "01567894326",
       "subject": "Bulk Order",
-      "message": "Can you provide a quote for a bulk order?"
+      "message": "Can you provide a quote for a bulk order?",
+      "viewed": false
     },
     {
       "id": "9c01",
@@ -222,7 +249,8 @@
       "email": "ehab.khaled@gmail.com",
       "phone": "01234567897",
       "subject": "Customer Service",
-      "message": "I had a bad experience with customer service."
+      "message": "I had a bad experience with customer service.",
+      "viewed": false
     },
     {
       "id": "0d12",
@@ -230,7 +258,8 @@
       "email": "nour.abdel@gmail.com",
       "phone": "01123456790",
       "subject": "Product Return",
-      "message": "How do I return a product?"
+      "message": "How do I return a product?",
+      "viewed": false
     },
     {
       "id": "1e23",
@@ -238,7 +267,8 @@
       "email": "omar.ahmed@gmail.com",
       "phone": "01098765436",
       "subject": "Order Confirmation",
-      "message": "I haven't received a confirmation for my order."
+      "message": "I haven't received a confirmation for my order.",
+      "viewed": false
     },
     {
       "id": "2f34",
@@ -246,7 +276,8 @@
       "email": "jana.ali@gmail.com",
       "phone": "01567894327",
       "subject": "Membership Inquiry",
-      "message": "How can I become a member?"
+      "message": "How can I become a member?",
+      "viewed": false
     },
     {
       "id": "3g45",
@@ -254,7 +285,8 @@
       "email": "rami.ahmed@gmail.com",
       "phone": "01234567898",
       "subject": "Shipping Error",
-      "message": "My order was shipped to the wrong address."
+      "message": "My order was shipped to the wrong address.",
+      "viewed": false
     },
     {
       "id": "4h56",
@@ -262,7 +294,8 @@
       "email": "mariam.farid@gmail.com",
       "phone": "01123456791",
       "subject": "Service Feedback",
-      "message": "The service was excellent, but the website needs improvement."
+      "message": "The service was excellent, but the website needs improvement.",
+      "viewed": false
     },
     {
       "id": "5i67",
@@ -270,7 +303,8 @@
       "email": "youssef.mohamed@gmail.com",
       "phone": "01087654324",
       "subject": "Product Repair",
-      "message": "I need to get a product repaired. What is the process?"
+      "message": "I need to get a product repaired. What is the process?",
+      "viewed": false
     },
     {
       "id": "6j78",
@@ -278,7 +312,8 @@
       "email": "sara.nasser@gmail.com",
       "phone": "01567894328",
       "subject": "Order Issue",
-      "message": "My order is incomplete. Can you help?"
+      "message": "My order is incomplete. Can you help?",
+      "viewed": false
     },
     {
       "id": "7k89",
@@ -286,7 +321,8 @@
       "email": "zain.hassan@gmail.com",
       "phone": "01234567899",
       "subject": "Product Inquiry",
-      "message": "Can you provide more details about product A?"
+      "message": "Can you provide more details about product A?",
+      "viewed": false
     },
     {
       "id": "8l90",
@@ -294,7 +330,8 @@
       "email": "huda.ali@gmail.com",
       "phone": "01123456792",
       "subject": "Payment Issue",
-      "message": "My payment went through but I did not receive a confirmation."
+      "message": "My payment went through but I did not receive a confirmation.",
+      "viewed": false
     },
     {
       "id": "9m01",
@@ -302,7 +339,8 @@
       "email": "tariq.mohamed@gmail.com",
       "phone": "01098765437",
       "subject": "Order Tracking",
-      "message": "How can I track my order?"
+      "message": "How can I track my order?",
+      "viewed": false
     },
     {
       "id": "0n12",
@@ -310,7 +348,8 @@
       "email": "hassan.said@gmail.com",
       "phone": "01567894329",
       "subject": "Product Availability",
-      "message": "Is product B available in other colors?"
+      "message": "Is product B available in other colors?",
+      "viewed": false
     },
     {
       "id": "1o23",
@@ -318,7 +357,8 @@
       "email": "jana.khalid@gmail.com",
       "phone": "01234567900",
       "subject": "Shipping Delay",
-      "message": "My shipment is delayed. Can you provide an update?"
+      "message": "My shipment is delayed. Can you provide an update?",
+      "viewed": false
     },
     {
       "id": "2p34",
@@ -326,7 +366,8 @@
       "email": "hadi.salem@gmail.com",
       "phone": "01123456793",
       "subject": "Warranty Issue",
-      "message": "I need to claim a warranty for product C."
+      "message": "I need to claim a warranty for product C.",
+      "viewed": false
     },
     {
       "id": "3q45",
@@ -334,7 +375,8 @@
       "email": "amina.hassan@gmail.com",
       "phone": "01087654325",
       "subject": "Discount Information",
-      "message": "Can you tell me about current discounts?"
+      "message": "Can you tell me about current discounts?",
+      "viewed": false
     },
     {
       "id": "4r56",
@@ -342,7 +384,8 @@
       "email": "omar.mohamed@gmail.com",
       "phone": "01567894330",
       "subject": "Return Status",
-      "message": "What is the status of my return request?"
+      "message": "What is the status of my return request?",
+      "viewed": false
     },
     {
       "id": "5s67",
@@ -350,7 +393,8 @@
       "email": "laila.nasser@gmail.com",
       "phone": "01234567901",
       "subject": "Order Status",
-      "message": "Can you provide an update on my order status?"
+      "message": "Can you provide an update on my order status?",
+      "viewed": false
     },
     {
       "id": "6t78",
@@ -358,7 +402,8 @@
       "email": "faris.abdel@gmail.com",
       "phone": "01123456794",
       "subject": "Product Review",
-      "message": "I would like to write a review for product D."
+      "message": "I would like to write a review for product D.",
+      "viewed": false
     },
     {
       "id": "7u89",
@@ -366,7 +411,8 @@
       "email": "reem.mohsen@gmail.com",
       "phone": "01098765438",
       "subject": "Payment Confirmation",
-      "message": "I did not receive a confirmation after payment."
+      "message": "I did not receive a confirmation after payment.",
+      "viewed": false
     },
     {
       "id": "8v90",
@@ -374,7 +420,8 @@
       "email": "hassan.farid@gmail.com",
       "phone": "01567894331",
       "subject": "Technical Issue",
-      "message": "I am having trouble with the website."
+      "message": "I am having trouble with the website.",
+      "viewed": false
     },
     {
       "id": "9w01",
@@ -382,7 +429,8 @@
       "email": "zara.abdel@gmail.com",
       "phone": "01234567902",
       "subject": "Product Availability",
-      "message": "Can you inform me when product E is available?"
+      "message": "Can you inform me when product E is available?",
+      "viewed": false
     },
     {
       "id": "0x12",
@@ -390,7 +438,8 @@
       "email": "samir.hassan@gmail.com",
       "phone": "01123456795",
       "subject": "Refund Status",
-      "message": "What is the status of my refund request?"
+      "message": "What is the status of my refund request?",
+      "viewed": false
     },
     {
       "id": "1y23",
@@ -398,7 +447,8 @@
       "email": "fatima.said@gmail.com",
       "phone": "01087654326",
       "subject": "Order Details",
-      "message": "I need more details about my recent order."
+      "message": "I need more details about my recent order.",
+      "viewed": false
     },
     {
       "id": "2z34",
@@ -406,7 +456,8 @@
       "email": "nabil.mohamed@gmail.com",
       "phone": "01567894332",
       "subject": "Account Access",
-      "message": "I can't access my account. What should I do?"
+      "message": "I can't access my account. What should I do?",
+      "viewed": false
     },
     {
       "id": "3a45",
@@ -414,7 +465,8 @@
       "email": "huda.khalid@gmail.com",
       "phone": "01234567903",
       "subject": "Discount Query",
-      "message": "Do you offer discounts for new customers?"
+      "message": "Do you offer discounts for new customers?",
+      "viewed": false
     },
     {
       "id": "4b56",
@@ -422,7 +474,8 @@
       "email": "jamal.said@gmail.com",
       "phone": "01123456796",
       "subject": "Product Return",
-      "message": "How can I return a damaged product?"
+      "message": "How can I return a damaged product?",
+      "viewed": false
     },
     {
       "id": "5c67",
@@ -430,7 +483,8 @@
       "email": "yasmin.farid@gmail.com",
       "phone": "01098765439",
       "subject": "Order Cancellation",
-      "message": "I need to cancel an order I just placed."
+      "message": "I need to cancel an order I just placed.",
+      "viewed": false
     },
     {
       "id": "6d78",
@@ -438,7 +492,8 @@
       "email": "ali.said@gmail.com",
       "phone": "01567894333",
       "subject": "Product Information",
-      "message": "Can you provide more details on product F?"
+      "message": "Can you provide more details on product F?",
+      "viewed": false
     },
     {
       "id": "7e89",
@@ -446,7 +501,8 @@
       "email": "reem.abdel@gmail.com",
       "phone": "01234567904",
       "subject": "Product Warranty",
-      "message": "Does product G come with a warranty?"
+      "message": "Does product G come with a warranty?",
+      "viewed": false
     },
     {
       "id": "8f90",
@@ -454,7 +510,8 @@
       "email": "layla.khalid@gmail.com",
       "phone": "01123456797",
       "subject": "Delivery Issue",
-      "message": "I am facing an issue with the delivery of my order."
+      "message": "I am facing an issue with the delivery of my order.",
+      "viewed": false
     },
     {
       "id": "9g01",
@@ -462,7 +519,8 @@
       "email": "khaled.said@gmail.com",
       "phone": "01087654327",
       "subject": "Stock Inquiry",
-      "message": "When will product H be back in stock?"
+      "message": "When will product H be back in stock?",
+      "viewed": false
     },
     {
       "id": "0h12",
@@ -470,7 +528,8 @@
       "email": "mona.nasser@gmail.com",
       "phone": "01567894334",
       "subject": "Membership Benefits",
-      "message": "What are the benefits of your membership program?"
+      "message": "What are the benefits of your membership program?",
+      "viewed": false
     }
   ]
 }
