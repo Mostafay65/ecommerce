@@ -3,13 +3,18 @@ import { CartContext } from "../../Context/CartContext";
 import { toast } from "react-toastify";
 import styles from "./ProductMainCard.module.css";
 import Rating from "../../Helpers/Rating";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useQuery } from '@tanstack/react-query';
 
 const ProductMainCard = ({ Product }) => {
   const { addToCart } = useContext(CartContext);
-
+  let navigate = useNavigate()
   async function addProductToCart(id) {
+    if(!localStorage.getItem('userName')) {
+      navigate('/login')
+      window.scrollTo(0, 0);
+      return
+    }
     let res = await addToCart(id);
     if (res.status == "success") {
       toast.success(res.message, {

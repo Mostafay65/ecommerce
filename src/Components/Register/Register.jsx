@@ -97,7 +97,7 @@ const Register = () => {
           </button>
         </div>
           <p className={`text-center text-sec ${styles.signInText} `}>
-          Already have an account? <Link className='text-main text-decoration-none ' to={'/login'}>Sign in now</Link>
+          Already have an account? <Link onClick={()=>window.scrollTo(0, 0)} className='text-main text-decoration-none ' to={'/login'}>Sign in now</Link>
           </p>
         
       </div>
