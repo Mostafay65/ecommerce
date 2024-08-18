@@ -29,7 +29,7 @@ const SmallCard = () => {
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={20}
           slidesPerView={6}
-          autoplay={{ delay: 2000 }} 
+          autoplay={{ delay: 800 }} 
           loop={true}
           breakpoints={{
             320: {

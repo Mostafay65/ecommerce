@@ -35,3 +35,10 @@
 .logoutIcon:hover{
   left: 5px;
 }
+
+.scrolledDownIcon{
+    color: #383e50 ;
+}
+.scrolledDownIcon:hover{
+    color: #088178 ;
+}

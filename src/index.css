@@ -20,6 +20,9 @@
 .btn-main:hover {
   background-color: #046963 !important;
 }
+.text-sm{
+  font-size: 14px;
+}
 .text-xsm{
   font-size: 12px;
 }
