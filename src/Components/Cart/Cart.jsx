@@ -123,7 +123,7 @@ export default function Cart() {
                                   }
                                   className="btn btn-link px-2"
                                 >
-                                  <i className="fas fa-minus"></i>
+                                  <i className="fas fa-minus text-main"></i>
                                 </button>
                                 <span className="mx-lg-3 mx-md-0 mx-3 mt-1">
                                   {product.count}
@@ -137,11 +137,11 @@ export default function Cart() {
                                   }
                                   className="btn btn-link px-2"
                                 >
-                                  <i className="fas fa-plus"></i>
+                                  <i className="fas fa-plus text-main"></i>
                                 </button>
                               </div>
                               <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                                <h6 className="mb-0">{product.price} EGP</h6>
+                                <h6 className="mb-0 ">{product.price} EGP</h6>
                               </div>
                               <div className="col-md-1 col-lg-1 col-xl-1 text-end">
                                 <a
@@ -187,8 +187,8 @@ export default function Cart() {
                           <h5 className="text-uppercase mb-3">Shipping</h5>
 
                           <div className="mb-4 pb-2">
-                            <select data-mdb-select-init>
-                              <option value="1">Free shipping</option>
+                            <select data-mdb-select-init className="form-select">
+                              <option value="1" className="bg-main py-3">Free shipping</option>
                             </select>
                           </div>
 
