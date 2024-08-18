@@ -1,36 +1,164 @@
 {
   "Messages": [
     {
-      "firstName": "test",
-      "email": "test",
-      "phone": "test",
-      "subject": "test",
-      "message": "test",
-      "id": "ff05"
+      "id": "1a23",
+      "firstName": "Mohamed",
+      "email": "mohamed.ali@example.com",
+      "phone": "01234567890",
+      "subject": "Product Inquiry",
+      "message": "I would like to know more about your latest products."
     },
     {
-      "id": "3a17",
-      "firstName": "ghfgc",
-      "email": "jkbn@sdjks.com",
-      "phone": "hkhgvj",
-      "subject": "hbvgh",
-      "message": "bhvgfchgchgv"
+      "id": "2b34",
+      "firstName": "Ahmed",
+      "email": "ahmed.hassan@example.com",
+      "phone": "01123456789",
+      "subject": "Order Issue",
+      "message": "I faced an issue while placing my order."
     },
     {
-      "id": "d325",
-      "firstName": "Mohamed ",
-      "email": "mhmdramadan.192@gmail.com",
-      "phone": "01020449160",
-      "subject": "sdada",
-      "message": "NNNNNNNNNNNNNNNN"
+      "id": "3c45",
+      "firstName": "Fatima",
+      "email": "fatima.abdel@example.com",
+      "phone": "01098765432",
+      "subject": "Payment Problem",
+      "message": "My payment was declined, but funds were deducted."
     },
     {
-      "id": "9a93",
-      "firstName": "SAD",
-      "email": "mhmdramadan.192@gmail.com",
-      "phone": "DSAA",
-      "subject": "SAD",
-      "message": "ASD"
+      "id": "4d56",
+      "firstName": "Omar",
+      "email": "omar.salem@example.com",
+      "phone": "01567894321",
+      "subject": "Return Policy",
+      "message": "Can you explain your return policy?"
+    },
+    {
+      "id": "5e67",
+      "firstName": "Aisha",
+      "email": "aisha.khalid@example.com",
+      "phone": "01234567891",
+      "subject": "Shipping Details",
+      "message": "How long does shipping take to my location?"
+    },
+    {
+      "id": "6f78",
+      "firstName": "Hassan",
+      "email": "hassan.mostafa@example.com",
+      "phone": "01123456788",
+      "subject": "Product Review",
+      "message": "I would like to leave a review for a product I bought."
+    },
+    {
+      "id": "7g89",
+      "firstName": "Yasmin",
+      "email": "yasmin.saeed@example.com",
+      "phone": "01087654321",
+      "subject": "Account Issue",
+      "message": "I can't access my account. Please assist."
+    },
+    {
+      "id": "8h90",
+      "firstName": "Ali",
+      "email": "ali.ahmed@example.com",
+      "phone": "01567894320",
+      "subject": "Discount Inquiry",
+      "message": "Are there any discounts available for bulk purchases?"
+    },
+    {
+      "id": "9i01",
+      "firstName": "Khalid",
+      "email": "khalid.ramzy@example.com",
+      "phone": "01234567892",
+      "subject": "Technical Support",
+      "message": "I need help with using your app."
+    },
+    {
+      "id": "0j12",
+      "firstName": "Sara",
+      "email": "sara.abdelrahman@example.com",
+      "phone": "01123456787",
+      "subject": "Product Availability",
+      "message": "Is product X available in stock?"
+    },
+    {
+      "id": "1k23",
+      "firstName": "Hussein",
+      "email": "hussein.abdel@example.com",
+      "phone": "01098765433",
+      "subject": "Complaint",
+      "message": "I received the wrong product in my order."
+    },
+    {
+      "id": "2l34",
+      "firstName": "Laila",
+      "email": "laila.mohamed@example.com",
+      "phone": "01567894322",
+      "subject": "Delivery Time",
+      "message": "Can you expedite my delivery?"
+    },
+    {
+      "id": "3m45",
+      "firstName": "Mustafa",
+      "email": "mustafa.hassan@example.com",
+      "phone": "01234567893",
+      "subject": "Refund Request",
+      "message": "I would like to request a refund for my order."
+    },
+    {
+      "id": "4n56",
+      "firstName": "Amira",
+      "email": "amira.fathi@example.com",
+      "phone": "01123456786",
+      "subject": "Price Match",
+      "message": "Do you offer price matching on your products?"
+    },
+    {
+      "id": "5o67",
+      "firstName": "Yousef",
+      "email": "yousef.abdelkader@example.com",
+      "phone": "01087654322",
+      "subject": "Order Status",
+      "message": "Can you update me on the status of my order?"
+    },
+    {
+      "id": "6p78",
+      "firstName": "Nadia",
+      "email": "nadia.salem@example.com",
+      "phone": "01567894323",
+      "subject": "Product Question",
+      "message": "What materials are used in product X?"
+    },
+    {
+      "id": "7q89",
+      "firstName": "Tarek",
+      "email": "tarek.hassan@example.com",
+      "phone": "01234567894",
+      "subject": "Account Deletion",
+      "message": "I want to delete my account permanently."
+    },
+    {
+      "id": "8r90",
+      "firstName": "Noor",
+      "email": "noor.khalid@example.com",
+      "phone": "01123456785",
+      "subject": "Product Warranty",
+      "message": "Does product X come with a warranty?"
+    },
+    {
+      "id": "9s01",
+      "firstName": "Ibrahim",
+      "email": "ibrahim.ali@example.com",
+      "phone": "01098765434",
+      "subject": "Loyalty Program",
+      "message": "How can I join your loyalty program?"
+    },
+    {
+      "id": "0t12",
+      "firstName": "Layla",
+      "email": "layla.mostafa@example.com",
+      "phone": "01567894324",
+      "subject": "Website Feedback",
+      "message": "Your website is great, but it could use more filters."
     }
   ]
 }
