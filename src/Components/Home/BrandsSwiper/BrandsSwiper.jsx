@@ -32,11 +32,11 @@ export default function BrandSwiper() {
         Our <span className="text-main">Brands</span>
       </h4>
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]} // Ensure Autoplay is included here
+        modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={20}
         slidesPerView={6}
         autoplay={{
-          delay: 2000, // Set the delay to 2000ms (2 seconds)
+          delay: 2000, 
         }}
         loop={true}
         breakpoints={{
