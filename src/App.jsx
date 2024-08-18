@@ -19,6 +19,7 @@ import SingleProduct from "./Components/Products/SingleProduct/SingleProduct";
 import ChangePassword from "./Components/ChangePassword/ChangePassword";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import AllUsers from "./Components/AllUsers/AllUsers";
+import AllOrders from './Components/AllOrders/AllOrders';
 import Messages from "./Components/Messages/Messages";
 
 
@@ -42,6 +43,7 @@ function App() {
                 { path: "/Contact-us", element: <ContactUs /> },
                 // { path: "/About-us", element: <Home /> },
                 { path: "/checkout", element: <CheckOut /> },
+                {path:'/allorders' , element: <AllOrders/> },
                 { path: "products", element: <Products /> },
                 { path: "products/:id", element: <SingleProduct /> },
                 { path: "login", element: <Login /> },
