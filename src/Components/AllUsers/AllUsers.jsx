@@ -28,11 +28,11 @@ const AllUsers = () => {
               Total Users :{" "}
               <span className="text-main">{users.totalUsers}</span>
             </h2>
-            <div className="filter d-flex w-25">
+            <div className="filter d-flex  justify-content-end w-25">
               <input
                 type="number"
                 onChange={(e) => setNumOfUsers(e.target.value)}
-                className="border-0 rounded-2 p-2"
+                className="border-0 w-100 rounded-2 p-2"
                 placeholder="Number between 10 and 50"
                 min={10}
               />

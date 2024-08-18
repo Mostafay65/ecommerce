@@ -1,36 +1,476 @@
 {
   "Messages": [
     {
-      "firstName": "test",
-      "email": "test",
-      "phone": "test",
-      "subject": "test",
-      "message": "test",
-      "id": "ff05"
+      "id": "1a23",
+      "firstName": "Mohamed",
+      "email": "mohamed.ali@gmail.com",
+      "phone": "01234567890",
+      "subject": "Product Inquiry",
+      "message": "I would like to know more about your latest products."
     },
     {
-      "id": "3a17",
-      "firstName": "ghfgc",
-      "email": "jkbn@sdjks.com",
-      "phone": "hkhgvj",
-      "subject": "hbvgh",
-      "message": "bhvgfchgchgv"
+      "id": "2b34",
+      "firstName": "Ahmed",
+      "email": "ahmed.hassan@gmail.com",
+      "phone": "01123456789",
+      "subject": "Order Issue",
+      "message": "I faced an issue while placing my order."
     },
     {
-      "id": "d325",
-      "firstName": "Mohamed ",
-      "email": "mhmdramadan.192@gmail.com",
-      "phone": "01020449160",
-      "subject": "sdada",
-      "message": "NNNNNNNNNNNNNNNN"
+      "id": "3c45",
+      "firstName": "Fatima",
+      "email": "fatima.abdel@gmail.com",
+      "phone": "01098765432",
+      "subject": "Payment Problem",
+      "message": "My payment was declined, but funds were deducted."
     },
     {
-      "id": "9a93",
-      "firstName": "SAD",
-      "email": "mhmdramadan.192@gmail.com",
-      "phone": "DSAA",
-      "subject": "SAD",
-      "message": "ASD"
+      "id": "4d56",
+      "firstName": "Omar",
+      "email": "omar.salem@gmail.com",
+      "phone": "01567894321",
+      "subject": "Return Policy",
+      "message": "Can you explain your return policy?"
+    },
+    {
+      "id": "5e67",
+      "firstName": "Aisha",
+      "email": "aisha.khalid@gmail.com",
+      "phone": "01234567891",
+      "subject": "Shipping Details",
+      "message": "How long does shipping take to my location?"
+    },
+    {
+      "id": "6f78",
+      "firstName": "Hassan",
+      "email": "hassan.mostafa@gmail.com",
+      "phone": "01123456788",
+      "subject": "Product Review",
+      "message": "I would like to leave a review for a product I bought."
+    },
+    {
+      "id": "7g89",
+      "firstName": "Yasmin",
+      "email": "yasmin.saeed@gmail.com",
+      "phone": "01087654321",
+      "subject": "Account Issue",
+      "message": "I can't access my account. Please assist."
+    },
+    {
+      "id": "8h90",
+      "firstName": "Ali",
+      "email": "ali.ahmed@gmail.com",
+      "phone": "01567894320",
+      "subject": "Discount Inquiry",
+      "message": "Are there any discounts available for bulk purchases?"
+    },
+    {
+      "id": "9i01",
+      "firstName": "Khalid",
+      "email": "khalid.ramzy@gmail.com",
+      "phone": "01234567892",
+      "subject": "Technical Support",
+      "message": "I need help with using your app."
+    },
+    {
+      "id": "1k23",
+      "firstName": "Hussein",
+      "email": "hussein.abdel@gmail.com",
+      "phone": "01098765433",
+      "subject": "Complaint",
+      "message": "I received the wrong product in my order."
+    },
+    {
+      "id": "2l34",
+      "firstName": "Laila",
+      "email": "laila.mohamed@gmail.com",
+      "phone": "01567894322",
+      "subject": "Delivery Time",
+      "message": "Can you expedite my delivery?"
+    },
+    {
+      "id": "3m45",
+      "firstName": "Mustafa",
+      "email": "mustafa.hassan@gmail.com",
+      "phone": "01234567893",
+      "subject": "Refund Request",
+      "message": "I would like to request a refund for my order."
+    },
+    {
+      "id": "4n56",
+      "firstName": "Amira",
+      "email": "amira.fathi@gmail.com",
+      "phone": "01123456786",
+      "subject": "Price Match",
+      "message": "Do you offer price matching on your products?"
+    },
+    {
+      "id": "5o67",
+      "firstName": "Yousef",
+      "email": "yousef.abdelkader@gmail.com",
+      "phone": "01087654322",
+      "subject": "Order Status",
+      "message": "Can you update me on the status of my order?"
+    },
+    {
+      "id": "6p78",
+      "firstName": "Nadia",
+      "email": "nadia.salem@gmail.com",
+      "phone": "01567894323",
+      "subject": "Product Question",
+      "message": "What materials are used in product X?"
+    },
+    {
+      "id": "7q89",
+      "firstName": "Tarek",
+      "email": "tarek.hassan@gmail.com",
+      "phone": "01234567894",
+      "subject": "Account Deletion",
+      "message": "I want to delete my account permanently."
+    },
+    {
+      "id": "8r90",
+      "firstName": "Noor",
+      "email": "noor.khalid@gmail.com",
+      "phone": "01123456785",
+      "subject": "Product Warranty",
+      "message": "Does product X come with a warranty?"
+    },
+    {
+      "id": "9s01",
+      "firstName": "Ibrahim",
+      "email": "ibrahim.ali@gmail.com",
+      "phone": "01098765434",
+      "subject": "Loyalty Program",
+      "message": "How can I join your loyalty program?"
+    },
+    {
+      "id": "0t12",
+      "firstName": "Layla",
+      "email": "layla.mostafa@gmail.com",
+      "phone": "01567894324",
+      "subject": "Website Feedback",
+      "message": "Your website is great, but it could use more filters."
+    },
+    {
+      "id": "1u23",
+      "firstName": "Sami",
+      "email": "sami.nasser@gmail.com",
+      "phone": "01234567895",
+      "subject": "Order Cancellation",
+      "message": "I need to cancel my recent order."
+    },
+    {
+      "id": "2v34",
+      "firstName": "Mona",
+      "email": "mona.elshazly@gmail.com",
+      "phone": "01123456788",
+      "subject": "Product Quality",
+      "message": "The quality of the product was not as expected."
+    },
+    {
+      "id": "3w45",
+      "firstName": "Rami",
+      "email": "rami.said@gmail.com",
+      "phone": "01098765435",
+      "subject": "Payment Issue",
+      "message": "I was charged twice for the same product."
+    },
+    {
+      "id": "4x56",
+      "firstName": "Lina",
+      "email": "lina.mohsen@gmail.com",
+      "phone": "01567894325",
+      "subject": "Discount Code",
+      "message": "I have a discount code, but it's not working."
+    },
+    {
+      "id": "5y67",
+      "firstName": "Jamal",
+      "email": "jamal.ali@gmail.com",
+      "phone": "01234567896",
+      "subject": "Product Dimensions",
+      "message": "What are the dimensions of product Y?"
+    },
+    {
+      "id": "6z78",
+      "firstName": "Dalia",
+      "email": "dalia.mourad@gmail.com",
+      "phone": "01123456789",
+      "subject": "Stock Availability",
+      "message": "When will product Z be back in stock?"
+    },
+    {
+      "id": "7a89",
+      "firstName": "Fadi",
+      "email": "fadi.mohammed@gmail.com",
+      "phone": "01087654323",
+      "subject": "Exchange Request",
+      "message": "I would like to exchange my recent purchase."
+    },
+    {
+      "id": "8b90",
+      "firstName": "Rania",
+      "email": "rania.hassan@gmail.com",
+      "phone": "01567894326",
+      "subject": "Bulk Order",
+      "message": "Can you provide a quote for a bulk order?"
+    },
+    {
+      "id": "9c01",
+      "firstName": "Ehab",
+      "email": "ehab.khaled@gmail.com",
+      "phone": "01234567897",
+      "subject": "Customer Service",
+      "message": "I had a bad experience with customer service."
+    },
+    {
+      "id": "0d12",
+      "firstName": "Nour",
+      "email": "nour.abdel@gmail.com",
+      "phone": "01123456790",
+      "subject": "Product Return",
+      "message": "How do I return a product?"
+    },
+    {
+      "id": "1e23",
+      "firstName": "Omar",
+      "email": "omar.ahmed@gmail.com",
+      "phone": "01098765436",
+      "subject": "Order Confirmation",
+      "message": "I haven't received a confirmation for my order."
+    },
+    {
+      "id": "2f34",
+      "firstName": "Jana",
+      "email": "jana.ali@gmail.com",
+      "phone": "01567894327",
+      "subject": "Membership Inquiry",
+      "message": "How can I become a member?"
+    },
+    {
+      "id": "3g45",
+      "firstName": "Rami",
+      "email": "rami.ahmed@gmail.com",
+      "phone": "01234567898",
+      "subject": "Shipping Error",
+      "message": "My order was shipped to the wrong address."
+    },
+    {
+      "id": "4h56",
+      "firstName": "Mariam",
+      "email": "mariam.farid@gmail.com",
+      "phone": "01123456791",
+      "subject": "Service Feedback",
+      "message": "The service was excellent, but the website needs improvement."
+    },
+    {
+      "id": "5i67",
+      "firstName": "Youssef",
+      "email": "youssef.mohamed@gmail.com",
+      "phone": "01087654324",
+      "subject": "Product Repair",
+      "message": "I need to get a product repaired. What is the process?"
+    },
+    {
+      "id": "6j78",
+      "firstName": "Sara",
+      "email": "sara.nasser@gmail.com",
+      "phone": "01567894328",
+      "subject": "Order Issue",
+      "message": "My order is incomplete. Can you help?"
+    },
+    {
+      "id": "7k89",
+      "firstName": "Zain",
+      "email": "zain.hassan@gmail.com",
+      "phone": "01234567899",
+      "subject": "Product Inquiry",
+      "message": "Can you provide more details about product A?"
+    },
+    {
+      "id": "8l90",
+      "firstName": "Huda",
+      "email": "huda.ali@gmail.com",
+      "phone": "01123456792",
+      "subject": "Payment Issue",
+      "message": "My payment went through but I did not receive a confirmation."
+    },
+    {
+      "id": "9m01",
+      "firstName": "Tariq",
+      "email": "tariq.mohamed@gmail.com",
+      "phone": "01098765437",
+      "subject": "Order Tracking",
+      "message": "How can I track my order?"
+    },
+    {
+      "id": "0n12",
+      "firstName": "Hassan",
+      "email": "hassan.said@gmail.com",
+      "phone": "01567894329",
+      "subject": "Product Availability",
+      "message": "Is product B available in other colors?"
+    },
+    {
+      "id": "1o23",
+      "firstName": "Jana",
+      "email": "jana.khalid@gmail.com",
+      "phone": "01234567900",
+      "subject": "Shipping Delay",
+      "message": "My shipment is delayed. Can you provide an update?"
+    },
+    {
+      "id": "2p34",
+      "firstName": "Hadi",
+      "email": "hadi.salem@gmail.com",
+      "phone": "01123456793",
+      "subject": "Warranty Issue",
+      "message": "I need to claim a warranty for product C."
+    },
+    {
+      "id": "3q45",
+      "firstName": "Amina",
+      "email": "amina.hassan@gmail.com",
+      "phone": "01087654325",
+      "subject": "Discount Information",
+      "message": "Can you tell me about current discounts?"
+    },
+    {
+      "id": "4r56",
+      "firstName": "Omar",
+      "email": "omar.mohamed@gmail.com",
+      "phone": "01567894330",
+      "subject": "Return Status",
+      "message": "What is the status of my return request?"
+    },
+    {
+      "id": "5s67",
+      "firstName": "Laila",
+      "email": "laila.nasser@gmail.com",
+      "phone": "01234567901",
+      "subject": "Order Status",
+      "message": "Can you provide an update on my order status?"
+    },
+    {
+      "id": "6t78",
+      "firstName": "Faris",
+      "email": "faris.abdel@gmail.com",
+      "phone": "01123456794",
+      "subject": "Product Review",
+      "message": "I would like to write a review for product D."
+    },
+    {
+      "id": "7u89",
+      "firstName": "Reem",
+      "email": "reem.mohsen@gmail.com",
+      "phone": "01098765438",
+      "subject": "Payment Confirmation",
+      "message": "I did not receive a confirmation after payment."
+    },
+    {
+      "id": "8v90",
+      "firstName": "Hassan",
+      "email": "hassan.farid@gmail.com",
+      "phone": "01567894331",
+      "subject": "Technical Issue",
+      "message": "I am having trouble with the website."
+    },
+    {
+      "id": "9w01",
+      "firstName": "Zara",
+      "email": "zara.abdel@gmail.com",
+      "phone": "01234567902",
+      "subject": "Product Availability",
+      "message": "Can you inform me when product E is available?"
+    },
+    {
+      "id": "0x12",
+      "firstName": "Samir",
+      "email": "samir.hassan@gmail.com",
+      "phone": "01123456795",
+      "subject": "Refund Status",
+      "message": "What is the status of my refund request?"
+    },
+    {
+      "id": "1y23",
+      "firstName": "Fatima",
+      "email": "fatima.said@gmail.com",
+      "phone": "01087654326",
+      "subject": "Order Details",
+      "message": "I need more details about my recent order."
+    },
+    {
+      "id": "2z34",
+      "firstName": "Nabil",
+      "email": "nabil.mohamed@gmail.com",
+      "phone": "01567894332",
+      "subject": "Account Access",
+      "message": "I can't access my account. What should I do?"
+    },
+    {
+      "id": "3a45",
+      "firstName": "Huda",
+      "email": "huda.khalid@gmail.com",
+      "phone": "01234567903",
+      "subject": "Discount Query",
+      "message": "Do you offer discounts for new customers?"
+    },
+    {
+      "id": "4b56",
+      "firstName": "Jamal",
+      "email": "jamal.said@gmail.com",
+      "phone": "01123456796",
+      "subject": "Product Return",
+      "message": "How can I return a damaged product?"
+    },
+    {
+      "id": "5c67",
+      "firstName": "Yasmin",
+      "email": "yasmin.farid@gmail.com",
+      "phone": "01098765439",
+      "subject": "Order Cancellation",
+      "message": "I need to cancel an order I just placed."
+    },
+    {
+      "id": "6d78",
+      "firstName": "Ali",
+      "email": "ali.said@gmail.com",
+      "phone": "01567894333",
+      "subject": "Product Information",
+      "message": "Can you provide more details on product F?"
+    },
+    {
+      "id": "7e89",
+      "firstName": "Reem",
+      "email": "reem.abdel@gmail.com",
+      "phone": "01234567904",
+      "subject": "Product Warranty",
+      "message": "Does product G come with a warranty?"
+    },
+    {
+      "id": "8f90",
+      "firstName": "Layla",
+      "email": "layla.khalid@gmail.com",
+      "phone": "01123456797",
+      "subject": "Delivery Issue",
+      "message": "I am facing an issue with the delivery of my order."
+    },
+    {
+      "id": "9g01",
+      "firstName": "Khaled",
+      "email": "khaled.said@gmail.com",
+      "phone": "01087654327",
+      "subject": "Stock Inquiry",
+      "message": "When will product H be back in stock?"
+    },
+    {
+      "id": "0h12",
+      "firstName": "Mona",
+      "email": "mona.nasser@gmail.com",
+      "phone": "01567894334",
+      "subject": "Membership Benefits",
+      "message": "What are the benefits of your membership program?"
     }
   ]
 }

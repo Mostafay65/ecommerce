@@ -93,7 +93,7 @@ const Login = () => {
           </button>
         </div>
           <p className={`text-center text-sec ${styles.signInText} `}>
-            Don't have account? <Link className='text-main text-decoration-none ' to={'/register'}>Sign up</Link>
+            Don't have account? <Link onClick={()=>window.scrollTo(0, 0)} className='text-main text-decoration-none ' to={'/register'}>Sign up</Link>
           </p>
           
       </div>

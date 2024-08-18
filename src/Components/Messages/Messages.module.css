@@ -1,0 +1,13 @@
+.overlay{
+    background-color: rgba(226, 218, 218, 0.438); /* Optional: a semi-transparent white background */
+    filter: blur(100px);
+}
+.allModal{
+    width: 400px;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255) !important;
+}
+.allusers{
+    filter: blur(5px);
+}
