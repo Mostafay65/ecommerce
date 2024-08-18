@@ -1,0 +1,39 @@
+.btnMain{
+    background-color: white;
+    border: 1px solid #088178;
+    transition: 0.3s;
+}
+.btnMain:hover{
+    transform: translateY(-2px);
+}
+.teamImg{
+    transition: 0.3s;
+}
+.teamImg:hover{
+    transform: translateY(-3px);
+}
+.factContainer{
+    border: 1px solid rgba(172, 170, 170, 0.208);
+    transition: 0.3s;
+}
+.factContainer:hover{
+    border: 1px solid #088178;
+    transform: translateY(-3px);
+}
+.factContainer img{
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+.factContainer img:hover{
+    border: 1px solid #088178;
+    transform: translateY(-3px);
+}
+
+.viewMoreBtn{
+   width: fit-content ;
+    transition: 0.3s;
+}
+.viewMoreBtn:hover{
+  transform: translateY(-3px);
+   
+}
