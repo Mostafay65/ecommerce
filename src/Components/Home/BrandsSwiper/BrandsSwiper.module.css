@@ -1,0 +1,9 @@
+.brandImage {
+    width: 100%;
+    height: auto;
+    max-height: 200px; 
+    object-fit: contain; 
+    opacity: 0.5;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  

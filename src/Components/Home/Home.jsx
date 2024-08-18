@@ -8,6 +8,7 @@ import ImgBaner from "./ImgBaners/ImgBaner";
 import SellBanner from "./ImgBaners/SellBanner";
 import { useNavigate } from "react-router-dom";
 import NewArrivalsProduct from "./NewArrivalsProduct/NewArrivalsProduct";
+import BrandsSwiper from "./BrandsSwiper/BrandsSwiper";
 
 const Home = () => {
   let navigate =  useNavigate()
@@ -24,6 +25,7 @@ const Home = () => {
       <ImgBaner/>  
       <NewArrivalsProduct/>
       <SellBanner/>
+      <BrandsSwiper/>
       
     </>
   );
