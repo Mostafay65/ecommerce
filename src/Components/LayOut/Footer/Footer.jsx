@@ -157,7 +157,7 @@ const Footer = () => {
                 <img src={PaymentMethod} alt="Payment Methods" />
               </a>
             </div>
-            <hr></hr>
+            
             <div className="d-flex justify-content-between pb-3  text-secondary">
               <span>© 2024, EcoCart - Ecommerce </span>
               <span>Designed by EcoCart. All rights reserved</span>

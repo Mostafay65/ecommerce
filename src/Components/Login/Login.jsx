@@ -25,8 +25,9 @@ const Login = () => {
      setErrorMessage(err.response.data.message);
    })
     console.log(data);
-    if(data.message === "success"){
+    if(data.message === "success"){  
       localStorage.setItem("userToken",data.token)
+      localStorage.setItem("userName",data.user.name)
       setToken(data.token)
       navigate('/home')
     }
