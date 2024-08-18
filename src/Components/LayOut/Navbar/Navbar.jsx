@@ -43,13 +43,12 @@ const Navbar = () => {
   }, [token]);
 
   const handleLinkClick = () => {
-    
-    const navbarToggler = document.querySelector('.navbar-collapse');
+    const navbarToggler = document.querySelector(".navbar-collapse");
     if (navbarToggler) {
-      navbarToggler.classList.remove('show');
+      navbarToggler.classList.remove("show");
     }
     window.scrollTo(0, 0);
-    setScroll(false)
+    setScroll(false);
   };
 
   return (
@@ -81,13 +80,16 @@ const Navbar = () => {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              {(token === "admin" || localStorage.getItem('userName') === 'admin') ? (
+              {token === "admin" ||
+              localStorage.getItem("userName") === "admin" ? (
                 <>
                   <NavLink
                     to="/allusers"
                     className={({ isActive }) =>
                       `${
-                        isActive || location.pathname === "/allusers" ? "text-main" : ""
+                        isActive || location.pathname === "/allusers"
+                          ? "text-main"
+                          : ""
                       } nav-link`
                     }
                     aria-current="page"
@@ -99,7 +101,9 @@ const Navbar = () => {
                     to="/messages"
                     className={({ isActive }) =>
                       `${
-                        isActive || location.pathname === "/messages" ? "text-main" : ""
+                        isActive || location.pathname === "/messages"
+                          ? "text-main"
+                          : ""
                       } nav-link`
                     }
                     aria-current="page"
@@ -115,7 +119,9 @@ const Navbar = () => {
                       to="/home"
                       className={({ isActive }) =>
                         `${
-                          isActive || location.pathname === "/" ? "text-main" : ""
+                          isActive || location.pathname === "/"
+                            ? "text-main"
+                            : ""
                         } nav-link`
                       }
                       aria-current="page"
@@ -157,7 +163,7 @@ const Navbar = () => {
                       aria-current="page"
                       onClick={handleLinkClick}
                     >
-                      Contact 
+                      Contact
                     </NavLink>
                   </li>
                 </>
@@ -165,14 +171,21 @@ const Navbar = () => {
             </ul>
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              {(token || localStorage.getItem('userName')) ? (
+              {token || localStorage.getItem("userName") ? (
                 <>
                   <div className=" d-flex me-0 me-lg-3 mt-2 mb-3 my-lg-0 justify-content-center align-items-center">
-                    <Link to={'/cart'} onClick={handleLinkClick}>
-                      <i className="fas fa-xl fa-cart-shopping text-sec position-relative">
-                        <div className="bg-main position-absolute bottom-100 start-100 translate-middle text-white text-xsm d-flex justify-content-center align-items-center rounded-3 " style={{width:'18px',height:'18px'}}>{numOfItems}</div>
-                      </i>
-                    </Link>
+                    {localStorage.getItem("userName") != "admin" && (
+                      <Link to={"/cart"} onClick={handleLinkClick}>
+                        <i className="fas fa-xl fa-cart-shopping text-sec position-relative">
+                          <div
+                            className="bg-main position-absolute bottom-100 start-100 translate-middle text-white text-xsm d-flex justify-content-center align-items-center rounded-3 "
+                            style={{ width: "18px", height: "18px" }}
+                          >
+                            {numOfItems}
+                          </div>
+                        </i>
+                      </Link>
+                    )}
                   </div>
                   <div className="user-info justify-content-center d-flex align-items-center">
                     <div
@@ -188,7 +201,9 @@ const Navbar = () => {
                         onClick={() => setScroll(!scroll)}
                       ></div>
                       <div
-                        className={`${styles.conChild} position-absolute rounded-2 top-100 end-0 px-2 mt-2 py-2 ${
+                        className={`${
+                          styles.conChild
+                        } position-absolute rounded-2 top-100 end-0 px-2 mt-2 py-2 ${
                           scroll ? "" : "d-none"
                         } `}
                         style={{ width: "180px" }}

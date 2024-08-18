@@ -95,21 +95,38 @@ font-size: 18px;
 /*  */
 
 .tablee {
-  width: 100%;
+  width: 100%; /* Make the table take the full width of its parent */
+  max-width: 100%; /* Ensure it doesn't exceed the parent container's width */
+  margin: 0 auto;
   background-color: white;
   border: 1px solid #aeccc5;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
 }
-.tablee thead{
+
+.tablee thead {
   background-color: #088178 !important;
   color: white;
   padding: 1rem;
 }
-.tablee tbody tr td{
+
+.tablee tbody tr td {
   padding: 0.8rem;
+  word-break: break-word; /* Ensure long content breaks into multiple lines */
 }
-.filter input:focus{
-  outline: 0;
+
+@media (max-width: 768px) {
+  .tablee thead {
+    font-size: 0.9rem;
+  }
   
+  .tablee tbody tr td {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+}
+
+.filter input:focus {
+  outline: 0;
   border: 1px solid #046963;
 }
