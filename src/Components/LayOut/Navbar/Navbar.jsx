@@ -209,6 +209,15 @@ const Navbar = () => {
                         style={{ width: "180px" }}
                       >
                         <NavLink
+                          to="/allOrders"
+                          className={`text-main mb-1  ${styles.logoutIcon} text-decoration-none`}
+                          aria-current="page"
+                          onClick={handleLinkClick}
+                        >
+                          <p className="my-0 ">My Orders</p>
+                        </NavLink>
+                        <hr className="my-1 text-main" />
+                        <NavLink
                           to="/changePassword"
                           className={`text-main mb-1  ${styles.logoutIcon} text-decoration-none`}
                           aria-current="page"

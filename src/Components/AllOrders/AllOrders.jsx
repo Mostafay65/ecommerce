@@ -61,13 +61,13 @@ export default function AllOrders() {
                     </div>
                   )}
                 </div>
-                <div className="row">
+                <div className="row g-3 mb-3">
                   {order.cartItems.map((item, idx) => (
                     <div
                       key={idx}
                       className={`${styles.itemCard} col-6 col-sm-4 col-md-3 col-lg-2 mb-3`}
                     >
-                      <div className={`${styles.itemInner} p-2`}>
+                      <div className={`${styles.itemInner} p-2 pb-4`}>
                         <img
                           src={item.product.imageCover}
                           className="img-fluid rounded mb-2"
@@ -77,7 +77,7 @@ export default function AllOrders() {
                           {item.product.category.name}
                         </h4>
                         <h4 className="fs-6 mb-1">
-                          {item.product.title.split(" ").slice(0, 4).join(" ")}
+                          {item.product.title.split(" ").slice(0, 2).join(" ")}
                         </h4>
                       </div>
                     </div>
