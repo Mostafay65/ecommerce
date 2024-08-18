@@ -10,7 +10,7 @@ const MainBodyOfHome = () => {
     const fetchProducts = async () => {
       try {
         const response = await fetch(
-          "https://ecommerce.routemisr.com/api/v1/products?limit=8"
+          "https://ecommerce.routemisr.com/api/v1/products?limit=12"
         );
         const data = await response.json();
         setProducts(data.data);
