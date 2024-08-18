@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, useNavigate } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Home/Home";
 import Layout from "./Components/Layout/Layout";
@@ -18,14 +18,18 @@ import CartProvider from "./Components/Context/CartContext";
 import SingleProduct from "./Components/Products/SingleProduct/SingleProduct";
 import ChangePassword from "./Components/ChangePassword/ChangePassword";
 import ContactUs from "./Components/ContactUs/ContactUs";
+import AllUsers from "./Components/AllUsers/AllUsers";
+import Messages from "./Components/Messages/Messages";
 
 function App() {
+    
     useEffect(() => {
         AOS.init({
             duration: 1200, // Adjust animation duration if needed
             once: false, // Make sure `once` is set to false if you want animations to re-trigger
         });
     }, []);
+
 
     const routes = createBrowserRouter([
         {
@@ -43,6 +47,8 @@ function App() {
                 { path: "register", element: <Register /> },
                 { path: "cart", element: <Cart /> },
                 { path: "changePassword", element: <ChangePassword /> },
+                { path: "allusers", element: <AllUsers /> },
+                { path: "messages", element: <Messages /> },
                 { path: "*", element: <NotFound /> },
             ],
         },

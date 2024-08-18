@@ -92,4 +92,24 @@ color: rgba(0, 0, 0, 0.511);
 font-size: 18px;
 }
 
+/*  */
 
+.tablee {
+  width: 100%;
+  background-color: white;
+  border: 1px solid #aeccc5;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);  overflow: hidden;
+}
+.tablee thead{
+  background-color: #088178 !important;
+  color: white;
+  padding: 1rem;
+}
+.tablee tbody tr td{
+  padding: 0.8rem;
+}
+.filter input:focus{
+  outline: 0;
+  
+  border: 1px solid #046963;
+}

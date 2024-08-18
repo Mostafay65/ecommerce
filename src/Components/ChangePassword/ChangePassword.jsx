@@ -6,6 +6,7 @@ import * as Yup from "yup";
 import axios from "axios";
 import { TokenContext } from "../Context/Token";
 import Loader from "../Helpers/Loader";
+import { toast } from "react-toastify";
 
 const ChangePassword = () => {
   const [loading, setIsLoading] = useState(false);
@@ -31,12 +32,20 @@ const ChangePassword = () => {
       if (data.message == "success") {
         setToken(data.token);
         localStorage.setItem("userToken",data.token);
+        toast.success("Password Changed Successfully", {
+          position: "bottom-right",
+          theme: "light",
+          autoClose: 2500,
+        });
         navigate("/home");
       }
     } catch (err) {
       setIsLoading(false);
-      console.log(err,"eror from here");
-      
+      toast.error(err.response?.data?.errors?.msg , {
+        position: "bottom-right",
+        theme: "light",
+        autoClose: 2500,
+      } )
       setErrorMessage(err.response?.data?.errors?.msg || "An error occurred");
     }
   }
@@ -66,7 +75,7 @@ const ChangePassword = () => {
           <div className="register-form col-8 col-md-6 col-lg-4 bg-white rounded-3 p-3 pb-4">
             <h3 className="h5 text-main text-center mb-4">Change Password</h3>
             {errorMessage && (
-              <div className="alert alert-danger">{errorMessage}</div>
+              <div className="alert alert-danger py-3">{errorMessage}</div>
             )}
             <form onSubmit={registerForm.handleSubmit}>
               <div className="form-group mb-2">
