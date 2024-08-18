@@ -1,0 +1,33 @@
+.card {
+    transition: transform 0.3s ease;
+    margin-top: 10px;
+    overflow: hidden; /* Ensure overflow is hidden */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .productImage {
+    height: 180px;
+    transition: transform 0.3s ease;
+    border-radius: 3px;
+  }
+  
+  .imageContainer {
+    overflow: hidden; /* This will hide any overflow from the image */
+    border-radius: 3px;
+  }
+  
+  .productTitle {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .productPrice {
+    font-size: 1rem;
+    color: #ff5722;
+  }
+  

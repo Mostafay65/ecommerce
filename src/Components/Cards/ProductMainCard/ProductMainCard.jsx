@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
-import { useQuery } from "@tanstack/react-query";
 import { CartContext } from "../../Context/CartContext";
 import { toast } from "react-toastify";
 import styles from "./ProductMainCard.module.css";
 import Rating from "../../Helpers/Rating";
 import { Link } from "react-router-dom";
+import { useQuery } from '@tanstack/react-query';
 
 const ProductMainCard = ({ Product }) => {
   const { addToCart } = useContext(CartContext);
