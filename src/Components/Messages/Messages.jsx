@@ -19,6 +19,11 @@ const Messages = () => {
     setLoading(false);
   }
 
+  async function deleteMessage(id) {
+    await axios.delete(`http://localhost:4000/Messages/${id}`)
+    getMessages()
+  }
+
   function handleViewClick(message){
     setSelectedMessage(message);
     setModal(true);
@@ -79,6 +84,7 @@ const Messages = () => {
                 <th>Phone</th>
                 <th>Subject</th>
                 <th>Message</th>
+                <th>Delete</th>
               </tr>
             </thead>
             <tbody className="text-center">
@@ -95,6 +101,9 @@ const Messages = () => {
                     >
                       View
                     </button>
+                  </td>
+                  <td>
+                    <button className="btn btn-danger px-2" onClick={()=>deleteMessage(message.id)}><i className="fas fa-trash-can text-white"></i></button>
                   </td>
                 </tr>
               ))}
