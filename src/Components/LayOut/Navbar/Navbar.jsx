@@ -208,7 +208,9 @@ const Navbar = () => {
                         } `}
                         style={{ width: "180px" }}
                       >
-                        <NavLink
+                        {localStorage.getItem("userName") != "admin" &&(
+                            <>
+                            <NavLink
                           to="/allOrders"
                           className={`text-main mb-1  ${styles.logoutIcon} text-decoration-none`}
                           aria-current="page"
@@ -226,6 +228,9 @@ const Navbar = () => {
                           <p className="my-0 ">Change Password</p>
                         </NavLink>
                         <hr className="my-1 text-main" />
+                            </>
+                        )}
+                        
                         <NavLink
                           to="/"
                           className={`text-main d-block mb-1 text-decoration-none ${styles.logoutIcon} `}
