@@ -12,34 +12,39 @@ import comp3 from '../../assets/About/company-3.jpg'
 import BrandSwiper from '../Home/BrandsSwiper/BrandsSwiper'
 import OurTeam from '../OurTeam/OurTeam'
 
+import Mostafa from '../../assets/About/TeamMembers/Mostafa.jpeg'
+import Ramadan from '../../assets/About/TeamMembers/Ramadan.jpeg'
+import Bessa from '../../assets/About/TeamMembers/Bessa.jpeg'
+import Khaled from '../../assets/About/TeamMembers/Khaled.jpeg'
+import Moshka from '../../assets/About/TeamMembers/Moshka.jpeg'
 
 
 const AboutUs = () => {
   let ourTeam = [
     {
-      name:"Patric Adams",
-      role:"CEO & Co-Founder",
-      image: team1
+      name:"Mostafa Youssef",
+      role:"Full-Stack SWE",
+      image: Mostafa
     },
     {
-      name:"Patric Adams",
-      role:"CEO & Co-Founder",
-      image: team2
+      name:"Muhamad Ramadan",
+      role:"MERN Stack SWE",
+      image: Ramadan
     },
     {
-      name:"Patric Adams",
-      role:"CEO & Co-Founder",
-      image: team3
+      name:"Abdelaziz Elbessa",
+      role:"Full-Stack SWE",
+      image: Bessa
     },
     {
-      name:"Patric Adams",
-      role:"CEO & Co-Founder",
-      image: team4
+      name:"Khaled Mohamed",
+      role:"Full-Stack SWE",
+      image: Khaled
     },
     {
-      name:"Patric Adams",
-      role:"CEO & Co-Founder",
-      image: team4
+      name:"Mohamed Elsayed",
+      role:"Full-Stack SWE",
+      image: Moshka
     },
 
   ]

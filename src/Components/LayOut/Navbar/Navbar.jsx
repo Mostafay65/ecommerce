@@ -192,7 +192,7 @@ const Navbar = () => {
                       className="icon rounded-pill bg-main d-flex justify-content-center align-items-center"
                       style={{ width: "28px", height: "28px" }}
                     >
-                      <i class="fa-solid fa-user text-white"></i>
+                      <i className="fa-solid fa-user text-white"></i>
                     </div>
                     <div className="con d-flex position-relative align-items-center ">
                       <p className="mb-0 px-2 text-sec">{userName}</p>

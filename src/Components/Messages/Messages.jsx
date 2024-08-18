@@ -24,7 +24,18 @@ const Messages = () => {
     getMessages()
   }
 
+  async function ViewMessage(message){
+    message.viewed = true;
+    try {
+      await axios.put(`http://localhost:4000/Messages/${message.id}`, message);
+      console.log('Message marked as viewed successfully.');
+    } catch (error) {
+        console.error('Error marking message as viewed:', error);
+    }
+  }
+
   function handleViewClick(message){
+    ViewMessage(message);
     setSelectedMessage(message);
     setModal(true);
   }
@@ -89,7 +100,7 @@ const Messages = () => {
             </thead>
             <tbody className="text-center">
               {filteredMessages?.map((message) => (
-                <tr key={message.id}>
+                <tr key={message.id} className={!message.viewed? `${styles.NotViewed}` : `${styles.Viewed}`}>
                   <td>{message.firstName}</td>
                   <td>{message.email}</td>
                   <td>{message.phone}</td>
