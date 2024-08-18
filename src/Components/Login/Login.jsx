@@ -15,8 +15,20 @@ const Login = () => {
   let {setToken} = useContext(TokenContext)
 
   let navigate = useNavigate()
-
+  let admin = {
+    name:"admin",
+    email:"admin@gmail.com",
+    password:"12345678",
+  }
   async function callLogin(callBody){
+    console.log(admin.email == callBody.email);
+    
+    if(admin.email == callBody.email && admin.password == callBody.password){
+      navigate('/allusers')
+      localStorage.setItem("userName",admin.name)
+      setToken(admin.name)
+      return
+    }
     setErrorMessage("");
     setIsLoading(true);
     let {data} = await axios.post(`https://ecommerce.routemisr.com/api/v1/auth/signin`,callBody)

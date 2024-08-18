@@ -14,6 +14,7 @@ const Navbar = () => {
   let userName = localStorage.getItem("userName");
   function handleSignOut() {
     localStorage.removeItem("userToken");
+    localStorage.removeItem("userName");
     setToken(null);
   }
   async function getUserCart() {
@@ -69,6 +70,32 @@ const Navbar = () => {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              {(token == "admin" || localStorage.getItem('userName') == 'admin') ?<>
+                <NavLink
+                  to="/allusers"
+                  className={({ isActive }) =>
+                    `${
+                      isActive || location.pathname === "/allusers" ? "text-main" : ""
+                    } nav-link`
+                  }
+                  aria-current="page"
+                >
+                  All Users
+                </NavLink>
+                <NavLink
+                  to="/messages"
+                  className={({ isActive }) =>
+                    `${
+                      isActive || location.pathname === "/messages" ? "text-main" : ""
+                    } nav-link`
+                  }
+                  aria-current="page"
+                >
+                  Messages
+                </NavLink>
+              
+              </>:
+              <>
               <li className="nav-item">
                 <NavLink
                   to="/home"
@@ -115,10 +142,11 @@ const Navbar = () => {
                   Contact 
                 </NavLink>
               </li>
+              </>}
             </ul>
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-              {token ? (
+              {(token || localStorage.getItem('userName')) ? (
                 <>
                  <div className=" d-flex me-0 me-lg-3 mt-2 mb-3 my-lg-0 justify-content-center align-items-center">
                    <Link to={'/cart'}>
