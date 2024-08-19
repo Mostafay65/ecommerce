@@ -68,6 +68,14 @@
     transition: 0.4s;
 }
 
+.add_to_wish {
+    border-color: #088178;
+    color: #088178;
+}
+
+.add_to_wish:hover {
+    background-color: #088178;
+}
 .add_to_cart_button:hover {
     background-color: #056963;
 }

@@ -8,7 +8,7 @@ const ProductSecondaryCard = ({ Product }) => {
     // Function to truncate the product title if it exceeds 23 characters
     const truncateTitle = (title, maxLength) => {
         if (title.length > maxLength) {
-            return title.substring(0, maxLength) + "";
+            return title.substring(0, maxLength) + "...";
         }
         return title;
     };

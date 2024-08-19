@@ -25,6 +25,7 @@ import Messages from "./Components/Messages/Messages";
 import ForgetPassword from "./Components/ForgetPassword/ForgetPassword";
 import ResetPassword from "./Components/ResetPassword/ResetPassword";
 import NewPassword from "./Components/NewPassword/NewPassword";
+import Wishlist from "./Components/Wishlist/Wishlist";
 
 
 function App() {
@@ -47,7 +48,7 @@ function App() {
                 { path: "/Contact-us", element: <ContactUs /> },
                 { path: "/About-us", element: <AboutUs /> },
                 { path: "/checkout", element: <CheckOut /> },
-                {path:'/allorders' , element: <AllOrders/> },
+                { path:'/allorders' , element: <AllOrders/> },
                 { path: "products", element: <Products /> },
                 { path: "products/:id", element: <SingleProduct /> },
                 { path: "login", element: <Login /> },
@@ -56,6 +57,7 @@ function App() {
                 { path: "changePassword", element: <ChangePassword /> },
                 { path: "allusers", element: <AllUsers /> },
                 { path: "messages", element: <Messages /> },
+                { path: "wishlist", element: <Wishlist /> },
                 { path: "forget-password", element: <ForgetPassword /> },
                 { path: "reset-password", element: <ResetPassword /> },
                 { path: "new-password", element: <NewPassword /> },

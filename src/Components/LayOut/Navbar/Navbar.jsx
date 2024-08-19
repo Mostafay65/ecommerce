@@ -173,8 +173,14 @@ const Navbar = () => {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               {token || localStorage.getItem("userName") ? (
                 <>
+                
                   <div className=" d-flex me-0 me-lg-3 mt-2 mb-3 my-lg-0 justify-content-center align-items-center">
-                    {localStorage.getItem("userName") != "admin" && (
+                      {localStorage.getItem("userName") != "admin" &&
+                        <Link to="/wishlist">
+                            <i className="fas fa-heart fa-xl text-sec position-relative mr-3"></i>
+                        </Link>
+                      }
+                      {localStorage.getItem("userName") != "admin" && (
                       <Link to={"/cart"} onClick={handleLinkClick}>
                         <i className="fas fa-xl fa-cart-shopping text-sec position-relative">
                           <div

@@ -10,6 +10,10 @@ import bannerImage from "../../../assets/banner-11.jpg";
 import bannerImage2 from "../../../assets/banner-4.png";
 import ProductBunnerCard from "../../Cards/ProductBannerCard/ProductBannerCard";
 import ImageSlider from "./ImageSliger";
+import { Toast } from "bootstrap";
+import { TokenContext } from "../../Context/Token";
+import axios from "axios";
+
 const getDate = (dateString) => {
     const date = new Date(dateString);
     return `${date.getFullYear()}-${(date.getMonth() + 1)
@@ -24,7 +28,7 @@ const getDate = (dateString) => {
 };
 
 const SingleProduct = () => {
-    let navigate = useNavigate()
+    let navigate = useNavigate();
     const { id } = useParams();
     const [Product, SetProduct] = useState({});
     const [Products, SetProducts] = useState({});
@@ -54,14 +58,38 @@ const SingleProduct = () => {
     };
 
     const { addToCart } = useContext(CartContext);
+    async function addProductToWish(id) {
+        const headers ={
+            token: localStorage.getItem("userToken"),
+        }
+        try {
+            const response = await axios.post(
+                "https://ecommerce.routemisr.com/api/v1/wishlist",
+                {
+                    productId: id,
+                },
+                {
+                    headers,
+                }
+            );
+            debugger;
+            if (response.status === 200) {
+                toast.success("Product Added To WishList Successfully");
+            } else {
+                toast.error("Failed to add product to wishlist");
+            }
+        } catch (e) {
+            toast.error(e);
+        }
+    }
 
     async function addProductToCart(id) {
         let res = await addToCart(id);
-        if(!localStorage.getItem('userName')) {
-            navigate('/login')
+        if (!localStorage.getItem("userName")) {
+            navigate("/login");
             window.scrollTo(0, 0);
-            return
-          }
+            return;
+        }
         if (res.status == "success") {
             toast.success(res.message, {
                 position: "bottom-right",
@@ -168,7 +196,7 @@ const SingleProduct = () => {
                                         type="number"
                                         placeholder="Quantity.."
                                         min={1}
-                                        value={1}
+                                        // value={1}
                                         max={Product.quantity}
                                     />
                                     <button
@@ -178,6 +206,14 @@ const SingleProduct = () => {
                                         className={`${Style.add_to_cart_button}`}
                                     >
                                         Add to cart
+                                    </button>
+                                    <button
+                                        onClick={() =>
+                                            addProductToWish(Product.id)
+                                        }
+                                        className={`btn btn-outline-success ml-3 ${Style.add_to_wish} `}
+                                    >
+                                        <i className="fas fa-heart-circle-plus"></i>
                                     </button>
                                 </div>
                                 <hr />
@@ -282,8 +318,9 @@ const SingleProduct = () => {
                                     <h3>New products</h3>
                                     <div className="d-flex flex-column">
                                         {Products.slice(9, 13).map(
-                                            (CurProduct) => (
+                                            (CurProduct, index) => (
                                                 <ProductBunnerCard
+                                                    key={index}
                                                     Product={CurProduct}
                                                 />
                                             )
