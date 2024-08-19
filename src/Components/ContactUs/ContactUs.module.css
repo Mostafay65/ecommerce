@@ -98,15 +98,19 @@
 .form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 }
 
 .formGroup {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 1rem;
 }
+@media screen and (min-width: 768px) {
+    .formGroup div {
+        width: 50% !important;
+    }
+}
+
 
 .formControl {
     width: 100%;
@@ -154,3 +158,4 @@ textarea.formControl {
 .submitButton:hover {
     background-color: #086a3f;
 }
+

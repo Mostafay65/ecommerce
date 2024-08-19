@@ -99,8 +99,7 @@ const AboutUs = () => {
         <div className="col-md-6">
           <h4 className='text-main h5'>Our Company</h4>
           <h2>We are Building The Destination For Getting Things Done</h2>
-          <p className='text-sec'>Tempus ultricies augue luctus et ut suscipit. Morbi arcu, ultrices purus dolor erat bibendum sapien metus.
-              Tempus ultricies augue luctus et ut suscipit. Morbi arcu, ultrices purus dolor erat bibendum sapien metus. Sit mi, pharetra, morbi arcu id. Pellentesque dapibus nibh augue senectus.</p>
+          <p className='text-sec'>The time of ultricies is augmented and accompanied by care. The curved shape, the pure and strong ultricies, forms the wise foundation. The time of ultricies is augmented and accompanied by care. The curved shape, the pure and strong ultricies, forms the wise foundation. Sit with me, the light, the curved shape is in control. The nibble of the dove is great in the old age.</p>
         </div>
         <div className="col-md-6">
           <img src={aboutImage} className='img-fluid' alt="" />
@@ -110,7 +109,7 @@ const AboutUs = () => {
       <div className="col-md-6 mb-md-4">
         <h4 className='h5 text-main'>Our Team</h4>
         <h2>Top team of experts</h2>
-        <p className='text-sec'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione optio perferendis sequi mollitia quis autem ea cupiditate possimus!</p>
+        <p className='text-sec'>Meet the talented developers behind our project—a team of dedicated professionals with a passion for innovation and excellence!</p>
       </div>
       <div className="col-md-6 mb-4 mb-md-0 d-flex justify-content-md-end align-items-md-center">
         <button className={`${styles.btnMain} py-2 rounded-2 px-3 text-xsm fw-semibold text-main text-uppercase`}>All Members</button>
@@ -172,7 +171,7 @@ const AboutUs = () => {
           <div className="col-9">
             <h6>{fact.name}</h6>
             <p className='text-secondary mb-1 text-sm'>Adobe Jsc</p>
-            <p className='text-sec'>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis nesciunt voluptatum dicta reprehenderit accusamus voluptatibus voluptas."</p>
+            <p className='text-sec'>"The product quality exceeded my expectations. Excellent service and fast delivery. Highly recommend!"</p>
           </div>
         </div>
      </div>
