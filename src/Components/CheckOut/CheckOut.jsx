@@ -69,7 +69,7 @@ export default function CheckOut() {
         if (isOnlinePayment) {
           setTimeout(() => (window.location.href = data.session.url), 5000);
         } else {
-          setTimeout(() => navigate("/AllOrders"), 5000);
+          setTimeout(() => navigate("/AllOrders"), 2000);
         }
       } else {
         toast.error("Something Went Wrong", {

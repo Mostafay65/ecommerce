@@ -12,9 +12,13 @@ const ProductSecondaryCard = ({ Product }) => {
         }
         return title;
     };
+    function handleClick(){
+        window.scrollTo(0,0)
+    }
 
     return (
         <Link
+        onClick={handleClick}
             to={`/products/${Product.id}`}
             className={`${styles.card} my-2 text-decoration-none`}
         >

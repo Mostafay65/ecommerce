@@ -114,7 +114,7 @@ const Messages = () => {
                     </button>
                   </td>
                   <td>
-                    <button className="btn btn-danger px-2" onClick={()=>deleteMessage(message.id)}><i className="fas fa-trash-can text-white"></i></button>
+                    <i onClick={()=>deleteMessage(message.id)} className={`fas fa-trash-can text-main ${styles.trash}`}></i>
                   </td>
                 </tr>
               ))}
@@ -134,7 +134,7 @@ const Messages = () => {
           style={{ maxHeight: "80vh", width: "90%", maxWidth: "600px" }}
         >
           <i
-            className="fas fa-x position-absolute text-sec end-0 me-3"
+            className={`fas fa-x position-absolute text-sec end-0 me-3 ${styles.x}`}
             onClick={() => setModal(false)}
           ></i>
           <h4>{selectedMessage?.subject}</h4>

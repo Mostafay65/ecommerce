@@ -57,30 +57,26 @@ const SingleProduct = () => {
         SetLoading(false);
     };
 
-    const { addToCart } = useContext(CartContext);
+    const { addToCart,addProductToWishlist } = useContext(CartContext);
+
     async function addProductToWish(id) {
-        const headers ={
-            token: localStorage.getItem("userToken"),
+        if (!localStorage.getItem("userName")) {
+            navigate("/login");
+            window.scrollTo(0, 0);
+            return;
         }
-        try {
-            const response = await axios.post(
-                "https://ecommerce.routemisr.com/api/v1/wishlist",
-                {
-                    productId: id,
-                },
-                {
-                    headers,
-                }
-            );
-            debugger;
-            if (response.status === 200) {
-                toast.success("Product Added To WishList Successfully");
-            } else {
-                toast.error("Failed to add product to wishlist");
-            }
-        } catch (e) {
-            toast.error(e);
+        let res = await addProductToWishlist(id);
+        console.log(res);
+        if (res.status == "success") {
+            toast.success(res.message, {
+                position: "bottom-right",
+                theme: "light",
+                autoClose: 2500,
+            });
+        } else {
+            toast.error("Failed");
         }
+        
     }
 
     async function addProductToCart(id) {
