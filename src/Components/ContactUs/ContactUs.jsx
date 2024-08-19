@@ -97,8 +97,8 @@ const ContactUs = () => {
           Sent us your message and we will contact you soon.
         </p>
         <form onSubmit={handleSubmit} className={`${styles.form}`}>
-          <div className={`${styles.formGroup}`}>
-            <div className="d-flex flex-column" style={{ width: "48%" }}>
+          <div className={`${styles.formGroup} d-flex`}>
+            <div className="d-flex flex-column w-100 mb-2 pe-md-2" >
               <input
                 type="text"
                 name="firstName"
@@ -111,7 +111,7 @@ const ContactUs = () => {
                 <span className={`${styles.error}`}>{errors.firstName}</span>
               )}
             </div>
-            <div className="d-flex flex-column" style={{ width: "48%" }}>
+            <div className="d-flex flex-column w-100 mb-2 " >
               <input
                 type="email"
                 name="email"
@@ -126,7 +126,7 @@ const ContactUs = () => {
             </div>
           </div>
           <div className={`${styles.formGroup}`}>
-            <div className="d-flex flex-column" style={{ width: "48%" }}>
+            <div className="d-flex flex-column w-100 mb-2 pe-md-2" >
               <input
                 type="tel"
                 name="phone"
@@ -139,7 +139,7 @@ const ContactUs = () => {
                 <span className={`${styles.error}`}>{errors.phone}</span>
               )}
             </div>
-            <div className="d-flex flex-column" style={{ width: "48%" }}>
+            <div className="d-flex flex-column w-100 mb-2 " >
               <input
                 type="text"
                 name="subject"

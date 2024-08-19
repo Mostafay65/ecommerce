@@ -475,7 +475,7 @@
       "phone": "01234567904",
       "subject": "Product Warranty",
       "message": "Does product G come with a warranty?",
-      "viewed": true
+      "viewed": false
     },
     {
       "id": "8f90",
@@ -493,7 +493,7 @@
       "phone": "01087654327",
       "subject": "Stock Inquiry",
       "message": "When will product H be back in stock?",
-      "viewed": true
+      "viewed": false
     }
   ]
 }

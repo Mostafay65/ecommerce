@@ -3,6 +3,7 @@ import styles from "./AllOrders.module.css";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import Spinner from "../Helpers/Spinner";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function AllOrders() {
   const [orders, setOrders] = useState([]);
@@ -30,6 +31,7 @@ export default function AllOrders() {
     setisLoading(true);
     GetOrders();
   }, []);
+  
   return (
     <>
       <title>All Orders</title>
@@ -55,7 +57,7 @@ export default function AllOrders() {
                   </div>
                   {order.shippingAddress && (
                     <div>
-                      <h3 className="h6 fw-semibold mb-3">
+                      <h3 className="h6 fw-semibold mb-3 ">
                         Delivered To: <span className="text-main">{order.shippingAddress.city}</span>
                       </h3>
                     </div>
@@ -63,9 +65,11 @@ export default function AllOrders() {
                 </div>
                 <div className="row g-3 mb-3">
                   {order.cartItems.map((item, idx) => (
-                    <div
+                    <Link
                       key={idx}
-                      className={`${styles.itemCard} col-6 col-sm-4 col-md-3 col-lg-2 mb-3`}
+                      to={`/products/${item.product.id}`}
+                      onClick={()=>window.scrollTo(0, 0)}
+                      className={`${styles.itemCard} text-decoration-none text-main col-6 col-sm-4 col-md-3 col-lg-2 mb-3`}
                     >
                       <div className={`${styles.itemInner} p-2 pb-4`}>
                         <img
@@ -80,7 +84,7 @@ export default function AllOrders() {
                           {item.product.title.split(" ").slice(0, 2).join(" ")}
                         </h4>
                       </div>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </div>

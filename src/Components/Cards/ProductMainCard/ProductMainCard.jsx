@@ -116,7 +116,7 @@ const ProductMainCard = ({ Product }) => {
                                         event.stopPropagation();
                                         addProductToWishlists(Product.id);
                                     }}
-                                    className={`${styles.add_to_cart} mr-3`}
+                                    className={`${styles.add_to_cart} mr-1 mr-md-3`}
                                 >
                                     <i className="fas fa-heart-circle-plus"></i>
                                     <div className={`${styles.pop} `}>

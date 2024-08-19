@@ -18,6 +18,9 @@ export default function Cart() {
   let [cartDetails, setCartDetails] = useState(null);
   let [isLoading, setisLoading] = useState(false);
 
+  function HandleClick(){
+    window.scrollTo(0,0);
+  }
   async function getCartDetails() {
     let data = await getCart();
 
@@ -214,21 +217,28 @@ export default function Cart() {
                             </h5>
                           </div>
 
-                          <Link
-                            to={`/checkout`}
-                            className="btn btn-main btn-block mb-3"
-                            data-mdb-ripple-color="dark"
-                          >
-                            Checkout
-                          </Link>
-                          <button
-                            onClick={clearCarts}
-                            type="button"
-                            className="btn btn-danger btn-block "
-                            data-mdb-ripple-color="dark"
-                          >
-                            Clear Cart
-                          </button>
+                          <div className="d-flex flex-lg-column align-items-center">
+                            <div className="w-100">
+                              <Link
+                                to={`/checkout`}
+                                onClick={HandleClick}
+                                className="btn btn-main me-1 me-lg-0 w-100 mb-lg-3"
+                                data-mdb-ripple-color="dark"
+                              >
+                                Checkout
+                              </Link>
+                            </div>
+                            <div className="w-100">
+                              <button
+                                onClick={clearCarts}
+                                type="button"
+                                className="btn btn-danger ms-1 ms-lg-0 w-100 "
+                                data-mdb-ripple-color="dark"
+                              >
+                                Clear Cart
+                              </button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
