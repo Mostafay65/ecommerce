@@ -46,7 +46,7 @@ const Wishlist = () => {
                     </thead>
                     <tbody>
 
-                        {products.map((product) => (
+                        {Products.map((product) => (
                             <tr key={product.id}>
                                 <td>
                                     <img
