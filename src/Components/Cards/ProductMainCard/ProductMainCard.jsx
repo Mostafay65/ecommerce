@@ -48,12 +48,16 @@ const ProductMainCard = ({ Product }) => {
             toast.error("Failed");
         }
     }
+    function handleClick(){
+        window.scrollTo(0,0)
+    }
 
 
     return (
         <>
             <Link
                 to={`/products/${Product._id}`}
+                onClick={handleClick}
                 className="p-2 col-6 col-md-4 col-lg-3 text-decoration-none"
             >
                 <div
