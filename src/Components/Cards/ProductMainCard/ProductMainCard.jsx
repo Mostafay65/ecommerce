@@ -8,8 +8,29 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const ProductMainCard = ({ Product }) => {
-    const { addToCart } = useContext(CartContext);
+    const { addToCart , addProductToWishlist } = useContext(CartContext);
     let navigate = useNavigate();
+
+    async function addProductToWishlists(id) {
+        if (!localStorage.getItem("userName")) {
+            navigate("/login");
+            window.scrollTo(0, 0);
+            return;
+        }
+        let res = await addProductToWishlist(id);
+        console.log(res);
+        if (res.status == "success") {
+            toast.success(res.message, {
+                position: "bottom-right",
+                theme: "light",
+                autoClose: 2500,
+            });
+        } else {
+            toast.error("Failed");
+        }
+        
+    }
+
     async function addProductToCart(id) {
         if (!localStorage.getItem("userName")) {
             navigate("/login");
@@ -28,30 +49,6 @@ const ProductMainCard = ({ Product }) => {
         }
     }
 
-    async function addProductToWish(id) {
-        const headers = {
-            token: localStorage.getItem("userToken"),
-        };
-        try {
-            const response = await axios.post(
-                "https://ecommerce.routemisr.com/api/v1/wishlist",
-                {
-                    productId: id,
-                },
-                {
-                    headers,
-                }
-            );
-            debugger;
-            if (response.status === 200) {
-                toast.success("Product Added To WishList Successfully");
-            } else {
-                toast.error("Failed to add product to wishlist");
-            }
-        } catch (e) {
-            toast.error(e);
-        }
-    }
 
     return (
         <>
@@ -113,7 +110,7 @@ const ProductMainCard = ({ Product }) => {
                                     onClick={(event) => {
                                         event.preventDefault();
                                         event.stopPropagation();
-                                        addProductToWish(Product.id);
+                                        addProductToWishlists(Product.id);
                                     }}
                                     className={`${styles.add_to_cart} mr-3`}
                                 >

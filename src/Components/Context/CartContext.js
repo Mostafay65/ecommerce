@@ -13,6 +13,7 @@ export default function CartProvider({children}){
         token: localStorage.getItem("userToken"),
     }
     let[numOfItems,setNumOfItems] = useState(0)
+    let[numOfWishList,setNumOfWishList] = useState(0)
     let[cartId,setCartId] = useState(null)
 
     async function getCart(){
@@ -26,7 +27,40 @@ export default function CartProvider({children}){
         console.log(err);
       }
     }
-  async function addToCart(productId){
+
+     async function getWishlist() {
+      try {
+        const {data} = await axios.get(`https://ecommerce.routemisr.com/api/v1/wishlist`,{headers,})
+        setNumOfWishList(data.count) 
+        return data ;
+        
+      } catch (error) {
+        
+      }
+     } 
+
+    async function addProductToWishlist(productId){
+      try {
+        let{data} = await axios.post(`https://ecommerce.routemisr.com/api/v1/wishlist`,{productId},{headers,})
+        setNumOfWishList(data.data.length)
+        return data
+        
+      } catch (error) {
+        console.log(error);
+        
+      }
+    }
+    async function removeFromWishlist(id){
+      try {
+        const {data} = await axios.delete(`https://ecommerce.routemisr.com/api/v1/wishlist/${id}` , {headers}) ;
+        setNumOfWishList(data.count)
+        return data ;
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  
+    async function addToCart(productId){
         try{
             const {data} = await axios.post(endPoint,{
                 productId,
@@ -75,7 +109,7 @@ export default function CartProvider({children}){
       }
 }
      
-return ( <CartContext.Provider value ={{numOfItems,addToCart,getCart,setNumOfItems,removeFromCart,clearCart,updateProductQty,cartId}}>
+return ( <CartContext.Provider value ={{numOfItems,numOfWishList,getWishlist,addProductToWishlist,removeFromWishlist,addToCart,getCart,setNumOfItems,removeFromCart,clearCart,updateProductQty,cartId}}>
 {children}
 </CartContext.Provider>
 )

@@ -10,7 +10,7 @@ const Navbar = () => {
   const [scrolledDown, setScrolledDown] = useState(false);
   const [scroll, setScroll] = useState(false);
   const location = useLocation();
-  let { numOfItems, getCart } = useContext(CartContext);
+  let { numOfItems, getCart,getWishlist,numOfWishList } = useContext(CartContext);
   let userName = localStorage.getItem("userName");
 
   function handleSignOut() {
@@ -21,6 +21,9 @@ const Navbar = () => {
 
   async function getUserCart() {
     if (token) await getCart();
+  }
+  async function getUserWishlist() {
+    if (token) await getWishlist();
   }
 
   useEffect(() => {
@@ -40,6 +43,7 @@ const Navbar = () => {
 
   useEffect(() => {
     getUserCart();
+    getUserWishlist()
   }, [token]);
 
   const handleLinkClick = () => {
@@ -177,7 +181,14 @@ const Navbar = () => {
                   <div className=" d-flex me-0 me-lg-3 mt-2 mb-3 my-lg-0 justify-content-center align-items-center">
                       {localStorage.getItem("userName") != "admin" &&
                         <Link to="/wishlist">
-                            <i className="fas fa-heart fa-xl text-sec position-relative mr-3"></i>
+                            <i className="fas fa-heart fa-xl text-sec position-relative mr-3">
+                            <div
+                            className="bg-main position-absolute bottom-100 start-100 translate-middle text-white text-xsm d-flex justify-content-center align-items-center rounded-3 "
+                            style={{ width: "18px", height: "18px" }}
+                          >
+                            {numOfWishList}
+                          </div>
+                            </i>
                         </Link>
                       }
                       {localStorage.getItem("userName") != "admin" && (
