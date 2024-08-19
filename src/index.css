@@ -39,7 +39,7 @@
   border: 1px solid transparent !important;
   padding: 10px !important;
 }
-input::placeholder {
+input::placeholder , textarea::placeholder {
   font-size: 12px;
   color: rgba(128, 128, 128, 0.604) !important;
 }

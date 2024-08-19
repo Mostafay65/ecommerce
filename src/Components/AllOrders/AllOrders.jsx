@@ -36,7 +36,7 @@ export default function AllOrders() {
       <section className="py-5">
       {isLoading && <Spinner />}
         <div className="container">
-          <h2 className="fw-semibold mb-4 mt-5">MyOrders</h2>
+          <h2 className="fw-semibold text-main text-uppercase mb-4 mt-5">My Orders</h2>
 
           {orders ? (
             orders.map((order, index) => (
@@ -56,7 +56,7 @@ export default function AllOrders() {
                   {order.shippingAddress && (
                     <div>
                       <h3 className="h6 fw-semibold mb-3">
-                        Delivered To: {order.shippingAddress.city}
+                        Delivered To: <span className="text-main">{order.shippingAddress.city}</span>
                       </h3>
                     </div>
                   )}

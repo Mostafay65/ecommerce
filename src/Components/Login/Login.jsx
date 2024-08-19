@@ -13,7 +13,7 @@ const Login = () => {
   const[errorMessage,setErrorMessage] = useState(false)
 
   let {setToken} = useContext(TokenContext)
-
+  
   let navigate = useNavigate()
   let admin = {
     name:"admin",
@@ -48,7 +48,7 @@ const Login = () => {
     email:Yup.string().required("Email is Required"),
     password:Yup.string().required('Password Rquired')
   })
- const registerForm = useFormik({
+ const loginForm = useFormik({
   initialValues:{
     email:"",
     password:"",
@@ -58,28 +58,29 @@ const Login = () => {
   
 })
   return <>
-  <div className="register min-vh-100 bg-gray" id='register'>
+  <div className="login min-vh-100 bg-gray" id='login'>
     <div className="container  min-vh-100 pt-5 w-100  d-flex justify-content-center align-items-center">
     <div className=" row mx-auto w-100 justify-content-center ">
       <div className="register-form col-8 col-md-6 col-lg-4 bg-white rounded-3 p-3">
         <h3 className='h5 text-sec mb-3'>Sign in</h3>
         {errorMessage && <div className="alert alert-danger">{errorMessage}</div> }
         
-        <form onSubmit={registerForm.handleSubmit}>
+        <form onSubmit={loginForm.handleSubmit}>
             <div className="form-group mb-2">
             <label htmlFor="Email" className={`mb-1 ${styles.textsm} `}>Email</label>
-            <input type="email" id='Email' name='email' placeholder='Email' className='form-control bg-gray' value={registerForm.values.email} onChange={registerForm.handleChange} onBlur={registerForm.handleBlur}/>
-            {registerForm.errors.email && registerForm.touched.email ? <div className={`text-danger ms-1 ${styles.signInText}`}> {registerForm.errors.email} </div> :null}
+            <input type="email" id='Email' name='email' placeholder='Email' className='form-control bg-gray' value={loginForm.values.email} onChange={loginForm.handleChange} onBlur={loginForm.handleBlur}/>
+            {loginForm.errors.email && loginForm.touched.email ? <div className={`text-danger ms-1 ${styles.signInText}`}> {loginForm.errors.email} </div> :null}
             </div>
 
             <div className="form-group mb-2">
             <label htmlFor="password" className={`mb-1 ${styles.textsm} `}>Password</label>
-            <input type="password" id='password' name='password' placeholder='Password' className='form-control bg-gray' value={registerForm.values.password} onChange={registerForm.handleChange} onBlur={registerForm.handleBlur}/>
-            {registerForm.errors.password && registerForm.touched.password ? <div className={`text-danger ms-1 ${styles.signInText}`}> {registerForm.errors.password} </div> :null}
+            <input type="password" id='password' name='password' placeholder='Password' className='form-control bg-gray' value={loginForm.values.password} onChange={loginForm.handleChange} onBlur={loginForm.handleBlur}/>
+            {loginForm.errors.password && loginForm.touched.password ? <div className={`text-danger ms-1 ${styles.signInText}`}> {loginForm.errors.password} </div> :null}
             </div>
-
-            <p className={`text-secondary ms-auto d-block my-3 px-1  ${styles.registerP}`}>Forget Password?</p>
-            <button  disabled={!(registerForm.isValid && registerForm.dirty)} className='btn btn-main w-100'>{loading ? <Loader/> : "Login"}</button>
+            <Link to={'/forget-password'} className='text-decoration-none'>
+            <p className={`text-secondary ms-auto d-block my-3 px-1  ${styles.registerP}` }>Forget Password?</p>
+            </Link>
+            <button  disabled={!(loginForm.isValid && loginForm.dirty)} className='btn btn-main w-100'>{loading ? <Loader/> : "Login"}</button>
         </form>
         <p className={`${styles.registerP} text-secondary text-center my-4 text-uppercase`}>or sign up with</p>
         <div className="btns mb-3 lex gap-2">

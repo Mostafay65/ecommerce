@@ -195,11 +195,13 @@ const Navbar = () => {
                       <i className="fa-solid fa-user text-white"></i>
                     </div>
                     <div className="con d-flex position-relative align-items-center ">
-                      <p className="mb-0 px-2 text-sec">{userName}</p>
+                      <div className="d-flex align-items-center" onClick={() => setScroll(!scroll)}>
+                      <p className={`mb-0 px-2 text-sec ${styles.userName}`}>{userName}</p>
                       <div
                         className={`fas fa-arrow-turn-down  ${styles.scrolledDownIcon}`}
-                        onClick={() => setScroll(!scroll)}
+                        
                       ></div>
+                      </div>
                       <div
                         className={`${
                           styles.conChild

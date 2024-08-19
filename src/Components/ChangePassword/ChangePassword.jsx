@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import styles from "../Register/Register.module.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
@@ -147,11 +147,13 @@ const ChangePassword = () => {
                 ) : null}
               </div>
 
+              <Link to={'/forget-password'} className="text-decoration-none">
               <p
                 className={`text-secondary ms-auto d-block my-3 px-1 ${styles.registerP}`}
               >
                 Forgot Password?
               </p>
+              </Link>
               <button
                 disabled={!(registerForm.isValid && registerForm.dirty)}
                 className="btn btn-main w-100"

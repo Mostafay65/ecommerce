@@ -81,68 +81,72 @@ export default function CheckOut() {
   return (
     <section className="py-5 bg-gray">
       <title>Check Out</title>
-      <div className={`container p-5 my-5 ${styles.formContainer} bg-white`}>
-        <h2>Checkout</h2>
+      <div className={`container rounded-3 py-5 px-4 my-5 ${styles.formContainer} bg-white`}>
+        <h2 className="text-uppercase text-main mb-3">Checkout</h2>
 
-        <form onSubmit={formik.handleSubmit} className={styles.form}>
+        <form onSubmit={formik.handleSubmit} >
           <div className={`form-group mb-3 ${styles.formGroup}`}>
-            <label htmlFor="phone">Phone</label>
+            <label htmlFor="phone" className="text-sec text-sm">Phone</label>
             <input
               className={`form-control bg-gray ${styles.input}`}
               id="phone"
+              placeholder="Phone"
               value={formik.values.phone}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               name="phone"
             />
             {formik.errors.phone && formik.touched.phone ? (
-              <div className="alert alert-danger my-2">
+              <div className=" text-danger text-sm ms-2 my-2">
                 {formik.errors.phone}
               </div>
             ) : null}
           </div>
 
           <div className={`form-group mb-3 ${styles.formGroup}`}>
-            <label htmlFor="email">Email</label>
+            <label className="text-sec text-sm" htmlFor="email">Email</label>
             <input
               className={`form-control bg-gray ${styles.input}`}
               id="email"
               value={formik.values.email}
+              placeholder="Email"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               name="email"
             />
             {formik.errors.email && formik.touched.email ? (
-              <div className="alert alert-danger my-2">
+              <div className=" text-danger text-sm ms-2 my-2">
                 {formik.errors.email}
               </div>
             ) : null}
           </div>
 
           <div className={`form-group mb-3 ${styles.formGroup}`}>
-            <label htmlFor="city">City</label>
+            <label className="text-sec text-sm" htmlFor="city">City</label>
             <input
               className={`form-control bg-gray ${styles.input}`}
               type="text"
               id="city"
               name="city"
+              placeholder="City"
               value={formik.values.city}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
             />
             {formik.errors.city && formik.touched.city ? (
-              <div className="alert alert-danger my-2">
+              <div className=" text-danger text-sm ms-2 my-2">
                 {formik.errors.city}
               </div>
             ) : null}
           </div>
 
           <div className={`form-group mb-3 ${styles.formGroup}`}>
-            <label htmlFor="details">Details</label>
+            <label className="text-sec text-sm" htmlFor="details">Details</label>
             <textarea
               className={`form-control bg-gray ${styles.input}`}
               id="details"
               name="details"
+              placeholder="Details"
               value={formik.values.details}
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
@@ -150,7 +154,7 @@ export default function CheckOut() {
               cols="30"
             ></textarea>
             {formik.errors.details && formik.touched.details ? (
-              <div className="alert alert-danger my-2">
+              <div className=" text-danger text-sm ms-2 my-2">
                 {formik.errors.details}
               </div>
             ) : null}
