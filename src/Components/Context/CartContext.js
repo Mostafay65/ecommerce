@@ -53,7 +53,7 @@ export default function CartProvider({children}){
     async function removeFromWishlist(id){
       try {
         const {data} = await axios.delete(`https://ecommerce.routemisr.com/api/v1/wishlist/${id}` , {headers}) ;
-        setNumOfWishList(data.count)
+        setNumOfWishList(data.data.length)
         return data ;
       } catch (error) {
         console.log(error);

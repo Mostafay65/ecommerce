@@ -73,9 +73,9 @@ const ChangePassword = () => {
       <div className="container min-vh-100 pt-5 w-100 d-flex justify-content-center align-items-center">
         <div className="row mx-auto w-100 justify-content-center">
           <div className="register-form col-8 col-md-6 col-lg-4 bg-white rounded-3 p-3 pb-4">
-            <h3 className="h5 text-main text-center mb-4">Change Password</h3>
+            <h3 className="h5 text-main text-center mb-3">Change Password</h3>
             {errorMessage && (
-              <div className="alert alert-danger py-3">{errorMessage}</div>
+              <div className=" text-danger pb-2 ">{errorMessage}!</div>
             )}
             <form onSubmit={registerForm.handleSubmit}>
               <div className="form-group mb-2">

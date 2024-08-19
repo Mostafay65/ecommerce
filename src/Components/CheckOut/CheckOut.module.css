@@ -6,3 +6,6 @@
   .CashBtn{
     width: fit-content !important;
   }
+  .modalfilter{
+    filter: blur(5px);
+  }

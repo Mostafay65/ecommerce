@@ -85,10 +85,10 @@ export default function CheckOut() {
   };
 
   return (
-    <section className="py-5 bg-gray">
+    <section className={`py-5 bg-gray `}>
       <title>Check Out</title>
       <div
-        className={`container rounded-4 py-5 px-4 my-5 ${styles.formContainer} bg-white`}
+        className={`container rounded-4 py-5 px-4 my-5 ${isModalOpen? `${styles.modalfilter}` : ""} ${styles.formContainer} bg-white`}
       >
         <h2 className="text-uppercase text-main mb-3">Checkout</h2>
 
@@ -189,12 +189,12 @@ export default function CheckOut() {
           </button>
         </form>
 
-        <ConfirmationModal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          onConfirm={() => confirmPayment(formik.values)}
-        />
       </div>
+      <ConfirmationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onConfirm={() => confirmPayment(formik.values)}
+      />
     </section>
   );
 }
