@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import styles from "./BlogSection.module.css";
 import BImg1 from "../../../imgs/theme/Home/blog-1.jpg";
 import BImg2 from "../../../imgs/theme/Home/blog-2.jpg";
@@ -11,11 +12,11 @@ export default function BlogSection() {
     <section className={styles.section}>
       <div className="container">
         <h3 className={styles.sectionTitle}>
-        From <span className={styles.highlight}>blog</span>
+          From <span className={styles.highlight}>blog</span>
         </h3>
         <div className={styles.layout}>
-            <div className={styles.blogPosts}>
-                <article className={styles.blogPost}>
+          <div className={styles.blogPosts}>
+            <article className={styles.blogPost}>
               <img src={BImg2} alt="" className={styles.blogImg} />
               <div className={styles.postContent}>
                 <span className={styles.category}>Fashion</span>
@@ -28,10 +29,10 @@ export default function BlogSection() {
                   <span className={styles.dot}>•</span>
                   <span>12M Views</span>
                 </div>
-                <a href="#" className={styles.readMore}>
+                <Link to="/home" className={styles.readMore}>
                   Read More
-                </a>
-            </div>
+                </Link>
+              </div>
             </article>
             <article className={styles.blogPost}>
               <img src={BImg1} alt="" className={styles.blogImg} />
@@ -45,9 +46,9 @@ export default function BlogSection() {
                   <span className={styles.dot}>•</span>
                   <span>12M Views</span>
                 </div>
-                <a href="#" className={styles.readMore}>
+                <Link to="/home" className={styles.readMore}>
                   Read More
-                </a>
+                </Link>
               </div>
             </article>
           </div>
@@ -60,9 +61,9 @@ export default function BlogSection() {
                   Save 17% on <br />
                   Autumn Hat
                 </h4>
-                <a href="#" className={styles.shopNow}>
+                <Link to="/products" className={styles.shopNow}>
                   Shop Now →
-                </a>
+                </Link>
               </div>
             </div>
             <div className={styles.smallPromos}>
@@ -74,9 +75,9 @@ export default function BlogSection() {
                     Save 20% on <br />
                     Women's socks
                   </h4>
-                  <a href="#" className={styles.shopNow}>
+                  <Link to="/products" className={styles.shopNow}>
                     Shop Now →
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className={styles.promo}>
@@ -87,9 +88,9 @@ export default function BlogSection() {
                     Save 20% on <br />
                     Eardrop
                   </h4>
-                  <a href="#" className={styles.shopNow}>
+                  <Link to="/products" className={styles.shopNow}>
                     Shop Now →
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

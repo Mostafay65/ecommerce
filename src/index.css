@@ -87,6 +87,17 @@ input::placeholder , textarea::placeholder {
   padding: 14px 80px 14px 65px ;
   color: #046963;
 }
+.slide .container .btn{
+  outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+.slide .container .btn:focus, 
+.slide .container .btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
 .slide .container p{
 color: rgba(0, 0, 0, 0.511);
 font-size: 18px;
@@ -180,12 +191,3 @@ font-size: 18px;
 }
 
 
-.confirmation-modal .confirm-button {
-  background-color: #28a745 !important;
-  color: #fff !important;
-}
-
-.confirmation-modal .close-button {
-  background-color: #dc3545 !important;
-  color: #fff !important;
-}

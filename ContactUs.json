@@ -406,15 +406,6 @@
       "viewed": true
     },
     {
-      "id": "8v90",
-      "firstName": "Hassan",
-      "email": "hassan.farid@gmail.com",
-      "phone": "01567894331",
-      "subject": "Technical Issue",
-      "message": "I am having trouble with the website.",
-      "viewed": true
-    },
-    {
       "id": "9w01",
       "firstName": "Zara",
       "email": "zara.abdel@gmail.com",
@@ -478,15 +469,6 @@
       "viewed": true
     },
     {
-      "id": "6d78",
-      "firstName": "Ali",
-      "email": "ali.said@gmail.com",
-      "phone": "01567894333",
-      "subject": "Product Information",
-      "message": "Can you provide more details on product F?",
-      "viewed": true
-    },
-    {
       "id": "7e89",
       "firstName": "Reem",
       "email": "reem.abdel@gmail.com",
@@ -511,15 +493,6 @@
       "phone": "01087654327",
       "subject": "Stock Inquiry",
       "message": "When will product H be back in stock?",
-      "viewed": true
-    },
-    {
-      "id": "0h12",
-      "firstName": "Mona",
-      "email": "mona.nasser@gmail.com",
-      "phone": "01567894334",
-      "subject": "Membership Benefits",
-      "message": "What are the benefits of your membership program?",
       "viewed": true
     }
   ]
