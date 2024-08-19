@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
 import { toast } from "react-toastify";
 import Style from "./SingleProduct.module.css";
@@ -24,6 +24,7 @@ const getDate = (dateString) => {
 };
 
 const SingleProduct = () => {
+    let navigate = useNavigate()
     const { id } = useParams();
     const [Product, SetProduct] = useState({});
     const [Products, SetProducts] = useState({});
@@ -56,7 +57,11 @@ const SingleProduct = () => {
 
     async function addProductToCart(id) {
         let res = await addToCart(id);
-        console.log(res);
+        if(!localStorage.getItem('userName')) {
+            navigate('/login')
+            window.scrollTo(0, 0);
+            return
+          }
         if (res.status == "success") {
             toast.success(res.message, {
                 position: "bottom-right",
@@ -70,9 +75,7 @@ const SingleProduct = () => {
 
     useEffect(() => {
         FetchData();
-        // console.log(Product);
     }, [id]);
-    console.log(Products);
     return (
         <div className="py-5">
             {Loading ? (

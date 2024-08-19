@@ -149,7 +149,7 @@ const ChangePassword = () => {
 
               <Link to={'/forget-password'} className="text-decoration-none">
               <p
-                className={`text-secondary ms-auto d-block my-3 px-1 ${styles.registerP}`}
+                className={`text-secondary me-auto d-block my-3 px-1 ${styles.registerP}`}
               >
                 Forgot Password?
               </p>

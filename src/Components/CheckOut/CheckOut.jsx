@@ -81,12 +81,12 @@ export default function CheckOut() {
   return (
     <section className="py-5 bg-gray">
       <title>Check Out</title>
-      <div className={`container rounded-3 py-5 px-4 my-5 ${styles.formContainer} bg-white`}>
+      <div className={`container rounded-4 py-5 px-4 my-5 ${styles.formContainer} bg-white`}>
         <h2 className="text-uppercase text-main mb-3">Checkout</h2>
 
         <form onSubmit={formik.handleSubmit} >
-          <div className={`form-group mb-3 ${styles.formGroup}`}>
-            <label htmlFor="phone" className="text-sec text-sm">Phone</label>
+          <div className={`form-group mb-2 ${styles.formGroup}`}>
+            <label htmlFor="phone" className="ms-1 text-sec text-sm">Phone</label>
             <input
               className={`form-control bg-gray ${styles.input}`}
               id="phone"
@@ -97,14 +97,14 @@ export default function CheckOut() {
               name="phone"
             />
             {formik.errors.phone && formik.touched.phone ? (
-              <div className=" text-danger text-sm ms-2 my-2">
+              <div className=" text-danger text-sm ms-2 my-1">
                 {formik.errors.phone}
               </div>
             ) : null}
           </div>
 
-          <div className={`form-group mb-3 ${styles.formGroup}`}>
-            <label className="text-sec text-sm" htmlFor="email">Email</label>
+          <div className={`form-group mb-2 ${styles.formGroup}`}>
+            <label className="ms-1 text-sec text-sm" htmlFor="email">Email</label>
             <input
               className={`form-control bg-gray ${styles.input}`}
               id="email"
@@ -115,14 +115,14 @@ export default function CheckOut() {
               name="email"
             />
             {formik.errors.email && formik.touched.email ? (
-              <div className=" text-danger text-sm ms-2 my-2">
+              <div className=" text-danger text-sm ms-2 my-1">
                 {formik.errors.email}
               </div>
             ) : null}
           </div>
 
-          <div className={`form-group mb-3 ${styles.formGroup}`}>
-            <label className="text-sec text-sm" htmlFor="city">City</label>
+          <div className={`form-group mb-2 ${styles.formGroup}`}>
+            <label className="ms-1 text-sec text-sm" htmlFor="city">City</label>
             <input
               className={`form-control bg-gray ${styles.input}`}
               type="text"
@@ -134,14 +134,14 @@ export default function CheckOut() {
               onBlur={formik.handleBlur}
             />
             {formik.errors.city && formik.touched.city ? (
-              <div className=" text-danger text-sm ms-2 my-2">
+              <div className=" text-danger text-sm ms-2 my-1">
                 {formik.errors.city}
               </div>
             ) : null}
           </div>
 
-          <div className={`form-group mb-3 ${styles.formGroup}`}>
-            <label className="text-sec text-sm" htmlFor="details">Details</label>
+          <div className={`form-group mb-4 ${styles.formGroup}`}>
+            <label className="ms-1 text-sec text-sm" htmlFor="details">Details</label>
             <textarea
               className={`form-control bg-gray ${styles.input}`}
               id="details"
@@ -154,7 +154,7 @@ export default function CheckOut() {
               cols="30"
             ></textarea>
             {formik.errors.details && formik.touched.details ? (
-              <div className=" text-danger text-sm ms-2 my-2">
+              <div className=" text-danger text-sm ms-2 my-1">
                 {formik.errors.details}
               </div>
             ) : null}
@@ -165,7 +165,7 @@ export default function CheckOut() {
               className={`btn bg-main w-100 text-white ms-auto d-block payment-btn ${styles.CashBtn}`}
               disabled={!(formik.isValid && formik.dirty)}
             >
-              Cash Payment
+              Confirm Payment
             </button>
         </form>
       </div>

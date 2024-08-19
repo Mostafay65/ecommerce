@@ -55,7 +55,6 @@ export default function Cart() {
 
   async function updateProductQuantity(id, count) {
     const data = await updateProductQty(id, count);
-    console.log(data);
     if (data.status === "success") {
       getCartDetails();
       if (count === 0) {
@@ -172,19 +171,19 @@ export default function Cart() {
                       </div>
                       <div className="col-lg-4 bg-body-tertiary">
                         <div className="p-5">
-                          <h3 className="fw-bold mb-5 mt-2 pt-1">Summary</h3>
+                          <h3 className="fw-semibold text-sec mb-4 mt-1 ">Summary</h3>
                           <hr className="my-4" />
 
                           <div className="d-flex justify-content-between mb-4">
-                            <h5 className="text-uppercase">
+                            <h5 className="text-uppercase text-sec h6">
                               Items <span> {numOfItems} </span>
                             </h5>
-                            <h5>
+                            <h5 className="h6 text-main ">
                               <span>{cartDetails.data.totalCartPrice} EGP</span>
                             </h5>
                           </div>
 
-                          <h5 className="text-uppercase mb-3">Shipping</h5>
+                          <h5 className="text-uppercase h6 text-sec mb-3">Shipping</h5>
 
                           <div className="mb-4 pb-2">
                             <select data-mdb-select-init className="form-select">
@@ -192,36 +191,32 @@ export default function Cart() {
                             </select>
                           </div>
 
-                          <h5 className="text-uppercase mb-3">Give code</h5>
+                          <h5 className="text-uppercase mb-3 h6 text-sec">Promo code</h5>
 
                           <div className="mb-5">
                             <div className="form-outline">
                               <input
                                 type="text"
                                 id="form3Examplea2"
-                                className="form-control form-control-lg"
+                                className="form-control "
+                                placeholder="Enter Code"
                               />
-                              <label
-                                className="form-label"
-                                htmlFor="form3Examplea2"
-                              >
-                                Enter your code
-                              </label>
+                              
                             </div>
                           </div>
 
                           <hr className="my-4" />
 
                           <div className="d-flex justify-content-between mb-5">
-                            <h5 className="text-uppercase">Total price</h5>
-                            <h5>
+                            <h5 className="text-uppercase h6 text-sec">Total price</h5>
+                            <h5 className="h6 text-main">
                               <span>{cartDetails.data.totalCartPrice} EGP</span>
                             </h5>
                           </div>
 
                           <Link
                             to={`/checkout`}
-                            className="btn btn-main btn-block btn-lg mb-3"
+                            className="btn btn-main btn-block mb-3"
                             data-mdb-ripple-color="dark"
                           >
                             Checkout
@@ -229,7 +224,7 @@ export default function Cart() {
                           <button
                             onClick={clearCarts}
                             type="button"
-                            className="btn btn-danger btn-block btn-lg"
+                            className="btn btn-danger btn-block "
                             data-mdb-ripple-color="dark"
                           >
                             Clear Cart
