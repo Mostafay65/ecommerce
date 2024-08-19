@@ -3,22 +3,6 @@
     margin: 0 auto;
     
   }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .formGroup {
-    width: 100%;
-  }
-  
-  .input {
-    width: 100%;
-    margin: 0 auto;
-  }
-  
   .CashBtn{
     width: fit-content !important;
   }

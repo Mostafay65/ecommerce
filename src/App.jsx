@@ -22,6 +22,9 @@ import AboutUs from "./Components/AboutUs/AboutUs";
 import AllUsers from "./Components/AllUsers/AllUsers";
 import AllOrders from './Components/AllOrders/AllOrders';
 import Messages from "./Components/Messages/Messages";
+import ForgetPassword from "./Components/ForgetPassword/ForgetPassword";
+import ResetPassword from "./Components/ResetPassword/ResetPassword";
+import NewPassword from "./Components/NewPassword/NewPassword";
 
 
 function App() {
@@ -53,6 +56,9 @@ function App() {
                 { path: "changePassword", element: <ChangePassword /> },
                 { path: "allusers", element: <AllUsers /> },
                 { path: "messages", element: <Messages /> },
+                { path: "forget-password", element: <ForgetPassword /> },
+                { path: "reset-password", element: <ResetPassword /> },
+                { path: "new-password", element: <NewPassword /> },
                 { path: "*", element: <NotFound /> },
             ],
         },
