@@ -4,6 +4,14 @@
 }
 .registerP{
     font-size: 11px;
+    width: fit-content;
+}
+.registerP:hover ,
+.registerOr:hover{
+    color: #088178 !important;
+}
+.registerOr{
+    font-size: 11px;
 }
 .registerBtns{
     font-size: 13px;

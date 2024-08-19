@@ -1,8 +1,8 @@
 .formContainer {
     max-width: 700px;
     margin: 0 auto;
-    
-  }
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    }
   .CashBtn{
     width: fit-content !important;
   }

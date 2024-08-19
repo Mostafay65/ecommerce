@@ -8,9 +8,7 @@
     transition: transform 0.3s ease;
   }
   
-  .sectionTitle:hover {
-    transform: scale(1.05);
-  }
+ 
   
   .highlight {
     color: #088178;

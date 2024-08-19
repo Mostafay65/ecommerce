@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import style from './ForgetPassword.module.css'
 import Loader from '../Helpers/Loader'
 import { Link, useNavigate } from 'react-router-dom'
@@ -7,11 +7,13 @@ import { useFormik } from 'formik'
 import axios from 'axios';
 import styles from '../Register/Register.module.css'
 import { toast } from 'react-toastify';
+import { TokenContext } from '../Context/Token';
 
 
 const ForgetPassword = () => {
   const[loading,setIsLoading] = useState(false)
   const[errorMessage,setErrorMessage] = useState(false)
+  let {token} = useContext(TokenContext)
   let navigate = useNavigate()
   async function callForgetPassword(callData){
     setIsLoading(true)
@@ -51,11 +53,21 @@ const ForgetPassword = () => {
         {errorMessage && <div className="text-danger">{errorMessage}</div> }
 
         <form onSubmit={forgetPassForm.handleSubmit}>
-            <div className="form-group mb-4">
+            <div className="form-group mb-3">
             <label htmlFor="Email" className={`mb-1 ms-1 ${styles.textsm} `}>Email</label>
             <input type="email" id='Email' name='email' placeholder='Email' className='form-control bg-gray' value={forgetPassForm.values.email} onChange={forgetPassForm.handleChange} onBlur={forgetPassForm.handleBlur}/>
             {forgetPassForm.errors.email && forgetPassForm.touched.email ? <div className={`text-danger ms-1 ${styles.signInText}`}> {forgetPassForm.errors.email} </div> :null}
             </div>
+            {!token?(
+              <Link to='/login' className='text-decoration-none'>
+              <p className={`${styles.registerOr} text-secondary text-sm ms-1`}>Back To Login</p>
+              </Link>
+            ):
+            (
+            <Link to='/home' className='text-decoration-none'>
+            <p className={`${styles.registerOr} text-secondary text-sm ms-1`}>Back To Home</p>
+            </Link>
+            )}
             <button  disabled={!(forgetPassForm.isValid && forgetPassForm.dirty)} className='btn btn-main w-100'>{loading ? <Loader/> : "Submit"}</button>
         </form>
 

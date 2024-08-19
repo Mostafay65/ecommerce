@@ -13,7 +13,7 @@ const Login = () => {
   const[errorMessage,setErrorMessage] = useState(false)
 
   let {setToken} = useContext(TokenContext)
-  
+
   let navigate = useNavigate()
   let admin = {
     name:"admin",
@@ -78,11 +78,11 @@ const Login = () => {
             {loginForm.errors.password && loginForm.touched.password ? <div className={`text-danger ms-1 ${styles.signInText}`}> {loginForm.errors.password} </div> :null}
             </div>
             <Link to={'/forget-password'} className='text-decoration-none'>
-            <p className={`text-secondary ms-auto d-block my-3 px-1  ${styles.registerP}` }>Forget Password?</p>
+            <p className={`text-secondary  me-auto d-block my-3 px-1  ${styles.registerP}` }>Forget Password?</p>
             </Link>
             <button  disabled={!(loginForm.isValid && loginForm.dirty)} className='btn btn-main w-100'>{loading ? <Loader/> : "Login"}</button>
         </form>
-        <p className={`${styles.registerP} text-secondary text-center my-4 text-uppercase`}>or sign up with</p>
+        <p className={`${styles.registerOr} text-secondary text-center my-4 text-uppercase`}>or sign up with</p>
         <div className="btns mb-3 lex gap-2">
           <button className={`btn border rounded-1 py-2 w-100 mb-3 ${styles.registerBtns}`}>
             <i className='fab fa-google accordion me-1 ' style={{color : '#DB4437'}}></i>
