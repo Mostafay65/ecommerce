@@ -178,3 +178,14 @@ font-size: 18px;
 .cur-icon-next:hover{
   transform: translateX(2px);
 }
+
+
+.confirmation-modal .confirm-button {
+  background-color: #28a745 !important;
+  color: #fff !important;
+}
+
+.confirmation-modal .close-button {
+  background-color: #dc3545 !important;
+  color: #fff !important;
+}
