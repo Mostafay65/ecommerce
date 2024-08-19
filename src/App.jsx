@@ -45,6 +45,7 @@ function App() {
             children: [
                 { path: "", element: <Home /> },
                 { path: "home", element: <Home /> },
+                { path: "/ecommerce", element: <Home /> },
                 { path: "/Contact-us", element: <ContactUs /> },
                 { path: "/About-us", element: <AboutUs /> },
                 { path: "/checkout", element: <CheckOut /> },
