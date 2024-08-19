@@ -121,12 +121,12 @@ const AboutUs = () => {
             <div key={index} className="col-lg-2 col-md-3 col-6 mb-4 rounded-3 text-center">
               <img src={member.image} className={`${styles.teamImg} img-fluid rounded-3 mb-2`} alt={member.name} />
               <h5 className='text-sec'>{member.name}</h5>
-              <p className='text-main'>{member.role}</p>
+              <p className='text-main '>{member.role}</p>
               <div className="icons d-flex justify-content-center text-sm gap-3">
-                <i className='fab fa-facebook-f text-secondary'></i>
-                <i className='fab fa-twitter text-secondary'></i>
-                <i className='fab fa-instagram text-secondary'></i>
-                <i className='fab fa-pinterest-p text-secondary'></i>
+                <i className={`fab fa-facebook-f text-secondary ${styles.mediaIcon}`}></i>
+                <i className={`fab fa-twitter text-secondary ${styles.mediaIcon}`}></i>
+                <i className={`fab fa-instagram text-secondary ${styles.mediaIcon}`}></i>
+                <i className={`fab fa-pinterest-p text-secondary ${styles.mediaIcon}`}></i>
               </div>
             </div>
           ))}

@@ -125,15 +125,26 @@ const Messages = () => {
 
       {modal && (
         <>
-          <div className={`${styles.overlay} position-fixed top-0 left-0 w-100 vh-100`} onClick={() => setModal(false)}>
-          </div>
-          <div className={`${styles.allModal} py-4 px-3 position-fixed text-main top-50 start-50 translate-middle bg-white z-3`}>
-            <i className="fas fa-x position-absolute text-sec end-0 me-3" onClick={() => setModal(false)}></i>
-            <h4>{selectedMessage?.subject}</h4>
-            <hr />
-            <p className="text-sec">{selectedMessage?.message}</p>
-          </div>
-        </>
+        <div
+          className={`${styles.overlay} position-fixed top-0 left-0 w-100 vh-100`}
+          onClick={() => setModal(false)}
+        ></div>
+        <div
+          className={`${styles.allModal} py-4 px-3 position-fixed text-main top-50 start-50 translate-middle bg-white z-3 overflow-auto`}
+          style={{ maxHeight: "80vh", width: "90%", maxWidth: "600px" }}
+        >
+          <i
+            className="fas fa-x position-absolute text-sec end-0 me-3"
+            onClick={() => setModal(false)}
+          ></i>
+          <h4>{selectedMessage?.subject}</h4>
+          <hr />
+          <p className="text-sec w-100" style={{ wordWrap: "break-word" }}>
+            {selectedMessage?.message}
+          </p>
+        </div>
+      </>
+      
       )}
     </>
   );

@@ -361,15 +361,6 @@
       "viewed": true
     },
     {
-      "id": "2p34",
-      "firstName": "Hadi",
-      "email": "hadi.salem@gmail.com",
-      "phone": "01123456793",
-      "subject": "Warranty Issue",
-      "message": "I need to claim a warranty for product C.",
-      "viewed": true
-    },
-    {
       "id": "3q45",
       "firstName": "Amina",
       "email": "amina.hassan@gmail.com",
@@ -529,15 +520,6 @@
       "phone": "01567894334",
       "subject": "Membership Benefits",
       "message": "What are the benefits of your membership program?",
-      "viewed": true
-    },
-    {
-      "id": "7c56",
-      "firstName": "Mostafa",
-      "email": "sajdkshb@gmail.com",
-      "phone": "sadsf",
-      "subject": "bhjgvhjhbkj",
-      "message": "ebdkhfjjdkby3ug67uy",
       "viewed": true
     }
   ]

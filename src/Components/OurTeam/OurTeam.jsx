@@ -1,36 +1,41 @@
 import React from 'react';
 import styles from './OurTeam.module.css';
 import team1 from '../../assets/About/avatar-1.jpg';
+import team2 from '../../assets/About/avatar-2.jpg';
+import team3 from '../../assets/About/avatar-3.jpg';
+import team4 from '../../assets/About/avatar-4.jpg';
+import team5 from '../../assets/About/avatar-5.jpg';
 
 const OurTeam = () => {
   let team = [
     {
-      name: "Mostafa Youssef",
-      job: "Back-End Developer",
+      name: "Isabella García",
+    job: "Loyal Customer",
       img: team1
     },
     {
-      name: "Muhamad Ramadan",
-      job: "Front-end Developer",
-      img: team1
+      name: "Sofía Martínez",
+      job: "Loyal Customer",
+      img: team2
     },
     {
-      name: "Abdelaziz Elbessa",
-      job: "Back-End Developer",
-      img: team1
+      name: "Camila Rodríguez",
+      job: "Frequent Buyer",
+      img: team3
     },
     {
-      name: "Khaled Mohamed",
-      job: "Front-End Developer",
-      img: team1
+      name: "Valentina López",
+      job: "Content Client",
+      img: team4
     },
     {
-      name: "Mohamed Elsayed",
-      job: "Front-End Developer",
-      img: team1
+      name: "Lucía Hernández",
+      job: "Happy Shopper",
+      img: team5
     }
   ];
-
+  
+  
   return (
     <>
       <div className="customers">
@@ -59,7 +64,7 @@ const OurTeam = () => {
                     />
                   </div>
                   <div className="customer py-5 bg-white px-md-5">
-                    <h4 className="pt-5">{member.name}</h4>
+                    <h4 className="pt-5 text-sec">{member.name}</h4>
                     <span
                       className="text-uppercase fw-semibold"
                       style={{ fontSize: '12px', color: '#777777' }}

@@ -8,6 +8,7 @@
 }
 .teamImg{
     transition: 0.3s;
+    cursor: pointer;
 }
 .teamImg:hover{
     transform: translateY(-3px);
@@ -36,4 +37,11 @@
 .viewMoreBtn:hover{
   transform: translateY(-3px);
    
+}
+.mediaIcon{
+    transition: 0.1s;
+    cursor: pointer;
+}
+.mediaIcon:hover{
+    color: #088178 !important;
 }

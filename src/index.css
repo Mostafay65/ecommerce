@@ -72,7 +72,7 @@ input::placeholder , textarea::placeholder {
   color: #046963 !important;
 }
 .slide{
-  background-position: center;
+  background-position: 58% center;
   background-size: cover;
 }
 .slide .container{
@@ -133,12 +133,14 @@ font-size: 18px;
 
 /* Cursuole */
 
-.customers .customer-image img{
+.customers .customer-image img {
   width: 80px;
   height: 80px;
   object-fit: cover;
+  object-position: top;
   transform: translateY(50%);
 }
+
 .customers .customer{
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
 }
