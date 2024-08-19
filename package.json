@@ -1,7 +1,7 @@
 {
   "name": "ecommerce",
   "version": "0.1.0",
-  "homepage": "https://github.com/Mostafay65/ecommerce",
+  "homepage": "https://Mostafay65.github.io/ecommerce",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
