@@ -98,7 +98,7 @@ const ProductMainCard = ({ Product }) => {
                             </span>
                         </div>
 
-                        <div className="d-flex  justify-content-between">
+                        <div className="d-flex flex-column flex-md-row justify-content-between">
                             <div className={`${styles.price} `}>
                                 <span className={`${styles.current_price}`}>
                                     ${Product.price}
