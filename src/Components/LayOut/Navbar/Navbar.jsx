@@ -9,8 +9,9 @@ const Navbar = () => {
   let { token, setToken } = useContext(TokenContext);
   const [scrolledDown, setScrolledDown] = useState(false);
   const [scroll, setScroll] = useState(false);
+  const [isNavExpanded, setIsNavExpanded] = useState(false);
   const location = useLocation();
-  let { numOfItems, getCart,getWishlist,numOfWishList } = useContext(CartContext);
+  let { numOfItems, getCart, getWishlist, numOfWishList } = useContext(CartContext);
   let userName = localStorage.getItem("userName");
 
   function handleSignOut() {
@@ -43,16 +44,17 @@ const Navbar = () => {
 
   useEffect(() => {
     getUserCart();
-    getUserWishlist()
+    getUserWishlist();
   }, [token]);
 
   const handleLinkClick = () => {
-    const navbarToggler = document.querySelector(".navbar-collapse");
-    if (navbarToggler) {
-      navbarToggler.classList.remove("show");
-    }
+    setIsNavExpanded(false);
     window.scrollTo(0, 0);
     setScroll(false);
+  };
+
+  const handleToggleClick = () => {
+    setIsNavExpanded(!isNavExpanded); 
   };
 
   return (
@@ -71,21 +73,19 @@ const Navbar = () => {
           <button
             className="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
+            onClick={handleToggleClick} 
             aria-controls="navbarSupportedContent"
-            aria-expanded="false"
+            aria-expanded={isNavExpanded} 
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
           <div
-            className="collapse navbar-collapse text-center"
+            className={`collapse navbar-collapse text-center ${isNavExpanded ? "show" : ""}`} // Conditionally apply show class
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              {token === "admin" ||
-              localStorage.getItem("userName") === "admin" ? (
+              {token === "admin" || localStorage.getItem("userName") === "admin" ? (
                 <>
                   <NavLink
                     to="/allusers"
@@ -177,25 +177,24 @@ const Navbar = () => {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               {token || localStorage.getItem("userName") ? (
                 <>
-                
-                  <div className=" d-flex me-0 me-lg-3 mt-2 mb-3 my-lg-0 justify-content-center align-items-center">
-                      {localStorage.getItem("userName") != "admin" &&
-                        <Link to="/wishlist">
-                            <i className="fas fa-heart fa-xl text-sec position-relative mr-3">
-                            <div
-                            className="bg-main position-absolute bottom-100 start-100 translate-middle text-white text-xsm d-flex justify-content-center align-items-center rounded-3 "
+                  <div className="d-flex me-0 me-lg-3 mt-2 mb-3 my-lg-0 justify-content-center align-items-center">
+                    {localStorage.getItem("userName") !== "admin" && (
+                      <Link to="/wishlist">
+                        <i className="fas fa-heart fa-xl text-sec position-relative mr-3">
+                          <div
+                            className="bg-main position-absolute bottom-100 start-100 translate-middle text-white text-xsm d-flex justify-content-center align-items-center rounded-3"
                             style={{ width: "18px", height: "18px" }}
                           >
                             {numOfWishList}
                           </div>
-                            </i>
-                        </Link>
-                      }
-                      {localStorage.getItem("userName") != "admin" && (
+                        </i>
+                      </Link>
+                    )}
+                    {localStorage.getItem("userName") !== "admin" && (
                       <Link to={"/cart"} onClick={handleLinkClick}>
                         <i className="fas fa-xl fa-cart-shopping text-sec position-relative">
                           <div
-                            className="bg-main position-absolute bottom-100 start-100 translate-middle text-white text-xsm d-flex justify-content-center align-items-center rounded-3 "
+                            className="bg-main position-absolute bottom-100 start-100 translate-middle text-white text-xsm d-flex justify-content-center align-items-center rounded-3"
                             style={{ width: "18px", height: "18px" }}
                           >
                             {numOfItems}
@@ -211,48 +210,49 @@ const Navbar = () => {
                     >
                       <i className="fa-solid fa-user text-white"></i>
                     </div>
-                    <div className="con d-flex position-relative align-items-center ">
-                      <div className="d-flex align-items-center" onClick={() => setScroll(!scroll)}>
-                      <p className={`mb-0 px-2 text-sec ${styles.userName}`}>{userName}</p>
+                    <div className="con d-flex position-relative align-items-center">
                       <div
-                        className={`fas fa-arrow-turn-down  ${styles.scrolledDownIcon}`}
-                        
-                      ></div>
+                        className="d-flex align-items-center"
+                        onClick={() => setScroll(!scroll)}
+                      >
+                        <p className={`mb-0 px-2 text-sec ${styles.userName}`}>
+                          {userName}
+                        </p>
+                        <div
+                          className={`fas fa-arrow-turn-down ${styles.scrolledDownIcon}`}
+                        ></div>
                       </div>
                       <div
-                        className={`${
-                          styles.conChild
-                        } position-absolute rounded-2 top-100 end-0 px-2 mt-2 py-2 ${
+                        className={`${styles.conChild} position-absolute rounded-2 top-100 end-0 px-2 mt-2 py-2 ${
                           scroll ? "" : "d-none"
-                        } `}
+                        }`}
                         style={{ width: "180px" }}
                       >
-                        {localStorage.getItem("userName") != "admin" &&(
-                            <>
+                        {localStorage.getItem("userName") !== "admin" && (
+                          <>
                             <NavLink
-                          to="/allOrders"
-                          className={`text-main mb-1  ${styles.logoutIcon} text-decoration-none`}
-                          aria-current="page"
-                          onClick={handleLinkClick}
-                        >
-                          <p className="my-0 ">My Orders</p>
-                        </NavLink>
-                        <hr className="my-1 text-main" />
-                        <NavLink
-                          to="/changePassword"
-                          className={`text-main mb-1  ${styles.logoutIcon} text-decoration-none`}
-                          aria-current="page"
-                          onClick={handleLinkClick}
-                        >
-                          <p className="my-0 ">Change Password</p>
-                        </NavLink>
-                        <hr className="my-1 text-main" />
-                            </>
+                              to="/allOrders"
+                              className={`text-main mb-1 ${styles.logoutIcon} text-decoration-none`}
+                              aria-current="page"
+                              onClick={handleLinkClick}
+                            >
+                              <p className="my-0">My Orders</p>
+                            </NavLink>
+                            <hr className="my-1 text-main" />
+                            <NavLink
+                              to="/changePassword"
+                              className={`text-main mb-1 ${styles.logoutIcon} text-decoration-none`}
+                              aria-current="page"
+                              onClick={handleLinkClick}
+                            >
+                              <p className="my-0">Change Password</p>
+                            </NavLink>
+                            <hr className="my-1 text-main" />
+                          </>
                         )}
-                        
                         <NavLink
                           to="/"
-                          className={`text-main d-block mb-1 text-decoration-none ${styles.logoutIcon} `}
+                          className={`text-main d-block mb-1 text-decoration-none ${styles.logoutIcon}`}
                           aria-current="page"
                           onClick={() => {
                             handleSignOut();
